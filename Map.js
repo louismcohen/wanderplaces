@@ -1,16 +1,20 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
-import { StyleSheet, View, Text, TextInput, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import BottomSheet, { useBottomSheet } from '@gorhom/bottom-sheet';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
+const Line = () => {
+  return <View style={styles.line}></View>
+}
 
 export default GoogleMap = () => {
   const bottomSheetRef = useRef(null);
   const snapPoints = useMemo(() => ['15%', '50%', '92%'], []);
   const handleSheetChanges = useCallback((index) => {
     console.log('handleSheetChanges', index);
+    console.log({containerHeight: Object.keys(bottomSheetRef.current)});
     if (index === 0) {
       // Keyboard.dismiss();
       // markerSelectedRef.current?.hideCallout()
@@ -60,6 +64,7 @@ export default GoogleMap = () => {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
+        showsUserLocation
         onMarkerPress={
           (e) => {
             changeBottomSheetPosition(1)
@@ -68,7 +73,7 @@ export default GoogleMap = () => {
         }}
         onPress={
           (e) => {
-            changeBottomSheetPosition(0)
+            bottomSheetRef.current.collapse()
             setMarkerSelected(null);
             console.log('Map pressed')
           }
@@ -82,14 +87,13 @@ export default GoogleMap = () => {
             latitude: 34.041878080486164,
             longitude: -118.26305772438361,
           }}
-          onDragEnd={
-            (e) => alert(JSON.stringify(e.nativeEvent.coordinate))
-          }
           title={'Test Marker'}
           description={'This is a description of the marker'}
         />
+          {/* <Image source={require('./src/images/restaurant_pinlet.png')} style={{maxWidth: 30, maxHeight: 30, objectFit: 'contain'}} /> */}
+          {/* </Marker> */}
       </MapView>
-      
+      <Line style={styles.line} />
         <BottomSheet
           ref={bottomSheetRef}
           style={styles.bottomSheet}
@@ -106,7 +110,7 @@ export default GoogleMap = () => {
               <TextInput
                 style={styles.textInput}
                 placeholder={'Search for a place'}
-                onFocus={() => changeBottomSheetPosition(2)}
+                onFocus={() => bottomSheetRef.current.expand()}
               />
             </View>
           </TouchableWithoutFeedback>
@@ -151,5 +155,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#00000010',
     borderRadius: 1000,
     marginVertical: moderateScale(16),
+  }, 
+  line: {
+    flex: 1,
+    height: 1,
+    width: '100%',
+    backgroundColor: 'red',
+    position: 'absolute',
+    top: '8%',
+    left: 0,
   }
 });
