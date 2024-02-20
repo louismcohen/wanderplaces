@@ -1,20 +1,24 @@
+import React, { useCallback, useMemo, useRef } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import GoogleMap from './Map';
 
-export default function App() {
+export default App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={ styles.container }>
+      <StatusBar style='auto' />
+      <GoogleMap />
     </View>
-  );
-}
+  )
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#ddd',
+  },
+  map: {
+    width: '100%',
+    height: '100%',
   },
 });

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "WannaGo",
-    "slug": "WannaGo",
+    "name": "Wanderplaces",
+    "slug": "Wanderplaces",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,7 +15,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.louiscohen.wanderplaces",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBVWoxT7UAn5cgvXUjLGOSmnzkRPUS5RI8"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,7 +28,10 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBVWoxT7UAn5cgvXUjLGOSmnzkRPUS5RI8"
+      }
     }
   }
 }
