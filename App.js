@@ -1,13 +1,13 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import GoogleMap from './Map';
+import PlacesMap from './PlacesMap';
 
 export default App = () => {
   return (
     <View style={ styles.container }>
       <StatusBar style='auto' />
-      <GoogleMap />
+      <PlacesMap />
     </View>
   )
 };

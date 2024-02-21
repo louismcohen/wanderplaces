@@ -32,6 +32,9 @@
       "config": {
         "googleMapsApiKey": "AIzaSyBVWoxT7UAn5cgvXUjLGOSmnzkRPUS5RI8"
       }
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }

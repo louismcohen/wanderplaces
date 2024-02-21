@@ -1209,6 +1209,11 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
+"@expo-google-fonts/space-grotesk@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.npmjs.org/@expo-google-fonts/space-grotesk/-/space-grotesk-0.2.3.tgz"
+  integrity sha512-UYEMIrzegR02pauH7gVMI7j6cUroTtJug6dH/aQFjMNz0UwZe6GUcrEtJDmsUHJjEZdxbYgHhaiIwswWVo0CMA==
+
 "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/@expo/bunyan/-/bunyan-4.0.0.tgz"
@@ -3284,6 +3289,13 @@ expo-modules-core@1.11.9:
   dependencies:
     invariant "^2.2.4"
 
+expo-splash-screen@~0.26.4:
+  version "0.26.4"
+  resolved "https://registry.npmjs.org/expo-splash-screen/-/expo-splash-screen-0.26.4.tgz"
+  integrity sha512-2DwofTQ0FFQCsvDysm/msENsbyNsJiAJwK3qK/oXeizECAPqD7bK19J4z9kuEbr7ORPX9MLnTQYKl6kmX3keUg==
+  dependencies:
+    "@expo/prebuild-config" "6.7.4"
+
 expo-status-bar@~1.11.1:
   version "1.11.1"
   resolved "https://registry.npmjs.org/expo-status-bar/-/expo-status-bar-1.11.1.tgz"
@@ -5295,6 +5307,11 @@ react-native-gesture-handler@>=1.10.1, react-native-gesture-handler@~2.14.0:
     invariant "^2.2.4"
     lodash "^4.17.21"
     prop-types "^15.7.2"
+
+react-native-global-props@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.npmjs.org/react-native-global-props/-/react-native-global-props-1.1.5.tgz"
+  integrity sha512-QDeAdRel6zyJfbgyFxZi9QXZe78OdlANxJae0rJn76uTqdt/A+iWBVjJy3NmaN/fpKy0uV0HhW6Hu4xM0QCisQ==
 
 react-native-maps@1.10.0:
   version "1.10.0"
