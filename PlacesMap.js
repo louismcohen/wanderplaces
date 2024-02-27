@@ -2,13 +2,15 @@ import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
-import { StyleSheet, View, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions } from 'react-native';
+import { StyleSheet, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions } from 'react-native';
+import { View, TextField, Button } from 'react-native-ui-lib';
 import Animated, { useSharedValue, useDerivedValue } from 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 import * as Haptics from 'expo-haptics';
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
+import { FontAwesome6, Ionicons } from '@expo/vector-icons';
 
 const SPACE_GROTESK_FAMILY = {
   '300Light': 'SpaceGrotesk_300Light',
@@ -189,10 +191,10 @@ export default PlacesMap = () => {
     setMapRegion(region);
   }, []);
 
-  useEffect(() => {
-    const points = getPointsforCoordinate({latitude: mapRegion.latitude, longitude: mapRegion.longitude});
-    console.log({mapRegion, points});
-  }, [mapRegion]);
+  // useEffect(() => {
+  //   const points = getPointsforCoordinate({latitude: mapRegion.latitude, longitude: mapRegion.longitude});
+  //   console.log({mapRegion, points});
+  // }, [mapRegion]);
 
   const [markerSelected, setMarkerSelected] = useState(null);
 
@@ -226,7 +228,7 @@ export default PlacesMap = () => {
           }}
           onPress={
             (e) => {
-              bottomSheetRef.current.collapse()
+              bottomSheetRef.current.close()
               setMarkerSelected(null);
             }
           }
@@ -246,11 +248,38 @@ export default PlacesMap = () => {
         </MapView>
         {/* <Line style={styles.line} /> */}
           <Animated.View style={{top: bottomSheetPosition}} />
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+              <View style={{...styles.textFieldView, buttom: bottomSheetPosition}}>
+                <TextField
+                  text65R
+                  containerStyle={styles.textFieldContainer}
+                  fieldStyle={styles.textField}
+                  placeholder={'Search for a place'}
+                  leadingAccessory={
+                    <FontAwesome6 name='magnifying-glass' color='rgba(0,0,0,0.33)' size={16} style={{paddingRight: moderateScale(8)}} />
+                  }
+                  onBlur={Keyboard.dismiss}
+                  // onFocus={() => bottomSheetRef.current.expand()}
+                />
+              
+                <Button
+                  style={styles.button}
+                  label={<Ionicons name='filter-sharp' size={24} color='rgba(0,0,0,0.7)' />}
+                  size='small'
+                  avoidMinWidth
+                  // backgroundColor='rgba(255,255,255,0.92)'
+                  // borderRadius={12}
+                  // borderColor='rgba(0,0,0,0.33)'
+                  // borderWidth={1}
+                />
+              </View>
+            </TouchableWithoutFeedback>
             <BottomSheet
               ref={bottomSheetRef}
               animatedPosition={bottomSheetPosition}
               style={styles.bottomSheet}
               snapPoints={snapPoints}
+              index={-1}
               // enableDynamicSizing
               onChange={handleSheetChanges}
               onAnimate={handleSheetAnimation}
@@ -263,15 +292,19 @@ export default PlacesMap = () => {
                   ...styles.contentContainer,
                   marginBottom: bottomTabBarHeight,
                   }}>
+                  <FontAwesome6 icon='magnifying-glass' color='black' size={48} />
                   {markerSelected 
                     ? <><Text style={ styles.headerText }>{markerSelected?.title}</Text>
                       <Text>{markerSelected.description}</Text></>
                     : null
                   }
-                  <TextInput
-                    style={styles.textInput}
+                  <TextField
+                    containerStyle={styles.textField}
                     placeholder={'Search for a place'}
                     onFocus={() => bottomSheetRef.current.expand()}
+                    leadingAccessory={
+                      <FontAwesome6 icon='magnifying-glass' size={48} />
+                    }
                   />
                 </BottomSheetScrollView>
               </TouchableWithoutFeedback>
@@ -315,14 +348,51 @@ const styles = StyleSheet.create({
   textInput: {
     fontSize: 20,
     // fontFamily: SPACE_GROTESK_FAMILY['400Regular'],
-    paddingVertical: moderateScale(12),
+    paddingVertical: moderateScale(20),
     paddingHorizontal: moderateScale(12),
     backgroundColor: '#00000010',
     borderRadius: 8,
     borderColor: '#00000015',
     borderWidth: 1,
     marginVertical: moderateScale(16),
+    position: 'relative',
+    // top: '100%',
+    // left: 0,
+    flex: 1,
   }, 
+  textFieldContainer: {
+    flex: 1,
+    paddingVertical: moderateScale(16),
+    paddingHorizontal: moderateScale(12),
+    borderRadius: moderateScale(16),
+    borderColor: 'rgba(0,0,0,0.33)',
+    borderWidth: 1,
+    
+    shadowColor: '#000',
+    shadowOpacity: 0.20,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowRadius: 6,
+    elevation: 5,
+
+    backgroundColor: 'rgba(255,255,255,0.92)',
+  }, 
+  textField: {
+    // fontSize: 24,
+    // lineHeight: 24,
+  },
+  textFieldView: {
+    position: 'absolute',
+    bottom: 0,
+    paddingVertical: moderateScale(16),
+    paddingHorizontal: moderateScale(16),
+    flex: 1, 
+    flexDirection: 'row',
+    gap: moderateScale(8),
+    width: '100%',
+  },
   line: {
     flex: 1,
     height: 1,
@@ -331,5 +401,23 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: `${100 - POINT_TOP}%`,
     left: 0,
+  },
+  button: {
+    paddingVertical: moderateScale(16),
+    paddingHorizontal: moderateScale(16),
+    borderRadius: moderateScale(16),
+    borderColor: 'rgba(0,0,0,0.33)',
+    borderWidth: 1,
+
+    shadowColor: '#000',
+    shadowOpacity: 0.20,
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowRadius: 6,
+    elevation: 5,
+
+    backgroundColor: 'rgba(255,255,255,0.92)',
   }
 });

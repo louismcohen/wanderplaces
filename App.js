@@ -35,21 +35,21 @@ export default App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator 
-        tabBar={(props) => <CustomTabBar {...props} />}
+        // tabBar={(props) => <CustomTabBar {...props} />}
         initialRouteName='Map'
         screenOptions={{
           headerShown: false,
           tabBarStyle: {
-            position: 'absolute',
-            backgroundColor: 'rgba(255,255,255,0.8)',
+            // position: 'absolute',
+            // backgroundColor: 'rgba(255,255,255,0.8)',
           },
           tabBarLabelStyle: {
             fontSize: 13,
             // fontFamily: 'SpaceGrotesk_600SemiBold'
           },
-          tabBarBackground: () => (
-            <BlurView tint='dark' intensity={50} />
-          )
+          // tabBarBackground: () => (
+          //   <BlurView tint='dark' intensity={50} />
+          // )
         }}
       >
         <Tab.Screen 
@@ -58,7 +58,7 @@ export default App = () => {
           options={{
             tabBarIcon: ({color, size}) => (
               // <FontAwesome name='th-list' color={color} size={size} />
-              <MaterialIcons name='collections' size={size} color='black' />
+              <MaterialIcons name='collections' color={color} size={size} />
             )
           }}  
         />
