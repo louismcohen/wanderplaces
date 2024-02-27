@@ -34,7 +34,18 @@
       }
     },
     "plugins": [
-      "expo-font"
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/space-grotesk/SpaceGrotesk_300Light.ttf",
+            "./assets/fonts/space-grotesk/SpaceGrotesk_400Regular.ttf",
+            "./assets/fonts/space-grotesk/SpaceGrotesk_500Medium.ttf",
+            "./assets/fonts/space-grotesk/SpaceGrotesk_600SemiBold.ttf",
+            "./assets/fonts/space-grotesk/SpaceGrotesk_700Bold.ttf"
+          ]
+        }
+      ]
     ]
   }
 }

@@ -2,10 +2,13 @@ import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
-import { StyleSheet, View, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image } from 'react-native';
+import { StyleSheet, View, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions } from 'react-native';
+import Animated, { useSharedValue, useDerivedValue } from 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import BottomSheet from '@gorhom/bottom-sheet';
+import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
+import * as Haptics from 'expo-haptics';
+import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 
 const SPACE_GROTESK_FAMILY = {
   '300Light': 'SpaceGrotesk_300Light',
@@ -16,22 +19,16 @@ const SPACE_GROTESK_FAMILY = {
 }
 
 import {
-  SpaceGrotesk_300Light,
-  SpaceGrotesk_400Regular,
-  SpaceGrotesk_500Medium,
-  SpaceGrotesk_600SemiBold,
-  SpaceGrotesk_700Bold,
-} from '@expo-google-fonts/space-grotesk';
-import {
   setCustomView,
   setCustomTextInput,
   setCustomText,
   setCustomImage,
   setCustomTouchableOpacity
 } from 'react-native-global-props';
+import { parse } from 'react-native-svg';
 
 const defaultStyle = {
-  fontFamily: 'SpaceGrotesk_500Medium',
+  // fontFamily: 'SpaceGrotesk_500Medium',
 }
 const customTextProps = {
   style: defaultStyle,
@@ -60,7 +57,16 @@ const Line = () => {
   return <View style={styles.line}></View>
 }
 
+const testMarker = {
+  latitude: 34.041878080486164,
+  longitude: -118.26305772438361,
+  title: 'Test Marker',
+  description: 'This is a description of the marker'
+}
+
 export default PlacesMap = () => {
+  const bottomTabBarHeight = useBottomTabBarHeight();
+
   SplashScreen.preventAutoHideAsync();
 
   const [appIsReady, setAppIsReady] = useState(false);
@@ -68,13 +74,13 @@ export default PlacesMap = () => {
   useEffect(() => {
     const prepare = async () => {
       try {
-        await Font.loadAsync({
-          SpaceGrotesk_300Light,
-          SpaceGrotesk_400Regular,
-          SpaceGrotesk_500Medium,
-          SpaceGrotesk_600SemiBold,
-          SpaceGrotesk_700Bold,
-        })
+        // await Font.loadAsync({
+        //   SpaceGrotesk_300Light,
+        //   SpaceGrotesk_400Regular,
+        //   SpaceGrotesk_500Medium,
+        //   SpaceGrotesk_600SemiBold,
+        //   SpaceGrotesk_700Bold,
+        // })
       } catch (error) {
         console.warn(error);
       } finally {
@@ -86,7 +92,48 @@ export default PlacesMap = () => {
   }, []);
 
   const bottomSheetRef = useRef(null);
-  const snapPoints = useMemo(() => [`${POINT_BOTTOM}%`, `${POINT_MIDDLE}%`, `${POINT_TOP}%`], []);
+  const snapPoints = useMemo(() => [bottomTabBarHeight + 100, `${POINT_MIDDLE}%`, `${POINT_TOP}%`], []);
+  const bottomSheetPosition = useSharedValue(0);
+
+  const recenterMap = async (fromSnapHeight, toSnapHeight) => {
+    console.log('in recenterMap\n\n');
+    const window = Dimensions.get('window');
+    const currentMapHeight = Math.round(window.height - fromSnapHeight);
+    const newMapHeight = Math.round(window.height - toSnapHeight);
+    const heightDiff = fromSnapHeight - toSnapHeight;
+    // const currentPoints = await getPointsforCoordinate({latitude: mapRegion.latitude, longitude: mapRegion.longitude});
+    console.log({heightDiff, fromSnapHeight, toSnapHeight, currentMapHeight, newMapHeight})
+
+    const desiredCenterPoint = {
+      x: window.width / 2,
+      y: window.height / 2 - heightDiff / 2,
+    };
+    const desiredCoordinates = await getCoordinatesForPoint(desiredCenterPoint);
+
+    // console.log({currentPoints, mapHeight, desiredCenterPoint})
+
+    mapViewRef.current.animateToRegion({
+      latitude: markerSelected ? markerSelected.latitude : desiredCoordinates.latitude,
+      longitude: desiredCoordinates.longitude,
+      latitudeDelta: mapRegion.latitudeDelta,
+      longitudeDelta: mapRegion.longitudeDelta,
+    }, 500)
+  }
+
+  const mapViewRef = useRef(null);
+
+  const getPointsforCoordinate = async (coordinate) => {
+    const points = await mapViewRef.current.pointForCoordinate(coordinate);
+    console.log({points});
+    return points;
+  }
+
+  const getCoordinatesForPoint = async (point) => {
+    const coordinates = await mapViewRef.current.coordinateForPoint(point);
+    console.log({coordinates});
+    return coordinates;
+  }
+
   const handleSheetChanges = useCallback((index) => {
     // console.log('handleSheetChanges', index);
     // console.log({containerHeight: Object.keys(bottomSheetRef.current)});
@@ -94,19 +141,60 @@ export default PlacesMap = () => {
       // Keyboard.dismiss();
       // markerSelectedRef.current?.hideCallout()
     }
+    
   }, []);
+
+  const calculateSnapPointHeight = (snapPoint, window) => {
+    return snapPoint.toString().includes('%')
+    ? parseFloat(snapPoint) / 100 * window.height
+    : snapPoint
+  }
+
   const handleSheetAnimation = useCallback((fromIndex, toIndex) => {
+    console.log('in handleSheetAnimation\n');
+    console.log({fromIndex, toIndex});
     if (toIndex !== 2) {
       Keyboard.dismiss();
+
+      if (fromIndex !== 2) {
+        const fromSnapPoint = snapPoints[fromIndex];
+        const toSnapPoint = snapPoints[toIndex];
+        const window = Dimensions.get('window');
+        
+        const fromSnapHeight = calculateSnapPointHeight(fromSnapPoint, window);
+        const toSnapHeight = calculateSnapPointHeight(toSnapPoint, window);
+       
+        recenterMap(fromSnapHeight, toSnapHeight);
+      }
     }
+    
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
   }, []);
 
   const changeBottomSheetPosition = useCallback((index) => {
     bottomSheetRef.current?.snapToIndex(index);
-    console.log(markerSelectedRef.current.props.title)
   }, []);
 
-  const markerSelectedRef = useRef(null);
+  const initialRegion= {
+    latitude: 34.041878080486164,
+    longitude: -118.26305772438361,
+    latitudeDelta: 0.1,
+    longitudeDelta: 0.1,
+  }
+
+  const [mapRegion, setMapRegion] = useState(initialRegion);
+
+  const handleMapRegionChangeComplete = useCallback((region, details) => {
+    console.log({regionChangeComplete: region});
+    setMapRegion(region);
+  }, []);
+
+  useEffect(() => {
+    const points = getPointsforCoordinate({latitude: mapRegion.latitude, longitude: mapRegion.longitude});
+    console.log({mapRegion, points});
+  }, [mapRegion]);
+
+  const [markerSelected, setMarkerSelected] = useState(null);
 
   const onLayoutRootView = useCallback(async () => {
     if (appIsReady) {
@@ -126,14 +214,11 @@ export default PlacesMap = () => {
     return (
       <GestureHandlerRootView styles={styles.container} onLayout={onLayoutRootView}>
         <MapView
+          ref={mapViewRef}
           provider={ PROVIDER_GOOGLE }
           style={ styles.map }
-          initialRegion={{
-            latitude: 34.041878080486164,
-            longitude: -118.26305772438361,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}
+          initialRegion={initialRegion}
+          onRegionChangeComplete={handleMapRegionChangeComplete}
           showsUserLocation
           onMarkerPress={
             (e) => {
@@ -142,44 +227,55 @@ export default PlacesMap = () => {
           onPress={
             (e) => {
               bottomSheetRef.current.collapse()
+              setMarkerSelected(null);
             }
           }
           >
           <Marker
-            ref={markerSelectedRef}
             stopPropagation
             coordinate={{
-              latitude: 34.041878080486164,
-              longitude: -118.26305772438361,
+              latitude: testMarker.latitude,
+              longitude: testMarker.longitude,
             }}
-            title={'Test Marker'}
-            description={'This is a description of the marker'}
+            title={testMarker.title}
+            description={testMarker.description}
+            onPress={() => setMarkerSelected(testMarker)}
           />
             {/* <Image source={require('./src/images/restaurant_pinlet.png')} style={{maxWidth: 30, maxHeight: 30, objectFit: 'contain'}} /> */}
             {/* </Marker> */}
         </MapView>
         {/* <Line style={styles.line} /> */}
-          <BottomSheet
-            ref={bottomSheetRef}
-            style={styles.bottomSheet}
-            snapPoints={snapPoints}
-            onChange={handleSheetChanges}
-            onAnimate={handleSheetAnimation}
-            keyboardBehavior='extend'
-            >
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-              <View style={ styles.contentContainer }>
-                <Text style={ styles.headerText }>{markerSelectedRef.current?.props.title}</Text>
-                <Text>{markerSelectedRef.current?.props.description}</Text>
-                
-                <TextInput
-                  style={styles.textInput}
-                  placeholder={'Search for a place'}
-                  onFocus={() => bottomSheetRef.current.expand()}
-                />
-              </View>
-            </TouchableWithoutFeedback>
-          </BottomSheet>
+          <Animated.View style={{top: bottomSheetPosition}} />
+            <BottomSheet
+              ref={bottomSheetRef}
+              animatedPosition={bottomSheetPosition}
+              style={styles.bottomSheet}
+              snapPoints={snapPoints}
+              // enableDynamicSizing
+              onChange={handleSheetChanges}
+              onAnimate={handleSheetAnimation}
+              keyboardBehavior='extend'
+              containerOffset={bottomTabBarHeight}
+              // bottomInset={bottomTabBarHeight}
+              >
+              <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <BottomSheetScrollView style={{
+                  ...styles.contentContainer,
+                  marginBottom: bottomTabBarHeight,
+                  }}>
+                  {markerSelected 
+                    ? <><Text style={ styles.headerText }>{markerSelected?.title}</Text>
+                      <Text>{markerSelected.description}</Text></>
+                    : null
+                  }
+                  <TextInput
+                    style={styles.textInput}
+                    placeholder={'Search for a place'}
+                    onFocus={() => bottomSheetRef.current.expand()}
+                  />
+                </BottomSheetScrollView>
+              </TouchableWithoutFeedback>
+            </BottomSheet>        
   
       </GestureHandlerRootView>
     )
@@ -193,8 +289,7 @@ const styles = StyleSheet.create({
     background: '#fff',
   },
   contentContainer: {
-    flex: 1,
-    padding: moderateScale(16),
+    paddingHorizontal: moderateScale(16),
   },
   bottomSheet: {
     shadowColor: "#000",
@@ -204,21 +299,22 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.33,
     shadowRadius: 15,
-
     elevation: 11,
   },
   map: {
     width: '100%',
     height: '100%',
+    // borderColor: 'red',
+    // borderWidth: '3px',
   },
   headerText: {
-    fontFamily: SPACE_GROTESK_FAMILY['700Bold'],
+    // fontFamily: SPACE_GROTESK_FAMILY['700Bold'],
     fontWeight: 'bold',
     fontSize: 30,
   },
   textInput: {
     fontSize: 20,
-    fontFamily: SPACE_GROTESK_FAMILY['400Regular'],
+    // fontFamily: SPACE_GROTESK_FAMILY['400Regular'],
     paddingVertical: moderateScale(12),
     paddingHorizontal: moderateScale(12),
     backgroundColor: '#00000010',

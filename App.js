@@ -4,11 +4,24 @@ import { StatusBar } from 'expo-status-bar';
 import PlacesMap from './PlacesMap';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { BlurView } from 'expo-blur';
 
-import { Entypo, FontAwesome, FontAwesome5 } from '@expo/vector-icons';
+import { MaterialIcons, FontAwesome, FontAwesome6 } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
+
+const CustomTabBar = (props) => {
+  return (
+    <BlurView 
+      intensity={100}
+      tint='light'
+    >
+      <BottomTabBar {...props} />
+    </BlurView>
+    
+  )
+}
 
 const TableView = () => {
   return (
@@ -22,18 +35,30 @@ export default App = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator 
+        tabBar={(props) => <CustomTabBar {...props} />}
+        initialRouteName='Map'
         screenOptions={{
           headerShown: false,
+          tabBarStyle: {
+            position: 'absolute',
+            backgroundColor: 'rgba(255,255,255,0.8)',
+          },
           tabBarLabelStyle: {
             fontSize: 13,
-          }}}
+            // fontFamily: 'SpaceGrotesk_600SemiBold'
+          },
+          tabBarBackground: () => (
+            <BlurView tint='dark' intensity={50} />
+          )
+        }}
       >
         <Tab.Screen 
-          name='Places' 
+          name='Collections' 
           component={TableView} 
           options={{
             tabBarIcon: ({color, size}) => (
-              <FontAwesome name='th-list' color={color} size={size} />
+              // <FontAwesome name='th-list' color={color} size={size} />
+              <MaterialIcons name='collections' size={size} color='black' />
             )
           }}  
         />
@@ -42,7 +67,17 @@ export default App = () => {
           component={PlacesMap} 
           options={{
             tabBarIcon: ({color, size}) => (
-              <FontAwesome5 name='map' color={color} size={size} />
+              <FontAwesome6 name='map-location-dot' color={color} size={size} />
+            )
+          }} 
+
+        />
+        <Tab.Screen 
+          name='Community' 
+          component={TableView} 
+          options={{
+            tabBarIcon: ({color, size}) => (
+              <FontAwesome name='users' color={color} size={size} />
             )
           }}          
         />
