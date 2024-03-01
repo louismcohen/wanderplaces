@@ -8,6 +8,7 @@ import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom
 import { BlurView } from 'expo-blur';
 
 import { MaterialIcons, FontAwesome, FontAwesome6 } from '@expo/vector-icons';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,6 +34,7 @@ const TableView = () => {
 
 export default App = () => {
   return (
+    <SafeAreaProvider>
     <NavigationContainer>
       <Tab.Navigator 
         // tabBar={(props) => <CustomTabBar {...props} />}
@@ -83,6 +85,7 @@ export default App = () => {
         />
       </Tab.Navigator>
     </NavigationContainer>
+    </SafeAreaProvider>
   )
 };
 
