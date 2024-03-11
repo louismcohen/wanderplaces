@@ -19,24 +19,95 @@ const data = [
         title: 'Kai Tod Fried Chicken',
         emoji: '🍗',
         note: 'Amazing Thai fried chicken with fresh sticky rice bamboo and fruit garden',
+        rating: 4.5,
+        ratingCount: 891,
+        primaryCategory: 'Thai restaurant',
+        currentlyOpen: true,
+        closesAt: '8:00 PM',
     },
     {
         id: '2',
         title: 'Kong Gnam View Point',
         emoji: '🌁',
         note: 'Need to stop along the way',
+        rating: 4.3,
+        ratingCount: 111,
+        primaryCategory: 'Scenic spot',
+        currentlyOpen: true,
     },
     {
         id: '3',
         title: 'Santichon Village',
         emoji: '🇨🇳',
         note: 'Chinese village. try fried shiitake mushrooms and steamed black chicken',
+        rating: 4.1,
+        ratingCount: 3764,
+        currentlyOpen: true,
+        primaryCategory: 'Tourist attraction',
+        closesAt: '6:00 PM',
+    },    
+    {
+        id: '4',
+        title: 'Sunset Bar',
+        emoji: '🍹',
+        note: 'Go here for Pai sunset to meet people',
+        rating: 4.4,
+        ratingCount: 65,
+        currentlyOpen: true,
+        primaryCategory: 'Bar',
+        closesAt: '24 hours',
+    },    
+    {
+        id: '5',
+        title: 'Noodle Soup House Ban Jabo',
+        emoji: '🍜',
+        note: 'bomb spicy tom yum with your feet dangling off the side of the wooden building floor',
+        rating: 4.4,
+        ratingCount: 1904,
+        currentlyOpen: true,
+        primaryCategory: 'Noodle shop',
+        closesAt: '4:00 PM',
+    },    
+    {
+        id: '6',
+        title: 'Doi Kiew Lom Viewpoint',
+        emoji: '⛰️',
+        note: '',
+        rating: 4.5,
+        ratingCount: 2491,
+        currentlyOpen: true,
+        primaryCategory: 'Scenic spot',
+        closesAt: '',
     },    
 ]
 
-const Item = ({title, emoji, note}) => {
-    console.log({title, emoji, note});
+const ItemInfo = ({ info }) => {
+    const { rating, ratingCount, currentlyOpen, closesAt, opensAt, primaryCategory } = info;
+    // console.log({info})
+    const separator = ' • ';
 
+    let itemInfoString = '';
+
+    if (primaryCategory) {
+        itemInfoString += primaryCategory;
+    }
+
+    if (closesAt || opensAt) {
+        itemInfoString += `${separator}${(opensAt || closesAt)}`;
+    }
+
+    if (rating) {
+        const ratingCountFormatted = ratingCount.toLocaleString();
+
+        itemInfoString += `${separator}★ ${rating} (${ratingCountFormatted})`
+    }
+
+    return (
+        <Text style={styles.placeInfo}>{itemInfoString}</Text>
+    )
+}
+
+const Item = ({info}) => {
     return (
     <View flex style={{flexDirection: 'row'}}>
         <View style={{
@@ -44,8 +115,14 @@ const Item = ({title, emoji, note}) => {
             flex: '1 1 auto',
             flexGrow: 1,
         }}>
-            <Text style={styles.placeTitle}>{emoji} {title}</Text>
-            <Text style={styles.placeNote}>{note}</Text>
+            <View style={styles.placeTextContainer}>
+                <View>
+                    <Text adjustsFontSizeToFit numberOfLines={1} style={styles.placeTitle}>{info.emoji} {info.title}</Text>
+                    <ItemInfo info={info} />
+                </View>
+                
+                {info.note ? <Text style={styles.placeNote}>{info.note}</Text> : null}
+            </View>
         </View>
         <View style={{ 
             paddingRight: moderateScale(16), 
@@ -61,9 +138,10 @@ const Item = ({title, emoji, note}) => {
 const ListView = () => {
     return (
         <SortableList
+            contentContainerStyle={{ gap: 1 }}
             contentInsetAdjustmentBehavior='automatic'
             data={data}
-            renderItem={({item}) => <Item title={item.title} emoji={item.emoji} note={item.note} />}
+            renderItem={({item}) => <Item info={item} />}
             keyExtractor={item => item.id}
         />
     )
@@ -154,12 +232,19 @@ export default Collections = () => {
 
 const styles = StyleSheet.create({
     placeTitle: {
-        fontSize: 24,
+        fontSize: 20,
         fontWeight: 700,
     },
     placeNote: {
         fontSize: 13,
         fontWeight: 400,
         color: 'rgba(0,0,0,0.50)',
+    },
+    placeInfo: {
+        fontWeight: 400,
+    },
+    placeTextContainer: {
+        flexDirection: 'column',
+        gap: 8,
     }
 })
