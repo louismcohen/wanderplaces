@@ -2,7 +2,8 @@ import React, { useCallback, useMemo, useRef } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import PlacesMap from './PlacesMap';
-import Collection from './Collection';
+import Collection from './CollectionItem';
+import Collections from './Collections';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -60,7 +61,7 @@ export default App = () => {
         >
           <Tab.Screen 
             name='Collections' 
-            component={Collection} 
+            component={Collections} 
             options={{
               tabBarIcon: ({color, size}) => (
                 // <FontAwesome name='th-list' color={color} size={size} />

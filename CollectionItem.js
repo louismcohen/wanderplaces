@@ -3,7 +3,7 @@ import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { getHeaderTitle } from '@react-navigation/elements';
-import { View, Text, SortableList, Button } from 'react-native-ui-lib'
+import { View, Text, SortableList, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { moderateScale } from 'react-native-size-matters';
 
@@ -115,7 +115,7 @@ const ItemInfo = ({ info }) => {
 
 const Item = ({info}) => {
     return (
-    <View flex style={{flexDirection: 'row', backgroundColor: '#ffffff'}}>
+    <TouchableOpacity flex style={{flexDirection: 'row', backgroundColor: '#ffffff'}}>
         <View style={{
             padding: moderateScale(16),
             flex: '1 1 auto',
@@ -137,7 +137,7 @@ const Item = ({info}) => {
         }}>
             <FontAwesome6 name='chevron-right' style={{ color: 'rgba(0,0,0,0.33)' }} />
         </View>
-    </View>
+    </TouchableOpacity>
     )
 }
 
@@ -186,7 +186,7 @@ const HeaderButton = ({ icon }) => {
 
     return (
         <Pressable style={({ pressed }) => styles(pressed).headerButton}>
-            <Ionicons name={icon} color={'#30B0C7'} size={16} />
+            <Ionicons name={icon} color={'#007AFF'} size={16} />
         </Pressable>
     )
 }
@@ -203,15 +203,19 @@ const HeaderRight = () => {
 
 
 
-export default Collection = () => {
+export default CollectionItem = ({ navigation, route }) => {
+    console.log({navigation, route})
     const insets = useSafeAreaInsets();
-    const navigation = useNavigation();
+    // const navigation = useNavigation();
 
     useLayoutEffect(() => {
         navigation.setOptions({
             headerLargeTitle: true,
             headerTransparent: true,
             headerBlurEffect: 'light',
+            headerRight: () => (
+                <HeaderRight />
+            ),
             // headerSearchOptions: {
             //     onChangeText: (event) => console.log(event),
             //     placeholder: 'Search',
@@ -223,26 +227,27 @@ export default Collection = () => {
     }, [navigation])
 
     return (
-        <CollectionsStack.Navigator
-            screenOptions={{
-                headerRight: () => (
-                    <HeaderRight />
-                ),
-                headerLargeTitle: true,
-                headerTransparent: true,
-                headerBlurEffect: 'regular',
-            }}
-        >
-            <CollectionsStack.Screen
-                name='Mae Hong Son Loop'
-                component={ListView}
-                options={{
-                    // headerLargeTitle: true,
-                    // headerTransparent: true,
-                    // headerBlurEffect: 'light',
-                }}
-            />
-        </CollectionsStack.Navigator>
+        <ListView />
+        // <CollectionsStack.Navigator
+        //     screenOptions={{
+        //         headerRight: () => (
+        //             <HeaderRight />
+        //         ),
+        //         headerLargeTitle: true,
+        //         headerTransparent: true,
+        //         headerBlurEffect: 'regular',
+        //     }}
+        // >
+        //     <CollectionsStack.Screen
+        //         name='Mae Hong Son Loop'
+        //         component={ListView}
+        //         options={{
+        //             // headerLargeTitle: true,
+        //             // headerTransparent: true,
+        //             // headerBlurEffect: 'light',
+        //         }}
+        //     />
+        // </CollectionsStack.Navigator>
     )
 }
 
