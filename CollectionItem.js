@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState} from 'react';
+import React, { useEffect, useLayoutEffect, useState} from 'react';
 import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -13,7 +13,7 @@ import { FontAwesome6, MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 const CollectionsStack = createNativeStackNavigator();
 
-const data = [
+const places = [
     {
         id: '1',
         title: 'Kai Tod Fried Chicken',
@@ -141,7 +141,18 @@ const Item = ({info}) => {
     )
 }
 
-const ListView = () => {
+const filteredResults = (query) => {
+    const queryLowerCase = query.toLowerCase();
+    const filtered = places.filter(place => 
+            place.title.toLowerCase().includes(queryLowerCase)
+            || place.primaryCategory.toLowerCase().includes(queryLowerCase)
+            || place?.note.toLowerCase().includes(queryLowerCase)
+        )   
+        
+    return filtered;
+}
+
+const ListView = ({data}) => {
     return (
         <FlatList
             contentContainerStyle={{ gap: 1 }}
@@ -207,13 +218,35 @@ const HeaderRight = () => {
 export default CollectionItem = ({ navigation, route }) => {
     // const insets = useSafeAreaInsets();
     // const navigation = useNavigation();
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        setData(places);
+    }, [places])
+
     const [search, setSearch] = useState('');
+    useEffect(() => {
+        const filtered = filteredResults(search);
+        setData(filtered);
+
+    }, [search])
+
+    const { emoji, title } = route.params;
 
     useLayoutEffect(() => {
         navigation.setOptions({
+            // headerTitle: `${emoji} ${title}`,
+            // headerBackTitleVisible: false,
+            headerShadowVisible: true,
             headerLargeTitle: true,
             headerTransparent: true,
             headerBlurEffect: 'regular',
+            headerLargeStyle: {
+                backgroundColor: `${'#E88484'}${33}`
+            },
+            headerStyle: {
+                backgroundColor: `${'#E88484'}${10}`
+            },
             headerRight: () => (
                 <HeaderRight />
             ),
@@ -226,7 +259,7 @@ export default CollectionItem = ({ navigation, route }) => {
     }, [navigation])
 
     return (
-        <ListView />
+        <ListView data={data} />
         // <CollectionsStack.Navigator
         //     screenOptions={{
         //         headerRight: () => (

@@ -12,20 +12,20 @@ const data = [
     {
         id: 1,
         title: 'Mae Hong Son Loop',
-        emoji: ''
+        emoji: '🛵'
     },
-    {
-        id: 2,
-        title: 'Samoeng Loop',
-        emoji: ''
-    }
+    // {
+    //     id: 2,
+    //     title: 'Samoeng Loop',
+    //     emoji: ''
+    // }
 ]
 
 const Item = ({info, onPress, navigation}) => {
     console.log({onPress, navigation})
     
     return (
-        <TouchableOpacity style={{padding: moderateScale(16)}} onPress={() => navigation.navigate(info.title)}>
+        <TouchableOpacity style={{padding: moderateScale(16)}} onPress={() => navigation.navigate(info.title, info)}>
             <Text>{info.emoji} {info.title}</Text>
         </TouchableOpacity>
     )
