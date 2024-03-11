@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from 'react';
-import { Pressable, StyleSheet } from 'react-native';
+import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { getHeaderTitle } from '@react-navigation/elements';
@@ -115,7 +115,7 @@ const ItemInfo = ({ info }) => {
 
 const Item = ({info}) => {
     return (
-    <View flex style={{flexDirection: 'row'}}>
+    <View flex style={{flexDirection: 'row', backgroundColor: '#ffffff'}}>
         <View style={{
             padding: moderateScale(16),
             flex: '1 1 auto',
@@ -143,12 +143,15 @@ const Item = ({info}) => {
 
 const ListView = () => {
     return (
-        <SortableList
+        <FlatList
             contentContainerStyle={{ gap: 1 }}
             contentInsetAdjustmentBehavior='automatic'
             data={data}
             renderItem={({item}) => <Item info={item} />}
             keyExtractor={item => item.id}
+            style={{
+                // backgroundColor: '#F2F2F7',
+            }}
         />
     )
 }
@@ -176,14 +179,14 @@ const HeaderButton = ({ icon }) => {
         headerButton: {
             borderRadius: 500,
             padding: 8,
-            color: `#ffffff`,
-            backgroundColor: pressed ? 'rgba(0,0,0,0.33)' : 'rgba(0,0,0,0.20)',
+            color: `#EBEBF530`,
+            backgroundColor: pressed ? '#76768015' : '#76768024',
         }
     })
 
     return (
         <Pressable style={({ pressed }) => styles(pressed).headerButton}>
-            <Ionicons name={icon} color={'#ffffff'} size={16} />
+            <Ionicons name={icon} color={'#30B0C7'} size={16} />
         </Pressable>
     )
 }
@@ -193,27 +196,29 @@ const HeaderRight = () => {
         <View style={{ flexDirection: 'row', gap: 8 }}>
             <HeaderButton icon='pencil' />
             <HeaderButton icon='filter' />
-            <HeaderButton icon='swap-vertical' />
+            {/* <HeaderButton icon='swap-vertical' /> */}
         </View>
     )
 }
 
 
 
-export default Collections = () => {
+export default Collection = () => {
     const insets = useSafeAreaInsets();
     const navigation = useNavigation();
 
     useLayoutEffect(() => {
         navigation.setOptions({
             headerLargeTitle: true,
-            headerSearchOptions: {
-                onChangeText: (event) => console.log(event),
-                placeholder: 'Search',
-                hideWhenScrolling: false,
-                autoCapitalize: 'none'
-                // shouldShowHintSearchIcon: true,
-            },
+            headerTransparent: true,
+            headerBlurEffect: 'light',
+            // headerSearchOptions: {
+            //     onChangeText: (event) => console.log(event),
+            //     placeholder: 'Search',
+            //     hideWhenScrolling: false,
+            //     autoCapitalize: 'none'
+            //     // shouldShowHintSearchIcon: true,
+            // },
         })
     }, [navigation])
 
@@ -222,14 +227,19 @@ export default Collections = () => {
             screenOptions={{
                 headerRight: () => (
                     <HeaderRight />
-                )
+                ),
+                headerLargeTitle: true,
+                headerTransparent: true,
+                headerBlurEffect: 'regular',
             }}
         >
             <CollectionsStack.Screen
                 name='Mae Hong Son Loop'
                 component={ListView}
                 options={{
-                    headerLargeTitle: true
+                    // headerLargeTitle: true,
+                    // headerTransparent: true,
+                    // headerBlurEffect: 'light',
                 }}
             />
         </CollectionsStack.Navigator>

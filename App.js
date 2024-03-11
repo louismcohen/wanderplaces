@@ -72,6 +72,7 @@ export default App = () => {
             name='Map' 
             component={PlacesMap} 
             options={{
+              headerShown: false,
               tabBarIcon: ({color, size}) => (
                 <FontAwesome6 name='map-location-dot' color={color} size={size} />
               )
