@@ -93,7 +93,13 @@ const ItemInfo = ({ info }) => {
     }
 
     if (closesAt || opensAt) {
-        itemInfoString += `${separator}${(opensAt || closesAt)}`;
+        itemInfoString += `${separator}`;
+
+        if (currentlyOpen && closesAt) {
+            itemInfoString += `Open until ${closesAt}`;
+        } else if (!currentlyOpen && opensAt) {
+            itemInfoString += `Closed. Opens at ${opensAt}`;
+        }
     }
 
     if (rating) {
@@ -246,5 +252,5 @@ const styles = StyleSheet.create({
     placeTextContainer: {
         flexDirection: 'column',
         gap: 8,
-    }
+    },
 })
