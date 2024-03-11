@@ -61,7 +61,7 @@ export default Collections = ({ navigation, route }) => {
             />
             <CollectionsStack.Screen
                 name='Mae Hong Son Loop'
-                component={Collection}
+                component={CollectionItem}
             />
         </CollectionsStack.Navigator>
 
