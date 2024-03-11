@@ -148,7 +148,7 @@ const filteredResults = (query) => {
             || place.primaryCategory.toLowerCase().includes(queryLowerCase)
             || place?.note.toLowerCase().includes(queryLowerCase)
         )   
-        
+
     return filtered;
 }
 
@@ -235,8 +235,8 @@ export default CollectionItem = ({ navigation, route }) => {
 
     useLayoutEffect(() => {
         navigation.setOptions({
-            // headerTitle: `${emoji} ${title}`,
-            // headerBackTitleVisible: false,
+            headerTitle: `${emoji} ${title}`,
+            headerBackTitleVisible: false,
             headerShadowVisible: true,
             headerLargeTitle: true,
             headerTransparent: true,
