@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState} from 'react';
 import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -180,7 +180,8 @@ const HeaderButton = ({ icon }) => {
             borderRadius: 500,
             padding: 8,
             color: `#EBEBF530`,
-            backgroundColor: pressed ? '#76768015' : '#76768024',
+            opacity: pressed ? 0.5 : 1.0,
+            backgroundColor: '#76768024',
         }
     })
 
@@ -204,25 +205,23 @@ const HeaderRight = () => {
 
 
 export default CollectionItem = ({ navigation, route }) => {
-    console.log({navigation, route})
-    const insets = useSafeAreaInsets();
+    // const insets = useSafeAreaInsets();
     // const navigation = useNavigation();
+    const [search, setSearch] = useState('');
 
     useLayoutEffect(() => {
         navigation.setOptions({
             headerLargeTitle: true,
             headerTransparent: true,
-            headerBlurEffect: 'light',
+            headerBlurEffect: 'regular',
             headerRight: () => (
                 <HeaderRight />
             ),
-            // headerSearchOptions: {
-            //     onChangeText: (event) => console.log(event),
-            //     placeholder: 'Search',
-            //     hideWhenScrolling: false,
-            //     autoCapitalize: 'none'
-            //     // shouldShowHintSearchIcon: true,
-            // },
+            headerSearchBarOptions: {
+                placeholder: 'Name, Category, Note, and More',
+                onChangeText: (event) => setSearch(event.nativeEvent.text),
+                onCancelButtonPress: (event) => setSearch(''),
+            },
         })
     }, [navigation])
 

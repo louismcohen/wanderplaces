@@ -53,6 +53,12 @@ export default Collections = ({ navigation, route }) => {
                 headerLargeTitle: true,
                 headerTransparent: true,
                 headerBlurEffect: 'regular',
+                headerSearchBarOptions: {
+                    placeholder: 'Search Collections',
+                    hideWhenScrolling: false,
+                    autoCapitalize: 'none',
+                    shouldShowHintSearchIcon: true,
+                }
             }}
         >
             <CollectionsStack.Screen

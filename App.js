@@ -2,7 +2,6 @@ import React, { useCallback, useMemo, useRef } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import PlacesMap from './PlacesMap';
-import Collection from './CollectionItem';
 import Collections from './Collections';
 
 import { NavigationContainer } from '@react-navigation/native';
