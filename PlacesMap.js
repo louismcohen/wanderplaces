@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react'
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
-import { StyleSheet, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions } from 'react-native';
+import { StyleSheet, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions, KeyboardAvoidingView, Platform } from 'react-native';
 import { View, TextField, Button } from 'react-native-ui-lib';
 import Animated, { useSharedValue, useDerivedValue } from 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -198,6 +198,8 @@ export default PlacesMap = () => {
 
   const [markerSelected, setMarkerSelected] = useState(null);
 
+  const textFieldRef = useRef(null);
+
   const onLayoutRootView = useCallback(async () => {
     if (appIsReady) {
       // This tells the splash screen to hide immediately! If we call this after
@@ -214,12 +216,17 @@ export default PlacesMap = () => {
   }
   else {
     return (
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={{ flex: 1 }}
+      >
       <GestureHandlerRootView styles={styles.container} onLayout={onLayoutRootView}>
         <MapView
           ref={mapViewRef}
           provider={ PROVIDER_GOOGLE }
           style={ styles.map }
           initialRegion={initialRegion}
+          // onRegionChange={() => console.log(mapViewRef.current)}
           onRegionChangeComplete={handleMapRegionChangeComplete}
           showsUserLocation
           onMarkerPress={
@@ -230,6 +237,7 @@ export default PlacesMap = () => {
             (e) => {
               bottomSheetRef.current.close()
               setMarkerSelected(null);
+              textFieldRef.current.blur();
             }
           }
           >
@@ -249,8 +257,9 @@ export default PlacesMap = () => {
         {/* <Line style={styles.line} /> */}
           <Animated.View style={{top: bottomSheetPosition}} />
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-              <View style={{...styles.textFieldView, buttom: bottomSheetPosition}}>
+              <View style={{...styles.textFieldView}}>
                 <TextField
+                  ref={textFieldRef}
                   text65R
                   containerStyle={styles.textFieldContainer}
                   fieldStyle={styles.textField}
@@ -274,6 +283,7 @@ export default PlacesMap = () => {
                 />
               </View>
             </TouchableWithoutFeedback>
+            
             <BottomSheet
               ref={bottomSheetRef}
               animatedPosition={bottomSheetPosition}
@@ -311,6 +321,7 @@ export default PlacesMap = () => {
             </BottomSheet>        
   
       </GestureHandlerRootView>
+      </KeyboardAvoidingView>
     )
   }
   
