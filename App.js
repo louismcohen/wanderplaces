@@ -3,6 +3,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import PlacesMap from './PlacesMap';
 import Collections from './Collections';
+import Library from './src/screens/Library';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -42,7 +43,7 @@ export default App = () => {
       <NavigationContainer>
         <Tab.Navigator 
           // tabBar={(props) => <CustomTabBar {...props} />}
-          initialRouteName='Map'
+          initialRouteName='Library'
           screenOptions={{
             headerShown: false,
             tabBarStyle: {
@@ -59,8 +60,8 @@ export default App = () => {
           }}
         >
           <Tab.Screen 
-            name='Collections' 
-            component={Collections} 
+            name='Library' 
+            component={Library} 
             options={{
               tabBarIcon: ({color, size}) => (
                 // <FontAwesome name='th-list' color={color} size={size} />

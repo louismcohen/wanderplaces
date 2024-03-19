@@ -6,8 +6,14 @@ import { getHeaderTitle } from '@react-navigation/elements';
 import { View, Text, SortableList, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { moderateScale } from 'react-native-size-matters';
+import PlaceDetail from './src/screens/PlaceDetail';
+
+import { getFilteredPlaces } from './src/utils/utils';
 
 import { FontAwesome6, MaterialIcons, Ionicons } from '@expo/vector-icons';
+
+import { HeaderButton, headerRightStyles } from './src/components/HeaderRight';
+import { ListItem, PlaceDetails, PlaceItem } from './src/components/ListItems';
 
 // console.log('in Collections');
 
@@ -113,9 +119,9 @@ const ItemInfo = ({ info }) => {
     )
 }
 
-const Item = ({info}) => {
+const Item = ({ info, navigation }) => {
     return (
-    <TouchableOpacity flex style={{flexDirection: 'row', backgroundColor: '#ffffff'}}>
+    <TouchableOpacity flex style={{flexDirection: 'row', backgroundColor: '#ffffff'}} onPress={() => navigation.navigate('PlaceDetail', info)}>
         <View style={{
             padding: moderateScale(16),
             flex: '1 1 auto',
@@ -152,13 +158,13 @@ const filteredResults = (query) => {
     return filtered;
 }
 
-const ListView = ({data}) => {
+const ListView = ({ data, navigation }) => {
     return (
         <FlatList
             contentContainerStyle={{ gap: 1 }}
             contentInsetAdjustmentBehavior='automatic'
             data={data}
-            renderItem={({item}) => <Item info={item} />}
+            renderItem={({item}) => <PlaceItem info={item} navigation={navigation} navigateTo={'PlaceDetail'} />}
             keyExtractor={item => item.id}
             style={{
                 // backgroundColor: '#F2F2F7',
@@ -185,33 +191,44 @@ const customHeader = ({ navigation, route, options, back }) => {
     )
 }
 
-const HeaderButton = ({ icon }) => {
-    const styles = (pressed) => StyleSheet.create({
-        headerButton: {
-            borderRadius: 500,
-            padding: 8,
-            color: `#EBEBF530`,
-            opacity: pressed ? 0.5 : 1.0,
-            backgroundColor: '#76768024',
-        }
-    })
+// const HeaderButton = ({ icon }) => {
+//     const styles = (pressed) => StyleSheet.create({
+//         headerButton: {
+//             borderRadius: 500,
+//             padding: 8,
+//             color: `#EBEBF530`,
+//             opacity: pressed ? 0.5 : 1.0,
+//             backgroundColor: '#76768024',
+//         }
+//     })
 
-    return (
-        <Pressable style={({ pressed }) => styles(pressed).headerButton}>
-            <Ionicons name={icon} color={'#007AFF'} size={16} />
-        </Pressable>
-    )
-}
+//     return (
+//         <Pressable style={({ pressed }) => styles(pressed).headerButton}>
+//             <Ionicons name={icon} color={'#007AFF'} size={16} />
+//         </Pressable>
+//     )
+// }
 
 const HeaderRight = () => {
     return (
-        <View style={{ flexDirection: 'row', gap: 8 }}>
-            <HeaderButton icon='pencil' />
-            <HeaderButton icon='filter' />
-            {/* <HeaderButton icon='swap-vertical' /> */}
+        <View style={headerRightStyles.container}>
+            <HeaderButton name='pencil' />
+            <HeaderButton name='filter' />
+            {/* <HeaderButton name='swap-vertical' /> */}
         </View>
     )
 }
+
+const headerRightButtons = [
+    {
+        name: 'pencil',
+        onPress: () => console.log('pencil pressed'),
+    },
+    {
+        name: 'filter',
+        onPress: () => console.log('filter pressed'),
+    }
+]
 
 
 
@@ -226,7 +243,7 @@ export default CollectionItem = ({ navigation, route }) => {
 
     const [search, setSearch] = useState('');
     useEffect(() => {
-        const filtered = filteredResults(search);
+        const filtered = getFilteredPlaces(places, search);
         setData(filtered);
 
     }, [search])
@@ -247,39 +264,18 @@ export default CollectionItem = ({ navigation, route }) => {
             headerStyle: {
                 backgroundColor: `${'#E88484'}${10}`
             },
-            headerRight: () => (
-                <HeaderRight />
-            ),
+            headerRight: () => <HeaderRight />,
             headerSearchBarOptions: {
                 placeholder: 'Name, Category, Note, and More',
                 onChangeText: (event) => setSearch(event.nativeEvent.text),
                 onCancelButtonPress: (event) => setSearch(''),
+                autoCapitalize: 'none',
             },
         })
     }, [navigation])
 
     return (
-        <ListView data={data} />
-        // <CollectionsStack.Navigator
-        //     screenOptions={{
-        //         headerRight: () => (
-        //             <HeaderRight />
-        //         ),
-        //         headerLargeTitle: true,
-        //         headerTransparent: true,
-        //         headerBlurEffect: 'regular',
-        //     }}
-        // >
-        //     <CollectionsStack.Screen
-        //         name='Mae Hong Son Loop'
-        //         component={ListView}
-        //         options={{
-        //             // headerLargeTitle: true,
-        //             // headerTransparent: true,
-        //             // headerBlurEffect: 'light',
-        //         }}
-        //     />
-        // </CollectionsStack.Navigator>
+        <ListView data={data} navigation={navigation} />
     )
 }
 
