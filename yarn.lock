@@ -3505,10 +3505,10 @@ expo-constants@~15.4.0:
   dependencies:
     "@expo/config" "~8.5.0"
 
-expo-file-system@~16.0.0, expo-file-system@~16.0.6:
-  version "16.0.6"
-  resolved "https://registry.npmjs.org/expo-file-system/-/expo-file-system-16.0.6.tgz"
-  integrity sha512-ATCHL7nEg2WwKeamW/SDTR9jBEqM5wncFq594ftKS5QFmhKIrX48d9jyPFGnNq+6h8AGPg4QKh2KCA4OY49L4g==
+expo-file-system@~16.0.0, expo-file-system@~16.0.6, expo-file-system@~16.0.8:
+  version "16.0.8"
+  resolved "https://registry.npmjs.org/expo-file-system/-/expo-file-system-16.0.8.tgz"
+  integrity sha512-yDbVT0TUKd7ewQjaY5THum2VRFx2n/biskGhkUmLh3ai21xjIVtaeIzHXyv9ir537eVgt4ReqDNWi7jcXjdUcA==
 
 expo-font@~11.10.3:
   version "11.10.3"

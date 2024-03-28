@@ -1,4 +1,5 @@
-import React, { useCallback, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { ApiProvider } from './src/api/ApiContext';
 import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
@@ -9,10 +10,6 @@ import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom
 import { BlurView } from 'expo-blur';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
-import jsonFiles from './data/Data';
-
-console.log({jsonFiles});
 
 const Tab = createBottomTabNavigator();
 
@@ -37,15 +34,20 @@ const TableView = () => {
 }
 
 export default App = () => {
+    // const [data, setData] = useState([]);
+
+
   return (
-    <SafeAreaProvider>
-      <StatusBar
-        animated={true}
-      />
-      <NavigationContainer>
-        <TabNavigator />
-      </NavigationContainer>
-    </SafeAreaProvider>
+    <ApiProvider>
+      <SafeAreaProvider>
+        <StatusBar
+          animated={true}
+        />
+        <NavigationContainer>
+          <TabNavigator />
+        </NavigationContainer>
+      </SafeAreaProvider>
+    </ApiProvider>
   )
 };
 
