@@ -1,0 +1,1648 @@
+[
+    {
+        "title": "Windsor at Dogpatch",
+        "note": "",
+        "url": "https://www.google.com/maps/place/Windsor+at+Dogpatch/data=!4m2!3m1!1s0x808f7fba5ceb52ef:0x28dfa93c1fe36937",
+        "comment": "",
+        "lat": 37.7559386,
+        "lng": -122.38839969999998,
+        "google": {
+            "place_id": "ChIJ71LrXLp_j4ARN2njHzyp3yg",
+            "display_name": "Windsor at Dogpatch Apartments",
+            "types": "Real Estate Agency,Point Of Interest,Establishment",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": 4.4,
+            "user_rating_count": 89,
+            "opening_hours": [
+                {
+                    "open": {
+                        "day": 1,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 1,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 2,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 2,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 3,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 3,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 4,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 4,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 5,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 5,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 6,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 6,
+                        "hour": 17,
+                        "minute": 0
+                    }
+                }
+            ],
+            "short_formatted_address": "2660 3rd St, San Francisco",
+            "photos": [
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJbk-8bjYp8TcTNoEobCevA1WS4fz_Ir3nKMS4ZuhtJrGiHYMecHaKhE4tZtnwygL1gyqI79AGp-tEk8WqqCbKo-BRMARCHxoPTJGIZJ8J8Kb-VcujccWfS5YymRBEZIAt77IdbxCN1U9EcK0B4_Lv6gSloGIwHj7mM",
+                    "widthPx": 1920,
+                    "heightPx": 1280,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJaAslt6bCF_yqYsfUZkzkT2XRUyQW1djoQBev5PaEBIycxlaYXWNhopAaJLqzQ6MwZQEyHEnfmfNwnNezyYrxx-k52OeHHz4oGf-nIwxTZfdIHaMyMpOr8K0g9ghPtTUoD6I8gIcRpchlZyvaE0Uc-G2xCAEcoXhPs",
+                    "widthPx": 3872,
+                    "heightPx": 2581,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJapkGYRPDCSLWixo7h2CW2M42cBQ7ReYqcBjtAL22uK4vhdKkP-D5SfY7Jz5gaUdbPs1dYAx6DGCYD4OeNuBKiCGiI2So5ttqbnPBSEgLoMSz4vzsBpsMrsgtgsJ1ZaqX2u9CYEDRoSkOuNqRef4TU4CGbT38hOiU0",
+                    "widthPx": 1920,
+                    "heightPx": 1280,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJbYbEHmVk5nUFep_qySvqb494IYRx8pUMCERxrtK_3yMzlqa4YbxLrhit0HHv6kgIGdctKd74ajm9dSb0niTzLVADcj6oOFZE6-czPjmezkCmk454kE2_e38H0ekFI4jdRfziYWRLKTH4FcIYEP3D0ozEUeZVAF2Xk",
+                    "widthPx": 4417,
+                    "heightPx": 2944,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJaS4f6rLzT3Ph23q3Klp3jr_YNGyx6_34K0-24GseKdLhalR2HYQrbo4UcM9BlAVTwsLEPF0h2LJmZMBFb5A6NFmnbSTf302eUaHPOwh0XZXlwErhfiqWvuk2O2ichoiDwxABpMl1VGWhJgQeeUfxp0Q-FU6DPmxSc",
+                    "widthPx": 2000,
+                    "heightPx": 1302,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJbpxXVi4RmsNExSfUcBYLxzJXI70drEwEDS_TOgeMzx_e56OB4rak58TRAT2g13YgPZyQ3KG01LTmku5yD-sosGEfjZBE_pkZA6pBojh59V6OOE8CMjpeBQ0nTpI2JAoiYUeKdAcxWCbkCmSjzorkUHSuyUELAYRbE",
+                    "widthPx": 1536,
+                    "heightPx": 1024,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJZ0bzHEZQNkmbWXEwp872jLsLffCJfQ25ON6v2D_dHiLeB7lsX30qnwaiMS24brFCH8ofE7uOP5XFiXAGYGId90PdQZl90KLIx_LdTrZqm_lumYGjV57kBZv9WLlfyHZz8oMqffehQ5gMY6XycpLAzixHEZSlrX07A",
+                    "widthPx": 4609,
+                    "heightPx": 3047,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJbRBR-m4lr6JFJd-1QVH_ZBZo2tgKDWRTxxrLHz9dr1ZEVT_vddG638WH267xG-lVBeR5em1TpxTAUMIMjiDrwHDX6oKialgwRfKS68WRsLVuABW6ALFpG8ZddIRtc0FGKj-Pew3Pub6bfszW6COUwVXN_C_mlJsT8",
+                    "widthPx": 1499,
+                    "heightPx": 1000,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJYmkSVaRvoJc9gcYEndkCZLB5aR3tFnUQA7W6CykGkIFSQ5XPmcO6PynIRA7-RvmwE6cy9aJ4wtCWIReP7lbShCeZ6tLwhY3op8DXPMnmRjWSaKHWfUcUwUxqWWBkazEBt0ntG7sGCzWMWgi_Qr0oazrFt5sgp0l3Y",
+                    "widthPx": 3871,
+                    "heightPx": 2583,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJ71LrXLp_j4ARN2njHzyp3yg/photos/ATplDJZy3641auG-f4vQwByQCMLPCgXbH34QXRwTHvskxFoFlfu0guxnEl8-mLvEAthZM_nW0d_-UJSY405HJmKw-SppbMxCprQfwchD-gewPEV4A6tOpgg8s7jBlEsok1H3kkPirWWL6vzSfmufhahh4n3yhpKma9ayDUo",
+                    "widthPx": 1920,
+                    "heightPx": 1280,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Windsor at Dogpatch Apartments",
+                            "uri": "//maps.google.com/maps/contrib/103375107729051954387",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjW1CvifipNcBFmG8zgvFBVHSWUrTN0ifBjrh6qDxbrHBw=s100-p-k-no-mo"
+                        }
+                    ]
+                }
+            ],
+            "title": "Windsor at Dogpatch",
+            "note": "",
+            "url": "https://www.google.com/maps/place/Windsor+at+Dogpatch/data=!4m2!3m1!1s0x808f7fba5ceb52ef:0x28dfa93c1fe36937",
+            "comment": ""
+        }
+    },
+    {
+        "title": "370 7th St",
+        "note": "",
+        "url": "https://www.google.com/maps/place/370+7th+St/data=!4m2!3m1!1s0x808f7e2a01ae4b1b:0x68146be54e8dff09",
+        "comment": "",
+        "lat": 34.045727899999996,
+        "lng": -118.25449849999998,
+        "google": {
+            "place_id": "EiYzNzAgN3RoIFN0LCBMb3MgQW5nZWxlcywgQ0EgOTAwMTQsIFVTQSIxEi8KFAoSCf1_62m1x8KAEe9FikZSTa4BEPICKhQKEglvV0ejfsfCgBEV2y-fltw7Ew",
+            "display_name": "370 7th St",
+            "types": "Street Address",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": null,
+            "user_rating_count": null,
+            "opening_hours": [],
+            "short_formatted_address": "370 7th St, Los Angeles",
+            "photos": "",
+            "title": "370 7th St",
+            "note": "",
+            "url": "https://www.google.com/maps/place/370+7th+St/data=!4m2!3m1!1s0x808f7e2a01ae4b1b:0x68146be54e8dff09",
+            "comment": ""
+        }
+    },
+    {
+        "title": "One Henry Adams Apartments",
+        "note": "",
+        "url": "https://www.google.com/maps/place/One+Henry+Adams+Apartments/data=!4m2!3m1!1s0x808f7e2d1c7cbd8d:0x79af7806eac65471",
+        "comment": "",
+        "lat": 37.769118999999996,
+        "lng": -122.40341760000001,
+        "google": {
+            "place_id": "ChIJjb18HC1-j4ARcVTG6gZ4r3k",
+            "display_name": "One Henry Adams Apartments",
+            "types": "Point Of Interest,Establishment",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": 4.4,
+            "user_rating_count": 59,
+            "opening_hours": [
+                {
+                    "open": {
+                        "day": 2,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 2,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 3,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 3,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 4,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 4,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 5,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 5,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 6,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 6,
+                        "hour": 17,
+                        "minute": 0
+                    }
+                }
+            ],
+            "short_formatted_address": "1 Henry Adams St, San Francisco",
+            "photos": [
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJZKqn1PCtLiZeDUDR-OiWUp3vC0EqqtXhDqbsrkoLe7aTdCfqXLeQaRd9jSO7pcyNi-G_BKcy5N1MSCPM4D5fu8l97xQ_fb1MvjXFWR12ZH9OB5N4XvoJjtr9j2Rq-MsiCryjbiuGXjdq9-InT0z0xHp23CstU2_BcK",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "One Henry Adams Apartments",
+                            "uri": "//maps.google.com/maps/contrib/116084126668042449306",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWDrLWoyJwblzG2agclvYDjXZr5wK5zbpnua0Glb5DJexE=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJY8RVXodBxCWde9CvWIVO8RPR87v5KB5kBIL9bRUo2IjgRsPPOqFkXpw6EFhAcea09OWQ5qmtcGQmh5RelXDvNuG-2ZdEMupohst5t8W6O1O9T9ArwJ94BmHhkkKTRBRQl8ccZUyAdycqagQu_7JtCAioP48KVkrxVq",
+                    "widthPx": 1240,
+                    "heightPx": 698,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Serendipity Travels",
+                            "uri": "//maps.google.com/maps/contrib/116111868658521143222",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUoAENt1IAjmvq5rj4vX64cb1QQgB3ucuDizLDBWUX-VpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJbRYQoR-uPwisxLBkwbAzu2ZGTPMkCRKVFFMhR4WV9MWBa0R204A3v96TyTwlOrL5HI1uEJIzsIHTI4bPoQsaA_XD5ppfZ5iikODNsR9feGw6mIciJXIC313-FC0UYiB1uqgjJLDYpOBGzItZRHvkDgrWC7kFHCuLV9",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "One Henry Adams Apartments",
+                            "uri": "//maps.google.com/maps/contrib/116084126668042449306",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWDrLWoyJwblzG2agclvYDjXZr5wK5zbpnua0Glb5DJexE=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJbG8XGd2gHiV0Eu2wpgvg8t7ebji-HL4-fq6mMqpQh5Lra51dT9T-lk4tVeETFVmTlx12ZUsgmzT1ViaSsETcH7_Rxw__8kGkEsb6YItFF54Hb-sAWB32si9qDxzKZT7pv-_JtVj-WmMTLlH7pC1dqSWH0ceR6QRqAk",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "One Henry Adams Apartments",
+                            "uri": "//maps.google.com/maps/contrib/116084126668042449306",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWDrLWoyJwblzG2agclvYDjXZr5wK5zbpnua0Glb5DJexE=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJaCdOgSS6Cv6itHgAmNE0z1DYXOIYy4Yb2QTTXmbpDU4GVsUO8Ukl5-aJMkZ209cNZquUCpMKlJWEACuBqllrStMb8WwlCwNcWmsKF3DohRCQKsnMEU04vL73vtLNr7cHQE92o8xMy-vtPMluRDWNlnJqj-yMSaVucI",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "One Henry Adams Apartments",
+                            "uri": "//maps.google.com/maps/contrib/116084126668042449306",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWDrLWoyJwblzG2agclvYDjXZr5wK5zbpnua0Glb5DJexE=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJa2YqKEZt7FToRk6jnBqEcaFDuMRRpC2VIj1hTsmNMMQcyGoVqp_qTUfeeNis_2W_x_fo-GCPpFECAovJohUtUB9XRDcekVhXaJlX2BV5hap1KWes15sLtFYchpFK-g1DjmbBaHE_218tYy58WLJ1m0X9_Dei9-ApPl",
+                    "widthPx": 1240,
+                    "heightPx": 698,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Serendipity Travels",
+                            "uri": "//maps.google.com/maps/contrib/116111868658521143222",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUoAENt1IAjmvq5rj4vX64cb1QQgB3ucuDizLDBWUX-VpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJaLG8mGdBJwUWOXXCcgb-ht1uXCvFE-G46JwVJH58DUuAsaNw40Rcd2f40qjXVl8xuSE-ncFTGVR23RId5VexqFd6ay-Fa3mO2oCyeoP5KBiMGtmN9HrVmX_1ongeVMamyhhIwyPRaE0sMGRWy_xIgNqvwpxQGF0K8y",
+                    "widthPx": 1240,
+                    "heightPx": 698,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Serendipity Travels",
+                            "uri": "//maps.google.com/maps/contrib/116111868658521143222",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUoAENt1IAjmvq5rj4vX64cb1QQgB3ucuDizLDBWUX-VpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJa5ueolu7MD1Ye4xpBp2WLR75VehlNPeOOmo2ez_V-87hUqFT8qnKuzfBTzTQAc8riLPsixuHmIQiwI98vb59DDg6vTy3sBTD3opth6Uh6vi4CrSyecbOmdbcz-KIof14Dg6NGsz3GHZce6Yk7uxsHgU74Wx5S9DDbI",
+                    "widthPx": 1240,
+                    "heightPx": 698,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Serendipity Travels",
+                            "uri": "//maps.google.com/maps/contrib/116111868658521143222",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUoAENt1IAjmvq5rj4vX64cb1QQgB3ucuDizLDBWUX-VpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJayIoGzgfMNPtWh5NcAcHkzWnYi1C2cVT60kJ2aW0wnGvJy9VojAxS7ualzLy2a0-uYqePL2N9bJ73OAfjPzt05YT7gcmvy3wzcxM_DjYXkmaJKWN7eCWQ45rdexW-cjep83SOi3ksKG1CUJIfyPWLK5iFQ9o4w3_O6",
+                    "widthPx": 1240,
+                    "heightPx": 698,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Serendipity Travels",
+                            "uri": "//maps.google.com/maps/contrib/116111868658521143222",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUoAENt1IAjmvq5rj4vX64cb1QQgB3ucuDizLDBWUX-VpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJjb18HC1-j4ARcVTG6gZ4r3k/photos/ATplDJYuz6CmGMzeof-Ms9cue7xO3ZBi9EhpTqKmTqqrBVL-RzNXghUy7dWsJiHAdKTrTtXm2ukxHKXxXmrrRzdPscvbg3Uqy4_D984JRPy38Vj9OTOLaQFHzqVSXBMdZoXg4sv7R1g3-i3f5vhzYL19y2uu0YoNZPn9JRiI",
+                    "widthPx": 2048,
+                    "heightPx": 1536,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Alex Covid19",
+                            "uri": "//maps.google.com/maps/contrib/103807838924166562343",
+                            "photoUri": "//lh3.googleusercontent.com/a/ACg8ocK0MpQiv3SEfLLKhdL6SPecjldkOXjNTnWiEhXwzAH7=s100-p-k-no-mo"
+                        }
+                    ]
+                }
+            ],
+            "title": "One Henry Adams Apartments",
+            "note": "",
+            "url": "https://www.google.com/maps/place/One+Henry+Adams+Apartments/data=!4m2!3m1!1s0x808f7e2d1c7cbd8d:0x79af7806eac65471",
+            "comment": ""
+        }
+    },
+    {
+        "title": "49 Zoe St",
+        "note": "",
+        "url": "https://www.google.com/maps/place/49+Zoe+St/data=!4m2!3m1!1s0x8085807f4c38f81d:0xe2aeef3a79d5bd46",
+        "comment": "",
+        "lat": 37.780060999999996,
+        "lng": -122.39606459999999,
+        "google": {
+            "place_id": "ChIJHfg4TH-AhYARRr3VeTrvruI",
+            "display_name": "49 Zoe St",
+            "types": "Premise",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": null,
+            "user_rating_count": null,
+            "opening_hours": [],
+            "short_formatted_address": "49 Zoe St, San Francisco",
+            "photos": "",
+            "title": "49 Zoe St",
+            "note": "",
+            "url": "https://www.google.com/maps/place/49+Zoe+St/data=!4m2!3m1!1s0x8085807f4c38f81d:0xe2aeef3a79d5bd46",
+            "comment": ""
+        }
+    },
+    {
+        "title": "SoMa Square Apartments",
+        "note": "",
+        "url": "https://www.google.com/maps/place/SoMa+Square+Apartments/data=!4m2!3m1!1s0x8085807e9c91004b:0x37a1a61accd4be1f",
+        "comment": "",
+        "lat": 37.7836046,
+        "lng": -122.3976651,
+        "google": {
+            "place_id": "ChIJSwCRnH6AhYARH77UzBqmoTc",
+            "display_name": "SoMa Square Apartments",
+            "types": "Point Of Interest,Establishment",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": 3.8,
+            "user_rating_count": 154,
+            "opening_hours": [
+                {
+                    "open": {
+                        "day": 2,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 2,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 3,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 3,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 4,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 4,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 5,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 5,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 6,
+                        "hour": 9,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 6,
+                        "hour": 17,
+                        "minute": 0
+                    }
+                }
+            ],
+            "short_formatted_address": "1 St Francis Pl, San Francisco",
+            "photos": [
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJZbYQtlyF3akA4EJJa0ugHaBMhvvyNvReOn63xpTpIvbltsXETciVO6oWaGTYnnUcC45xOhChmO-f2I1ukk1XMItYnVJsvMSQUURaK_eSKE5Xm-IgZUeQbnsRwRl8ENo4TuyyZZpC_b5oX380GCcXt518PnEU2Znjx7",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "SoMa Square Apartments",
+                            "uri": "//maps.google.com/maps/contrib/108951491265189120454",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUCeupRvQZk1wB5FqUFoWRWQnE1LuVkfTAm8wWLowheTw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJYA8BdOGCFyjJ6eUmutr1OdD40VgqtnLK7lfj4ICQz-gpvK00-h7uwMSI406q27aVmQnl6CKPrwZ-s018OshFp-4BELjsBbnNAfHt58FBP0mm6uVG6op2cBTg3FVOP5GN09SUQKX_JW3W_omH1hkDP16YyVumH2gffh",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "SoMa Square Apartments",
+                            "uri": "//maps.google.com/maps/contrib/108951491265189120454",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUCeupRvQZk1wB5FqUFoWRWQnE1LuVkfTAm8wWLowheTw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJYlm6PzdNBEU3G2cxUKpIAJS-mKNHI8YTeUPKxpXhVGlXTaWma8J_Jt9QF8nLW3HeviKsgznVo27U0ME8PlDkmFiMOp9e-wtzywtE6P668Mwb4lTd81P9bvxnhNYkzUO9oUCRiCOblxyuBgU7nGrul30EsaROVunrNJ",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "SoMa Square Apartments",
+                            "uri": "//maps.google.com/maps/contrib/108951491265189120454",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUCeupRvQZk1wB5FqUFoWRWQnE1LuVkfTAm8wWLowheTw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJZ2hAh_oekkdgxIubjtyDvqwIMgG6-wM1LzZlAMUuimWJ3bYwiXl8sSS9Htsqa6TD5DalLU3-3nNTYIhZvsSwf272i5sOJzc45fDRLvAqvthjydQHg96Uz7brC3ilqIgAG-SNr24P0DKR7EXuPmQZph4HLa7PVn8Wgl",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "SoMa Square Apartments",
+                            "uri": "//maps.google.com/maps/contrib/108951491265189120454",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUCeupRvQZk1wB5FqUFoWRWQnE1LuVkfTAm8wWLowheTw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJahkjd6pGGUQf8EIbViIYfw9y852WgEeMj8sN2E0la1vTU1xJw0x5ZYSHYFKoHvjrthMwuWa3evPH3p2MmxB6VSTKoiE-L9mKuI-3Qp9fb57gIBKBQTe9DW-2Wu4GiVmrVHOPAY9hhZcwLOydE1CDUYCod89iENmezb",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "SoMa Square Apartments",
+                            "uri": "//maps.google.com/maps/contrib/108951491265189120454",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUCeupRvQZk1wB5FqUFoWRWQnE1LuVkfTAm8wWLowheTw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJblc7r1IQKgImb8gsiNxZesZTODwHZEnR6fsUFWA26vxx-kKKum9DVZEZ9wYk-wlD9hktsuJijPEaT6fgltuFLS4e17njd75_nMBpz5SDg8Ff9I5SaULbkHDNYKVNByqkzO6DemJ9vQx-cGy-zRdDK97VzQKeF0xdIj",
+                    "widthPx": 3024,
+                    "heightPx": 4032,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Aniket Pallav",
+                            "uri": "//maps.google.com/maps/contrib/114022768866841922908",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWsP0EB1iOu8PA6yyrWvxEAIJ0iqpQYPHqmcwuGdkNtLnmf=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJZPJF7uISFOswv-e1Jx1i6NwnCVMDnE2lB1iSUXC0CdH65Ac6bHVEedSyPkkJDWuP8gDMCl34rx8yaWnb2WizcF1SPY3LfBTbOPVR-UuZAaGMeLqqogSd9qk4FnsiHNaHzloKmqYQhqjjJIuNt3j2db7LF4njYI0Cpk",
+                    "widthPx": 3072,
+                    "heightPx": 4096,
+                    "authorAttributions": [
+                        {
+                            "displayName": "chi zhang",
+                            "uri": "//maps.google.com/maps/contrib/101227186954904662628",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjXlaPe0k5ieGGGddGqwCVxa6jnPfyMk47-u9KI5pSwSGac=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJaBiryXsfwC6f4pA7zJ_dVLI3QdLS0NPGbZrdUYGWNIIXNB2l46Oyy63qUmHZK2Aqzojh67NQQ4_CDTMgPvxAejlo1AcQ-vWFeywk6nNtq-YJCmST71BQYDfrHbDj36dF7yY9Q6TM4row1IpADTrNh0a0JcYYHBZkEN",
+                    "widthPx": 4032,
+                    "heightPx": 3024,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Zack",
+                            "uri": "//maps.google.com/maps/contrib/106493869980727095926",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWYFoPJV-ElsCNrjK7xGWnnWI2h5fsV745upSiaCGNf-eg=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJbjZ1emEF3dlKte0leAglCVvDrAh7oaFswWJLpqbfcQOtgk0f7Xp5jCeU3dR3Ml5Sp0P_TnWYEW7--moXN5NO_AqEwf7GgL4vrcr538gr9XxtGSxy0-0mBQuMfs_PMOdn_sB-x3-IAKCo6pJNxMcPl-jFYZlj1X9H3l",
+                    "widthPx": 3024,
+                    "heightPx": 4032,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Mark Bezemer",
+                            "uri": "//maps.google.com/maps/contrib/103344982261426882804",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWFTxWr8uFYexmm9nbuQSSYv7US4SkTe6x9e4lfG5-NQb7q=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJSwCRnH6AhYARH77UzBqmoTc/photos/ATplDJaQzUm6iQk9P8UDpju0ec81rCRv4s_uV9DlvTmWpMw-GuBlb53Yxgitbz10Bniq262v9A634lFDQtN3GpyZTFOFwvyftWakFv9sfsJoo00V_C7P75Br3ooFXOPSEty1FhwlvAuXYhi19A7agx7iB7kDwwLzeex_24eA",
+                    "widthPx": 2160,
+                    "heightPx": 3840,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Alvaro sequeira",
+                            "uri": "//maps.google.com/maps/contrib/103461861901443844094",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWkSG2mb0IE2vEHxM592lh1b6d2goT4A_e-H2YH91dXXJo=s100-p-k-no-mo"
+                        }
+                    ]
+                }
+            ],
+            "title": "SoMa Square Apartments",
+            "note": "",
+            "url": "https://www.google.com/maps/place/SoMa+Square+Apartments/data=!4m2!3m1!1s0x8085807e9c91004b:0x37a1a61accd4be1f",
+            "comment": ""
+        }
+    },
+    {
+        "title": "Strata at Mission Bay Apartments",
+        "note": "",
+        "url": "https://www.google.com/maps/place/Strata+at+Mission+Bay+Apartments/data=!4m2!3m1!1s0x808f7fd06bdff96f:0x58c408730be9c5b9",
+        "comment": "",
+        "lat": 37.772509299999996,
+        "lng": -122.3912148,
+        "google": {
+            "place_id": "ChIJb_nfa9B_j4ARucXpC3MIxFg",
+            "display_name": "Strata at Mission Bay Apartments",
+            "types": "Real Estate Agency,Point Of Interest,Establishment",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": 3.7,
+            "user_rating_count": 46,
+            "opening_hours": [
+                {
+                    "open": {
+                        "day": 0,
+                        "hour": 12,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 0,
+                        "hour": 17,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 1,
+                        "hour": 9,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 1,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 2,
+                        "hour": 9,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 2,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 3,
+                        "hour": 9,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 3,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 4,
+                        "hour": 9,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 4,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 5,
+                        "hour": 9,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 5,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 6,
+                        "hour": 9,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 6,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                }
+            ],
+            "short_formatted_address": "1201 4th St, San Francisco",
+            "photos": [
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJYTut7uBwHQrAYEd4HoDskxMumyYAh1BDK1HZeX9B5DmYsGKrqQ33D3NCNVZYVY5NXEbLIEa8Ios-u7Q_wrzUSThow9QaGAxZUk3UEBE28S9poLmpmShxr_uOPU_xXXC7b6bkbwZyhjYreBxqB-exq3-SnCFpjLPXTp",
+                    "widthPx": 720,
+                    "heightPx": 481,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJbYFcbF3Hgv2C5t61npYd9XFCgkULL13yE6OFe8aP7Bi-ZjGb82lAlgzZlHx-QPnvuhoNupU-5vO0To0bj8nsFEl0JmtRWken_qpsJTsWbFraaR6AKo0It3SNqgeJhKYQ0Yk1Oe-Os8CVwdm_AyYgdxcA7YAAo60nEe",
+                    "widthPx": 1732,
+                    "heightPx": 1154,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJbvBa9HeBJJ4czE-ibCe-_d7Vlrn2_NaQ1d3arY1B2DNuuXvWE_kAERJor8tVr-LrgGg8GprbwcCfPJL2vW2VS7wfJIWs3GZeegwE-xUS7qJoUiXcrDEhbOXKOa_aQwzhfGMZI4tOyf0HUklkiBjvufN0KryL3B_XSx",
+                    "widthPx": 1732,
+                    "heightPx": 1154,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJZATlQS9RBqK_0dAK48Ipx3VDzFQmgaylSKTxLYmsDDyldQ6b-1s4qQ-MqTzsEJePXoMYzsB_u4tCqx5fwyUBT7k8K-R4_whUTlV1eDbFdcSMOS7ST9W4vNYqPrxABhUtUYgmlWIT56D3W1u1Rs03lywJdZ9-XCzEwO",
+                    "widthPx": 1732,
+                    "heightPx": 1154,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJZOW3Hj__ssst4x3eRCfFpuk2ahfKSLJv0rQEZT5aCclRU2euh-RN9OT3-d0gKohKvd53Sp1dV7T3YnFh02aW5oyWc2SdwqlvNsuvK7I1stgIV8bAJ2F6ZGk8PSQLZjGLhkPOwbT8fF1CNBjm1ZpWUF2SLOh7elJ6ZE",
+                    "widthPx": 1732,
+                    "heightPx": 1154,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJZVbT4FFX98NP3-DpfCdEq0hippRYhOSgxLBYHBpjYvHShzrPowsJr0Y2T6INtomuoh0UwW4pHEf5VxVsrDR8jFhNZFxnErj57Ub4Czto94MwvNr0R-vsJk3-eEW9cTvHGuyXIG8lbKZ-2Lhz6UaUVrop95dd8qI4Ij",
+                    "widthPx": 1732,
+                    "heightPx": 1154,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJZBcP36JD7T9LUsn0QcMvFPi7bhhQFgCHMn48lshzapX8qctRj47jnL4DONx4zZ6dspBl6db6QqwW12nQPkbhqdVUr5JPRZY6_eU06AmfMpbsbrBvGRKbpMRXvX9p0KeIck0rUDga_vyFPETBNoyvhpYN-Ef1vuX5Ua",
+                    "widthPx": 720,
+                    "heightPx": 481,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJak8GVq_yYKIWkgGZOixaT-E_L8XpI1Kpe544i6nliEOm0hfBSLwOHxRnpy4sIiPLeokZXuxo4HIdDw8d-Eu_O9pXWufYkpLHxvkqrVH7rayeLkFDTlBLQ_BwhsZW_TAJsECRFaPql7zH_fP3JP5e_bKyy0vD4UXK06",
+                    "widthPx": 500,
+                    "heightPx": 367,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJa1wplGovI8jj21VNXeC6ZMuksX1nK4MH2Og_mG9ldcOUt7RMta8abnKI5M7_XZJ-e1RWXuKaQtDTKaQM7FY4G8vqTckCgHurXuGAc9ydCI44o5ESaKVIxJ4ydTGzCwGmQ-3PWaKFZclya_O5yhbP6TPY2SjYpuvrNa",
+                    "widthPx": 1732,
+                    "heightPx": 1154,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJb_nfa9B_j4ARucXpC3MIxFg/photos/ATplDJYyrSy29A51YGArx1pEEL7BDlSQVThwfd8ALoSnlBcs1npuMGT-_kEJiL4-2xhpCJlH74WbKq6u96Bo6kNJHabGRUy7GjwDR_f5UqnoUIqMLblksvtURzIrc1D8uQR6Q0Vz2uYptCGyx9vKflrbUtcvSawxVn43iD1j",
+                    "widthPx": 1732,
+                    "heightPx": 1154,
+                    "authorAttributions": [
+                        {
+                            "displayName": "STRATA at Mission BAY Apartments",
+                            "uri": "//maps.google.com/maps/contrib/104672253862647232054",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjUWuoXIAfcvGr27tDk3_iOwI8A4kh4IbQ01L7VnYlYL2A=s100-p-k-no-mo"
+                        }
+                    ]
+                }
+            ],
+            "title": "Strata at Mission Bay Apartments",
+            "note": "",
+            "url": "https://www.google.com/maps/place/Strata+at+Mission+Bay+Apartments/data=!4m2!3m1!1s0x808f7fd06bdff96f:0x58c408730be9c5b9",
+            "comment": ""
+        }
+    },
+    {
+        "title": "821 Folsom St",
+        "note": "",
+        "url": "https://www.google.com/maps/place/821+Folsom+St/data=!4m2!3m1!1s0x8085807e1e25dc69:0x45c7df5241434a05",
+        "comment": "",
+        "lat": 34.045034199999996,
+        "lng": -118.18374730000001,
+        "google": {
+            "place_id": "Eik4MjEgRm9sc29tIFN0LCBMb3MgQW5nZWxlcywgQ0EgOTAwNjMsIFVTQSIxEi8KFAoSCfmeYNv0xcKAEbieL36Zc1mbELUGKhQKEgnTFztO8cXCgBHtid4fm5pLJw",
+            "display_name": "821 Folsom St",
+            "types": "Street Address",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": null,
+            "user_rating_count": null,
+            "opening_hours": [],
+            "short_formatted_address": "821 Folsom St, Los Angeles",
+            "photos": "",
+            "title": "821 Folsom St",
+            "note": "",
+            "url": "https://www.google.com/maps/place/821+Folsom+St/data=!4m2!3m1!1s0x8085807e1e25dc69:0x45c7df5241434a05",
+            "comment": ""
+        }
+    },
+    {
+        "title": "870 Harrison St",
+        "note": "",
+        "url": "https://www.google.com/maps/place/870+Harrison+St/data=!4m2!3m1!1s0x8085807fd5e2f55f:0xa4cf8361619209bd",
+        "comment": "",
+        "lat": 33.8835623,
+        "lng": -118.1599717,
+        "google": {
+            "place_id": "ChIJ-UrDVdUy3YARB4IWtQveurQ",
+            "display_name": "Harrison Street",
+            "types": "Route",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": null,
+            "user_rating_count": null,
+            "opening_hours": [],
+            "short_formatted_address": "Paramount",
+            "photos": "",
+            "title": "870 Harrison St",
+            "note": "",
+            "url": "https://www.google.com/maps/place/870+Harrison+St/data=!4m2!3m1!1s0x8085807fd5e2f55f:0xa4cf8361619209bd",
+            "comment": ""
+        }
+    },
+    {
+        "title": "855 Brannan St",
+        "note": "",
+        "url": "https://www.google.com/maps/place/855+Brannan+St/data=!4m2!3m1!1s0x808f7e2b7d6381c7:0xec4be0e417c4ed48",
+        "comment": "",
+        "lat": 37.7719439,
+        "lng": -122.4043322,
+        "google": {
+            "place_id": "ChIJnRCsgSt-j4AROengygLbZT0",
+            "display_name": "855 Brannan Apartments",
+            "types": "Point Of Interest,Establishment",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": 4.1,
+            "user_rating_count": 225,
+            "opening_hours": [
+                {
+                    "open": {
+                        "day": 2,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 2,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 3,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 3,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 4,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 4,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 5,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 5,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 6,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 6,
+                        "hour": 17,
+                        "minute": 0
+                    }
+                }
+            ],
+            "short_formatted_address": "855 Brannan St, San Francisco",
+            "photos": [
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJb68BHWcBFomAIJYBgAMraoKCaOYsErSlJhVJB6w1wPR9G8jqVyNP3PYgG79V5ypBmFO6prlnvfK-MvvymzpQ86v07UFnNFA3Anh8EDjPg9w9hSdBg7NrB-i7QuJB69NCNHtPO6HYytFiJ9FQ1FaRmhsq7aUpS46KRE",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "855 Brannan Apartments",
+                            "uri": "//maps.google.com/maps/contrib/105708560965994337226",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjVU_MSRXObJP4yRaq1Hehvw-JYrQp0pr6apS6WeA3bLtC0=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJYzu6ytZnAa2Bg3Q5lEn-PH4gaGuCO_vy-YqT_yRexn5lPhlJk0DBr88q8EEhwC4oHgDgeC-WivAZFCMPdgtqB9hGEmACW-7-juSOKuTLPKsdbfIlWZlYgm6o7ATg8Gv-jbv2yIaeEZah6XfvHJPN0a5UcyRtVmXN-D",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "855 Brannan Apartments",
+                            "uri": "//maps.google.com/maps/contrib/105708560965994337226",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjVU_MSRXObJP4yRaq1Hehvw-JYrQp0pr6apS6WeA3bLtC0=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJZvtjBnW8b3JdVr6Z75c5TaP1bIATXrasoz8-o_V4pxo8ve5e0_bFG_YQ2NtIRVsFK89pl9lclnU8Kkhnb3io34YvsIrDOU4HXrq_3QCGz1ofjnQJZEQOHt8dS_KDNaytJRAqO_lrm8c15dAEopuujfnrIAKRvEHcPJ",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "855 Brannan Apartments",
+                            "uri": "//maps.google.com/maps/contrib/105708560965994337226",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjVU_MSRXObJP4yRaq1Hehvw-JYrQp0pr6apS6WeA3bLtC0=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJYCwjxQp1GiUQXelj9xtlnC6A_iOtKYCqT75rKK2I7SgJXfX5EOQ_ZubAzwgu1hDXz19fmvWeTOvhX-VFIFSXsPhHT-YcfLAHQJaBZ_-Z-kpUKTVaOQ8Tcdsw4b7lpr8MnSHvU3XN-CBBvNKOxNyCjnjWdkdkNTA_kc",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "855 Brannan Apartments",
+                            "uri": "//maps.google.com/maps/contrib/105708560965994337226",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjVU_MSRXObJP4yRaq1Hehvw-JYrQp0pr6apS6WeA3bLtC0=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJbhaaMs0k7Vd7criOFJa_trJYxgfsyyfLyl3N5B-1QQRNlFrRhJVrF8Mo6ecjHFPfn8lp3oTSFFOQEGaFTB5IG15nkX8uHpYxELM08wD42H6RWCVVpDnrjgOifpxspZtolR_5u3x0LgqBeYqP-at6IUrwCKRuqK0GMd",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "855 Brannan Apartments",
+                            "uri": "//maps.google.com/maps/contrib/105708560965994337226",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjVU_MSRXObJP4yRaq1Hehvw-JYrQp0pr6apS6WeA3bLtC0=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJYEXqfT2uVPcpI6nVXBZr5npgnUu4qPmGXivWoUCn2xwZ3z1sTp96qAGJBQcdixrZrGHW2WXgGyqJASFU7KEg2CJT6dhJw27WnRWjNcFy8eetuKjjOY1Z8eJd6boVT1gVXDCHdAI5xxZCi57Bae3yLYsYY9s4bKQzlX",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "855 Brannan Apartments",
+                            "uri": "//maps.google.com/maps/contrib/105708560965994337226",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjVU_MSRXObJP4yRaq1Hehvw-JYrQp0pr6apS6WeA3bLtC0=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJZHVMn2NflLki8QToJYEfJ1_Q3ZeSklkJEdE0LwK9YUM7S5R69hioqkG4fSrTTRbwh_h8gTxgppxijO4oSpE_M3YQw_By282hEM7StPEBCEZ7MnG3z8CYLfxStDqaJ5ReqGpC7GkF9Acw8QJ7KxBn4Dk0cPFfcrnA2V",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "855 Brannan Apartments",
+                            "uri": "//maps.google.com/maps/contrib/105708560965994337226",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjVU_MSRXObJP4yRaq1Hehvw-JYrQp0pr6apS6WeA3bLtC0=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJb7vsad6beSdijEIVA8Grrve-qvR7c0tpjzeckBH4Rcy2Pr9dy-l_5PttvNi3-I3quQGfjBgggUKeAWvuf4Bo3af4upDyI5RWQ-9Zfuswhi_aDA-qm1R0iVNJ7ujCbgqSpnJ9I4JULBCGdIWkXucpXCf_37hAO84De5",
+                    "widthPx": 3000,
+                    "heightPx": 4000,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Vanessa S",
+                            "uri": "//maps.google.com/maps/contrib/107402651727848893605",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjU_bch1Zg6MjnLb5UPyGUhKOr31ejQwbAs_oGQ3gCVX1pw=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJavxbITB2Q5NZzrCRMuaMfOdB0iJt1YHfUePYMHQ1l9skAoS8kwU01GsfECXO85Q5tW4RFJL8M6jaC_e7vf4x-Yz3WwZAQr-IJMs7oUiPk2jk1vm958tNZuubTyN6Vo4aKk01ktqWRlYzdt-n0r9u9UDcgtoF0AJme0",
+                    "widthPx": 3024,
+                    "heightPx": 4032,
+                    "authorAttributions": [
+                        {
+                            "displayName": "TG",
+                            "uri": "//maps.google.com/maps/contrib/101341947304305081343",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjV5R1uV-IeflMNKkJ3C8FmO3oOGGsxDOte9U-5zByfDspwK=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJnRCsgSt-j4AROengygLbZT0/photos/ATplDJaIhK9gXQFrRgJa2LM1P09ZkNAQ4I9TM1CwJjYHMWpVj73iqRrIIgZe6RhZo0nx2pz3UZBg2Fg2Z_IoLGz_eOrzbKD_E-g1audQXhcG8IU4Ve8SRM1NmxjwRPlD2UYgGhu-5l8HMA9pt0X0gI4BBMjy9niUQTfhgnh-",
+                    "widthPx": 4160,
+                    "heightPx": 3120,
+                    "authorAttributions": [
+                        {
+                            "displayName": "On Location ProStylist Oscar J Molinar",
+                            "uri": "//maps.google.com/maps/contrib/115913881173286119250",
+                            "photoUri": "//lh3.googleusercontent.com/a/ACg8ocKmOiPyel12CbG5qCtL4U8Bj85v79S2BRWpm82Klak_-N8=s100-p-k-no-mo"
+                        }
+                    ]
+                }
+            ],
+            "title": "855 Brannan St",
+            "note": "",
+            "url": "https://www.google.com/maps/place/855+Brannan+St/data=!4m2!3m1!1s0x808f7e2b7d6381c7:0xec4be0e417c4ed48",
+            "comment": ""
+        }
+    },
+    {
+        "title": "Avalon at Mission Bay",
+        "note": "",
+        "url": "https://www.google.com/maps/place/Avalon+at+Mission+Bay/data=!4m2!3m1!1s0x808f7fd6dd702f27:0xb55a40a334590773",
+        "comment": "",
+        "lat": 37.776453,
+        "lng": -122.39345039999999,
+        "google": {
+            "place_id": "ChIJJy9w3dZ_j4ARcwdZNKNAWrU",
+            "display_name": "Avalon at Mission Bay",
+            "types": "Real Estate Agency,Point Of Interest,Establishment",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": 4.4,
+            "user_rating_count": 518,
+            "opening_hours": [
+                {
+                    "open": {
+                        "day": 0,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 0,
+                        "hour": 17,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 1,
+                        "hour": 9,
+                        "minute": 30
+                    },
+                    "close": {
+                        "day": 1,
+                        "hour": 18,
+                        "minute": 30
+                    }
+                },
+                {
+                    "open": {
+                        "day": 2,
+                        "hour": 9,
+                        "minute": 30
+                    },
+                    "close": {
+                        "day": 2,
+                        "hour": 18,
+                        "minute": 30
+                    }
+                },
+                {
+                    "open": {
+                        "day": 3,
+                        "hour": 9,
+                        "minute": 30
+                    },
+                    "close": {
+                        "day": 3,
+                        "hour": 18,
+                        "minute": 30
+                    }
+                },
+                {
+                    "open": {
+                        "day": 4,
+                        "hour": 9,
+                        "minute": 30
+                    },
+                    "close": {
+                        "day": 4,
+                        "hour": 18,
+                        "minute": 30
+                    }
+                },
+                {
+                    "open": {
+                        "day": 5,
+                        "hour": 8,
+                        "minute": 30
+                    },
+                    "close": {
+                        "day": 5,
+                        "hour": 17,
+                        "minute": 30
+                    }
+                },
+                {
+                    "open": {
+                        "day": 6,
+                        "hour": 8,
+                        "minute": 30
+                    },
+                    "close": {
+                        "day": 6,
+                        "hour": 17,
+                        "minute": 30
+                    }
+                }
+            ],
+            "short_formatted_address": "255 King St, San Francisco",
+            "photos": [
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJbcUCq1-vo5eObdS2bRmy9fZ8cqgMCKxUsW_-lEu6jngOhVd5NeaDyAepycZiU21a_6FMQpzvvlmdsNRjnc6BcNcQZWcpBALtWJmxLnqv41OCrB3SD2Syd0M3n_uMF3KNyUhVxWtw9dDu_ZrKKqk0HZGnmW3mC-vcRp",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJZgkFaLRNnVwdhhRMAJoRHRqJWdIM1ToKTZ_30vLJuLL2simBWe2-SuAeGmc9Eu8B7bTq7sktWVRdppzpzqg7UgePjoQw2jI4VuCWMXFidLtee-PMCzix8Tpasok8mKU7vssoVNg55HdYYI24-KmCh3GP5wAFnyIxg9",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJYVd7AP7sjFH5Lu7oSOzxP0jVYTouScMttXoV8xhGItKiFeT_gbZ23FQj6ruAow2nzI17PES8xwbsVl6jGzhRGou09-CK2oBWVVYShWYn1CyXLVkR8f_xJPsB9qktEyQtQFLGrKqCqbMvlJcBxSA6F2Mdto_QpMApHH",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJYSour2nGnCiSVcpaHQ6fHq_Gnrao8KT5EG47yPzHxwQaOiYfDWxa0ugE5tHkbEUhL0xmG5cb-sERznKQNVnW4QfIXSboZcogqAwCtPCgqVuno5D6_bSp_5CdiyiAl0Z4TKNsgXDNENXL89x9n4Q_sKAXxGb9sIb1gm",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJbHW2fho7oKpnTJ7r9GxEtDNcS5m_d6uq0f7MB4YJq9FejWgvCyVajwh_RykvmjID2c9MmNBa83nRKYdvxlMuMn9vSJUhh29iYITG9WRhHnApXnw_gS_G_B-LWgywzA1-XJmUiReHshTkrvCxV6JtILlY8pq22aHMhF",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJb3_UGB03oAy_AaGuNI-SnO13KF93I_ra0aDxexw92Ndq7_nLh6r68-8_H9M_KII8G4GpZB8r0e63Mxm4eTaMi_fbcyZzEG2zQhyPXoIqrrifqC6YsrKPMPHjgIr8zKRnDkKk-8YafiZmoArP_k89RTdJ2vSBkI1GD5",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJa9WXdzXvdagJHPW14LnLEr9AOWD-2hoJgLNXUHHP6i5Sf7-N5wY2CKxMUoQ9Yd8GHeVmOOThkjTQnqksqhPhZ5UeiZ2FOFgMiemCgl5FmLHOsKNuc5zepi1jws7Au1mY1bHqLW5zavyCm0rqpX8055NSt5XJBK13Ou",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJZY_yg9C-m9rzaThLpHbOdjz7aeltW1RKZUQ6YD2XiebFyJAMdZufd_HonsYJTkHBDwl9gEZWylKlW513WZ3rT79iA9LDlZvRv6IEcrgEaGTzuoVeOC8nsXLIdmDx6_YtDq-y0za1OZMfUkxjAIz3wzfsl66dfB3YE2",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJbukURodNaghvX7T1zfQrY17VgvPt798q6oor7RY2WPhLkGBT5bCBoPsi1gx13rVaP86EGTXo87PkG5Gw8KTdbHauQE2rp7Uq0q75nY8FlSi56RDU-6RfxWpaHvuaqzQOtQnmVcX_s-Bc6IQysyQXd_iXf9nn0UigB4",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJJy9w3dZ_j4ARcwdZNKNAWrU/photos/ATplDJZj3zcZ9OHbe-JTfCnogqSEmukS2pPcsKkgMpDksW5-RBOe97HQsr9tdZ_zSMhGjIXmwq8gyEnyAL283O8ZjWqW-dXko7hhbN0R7pGWZUoC8KpGYMnk2k-5GFnygPN8oHTtN9EWUDzQLWzasClX2dsfySMbBRivxCtM",
+                    "widthPx": 996,
+                    "heightPx": 747,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Avalon at Mission Bay",
+                            "uri": "//maps.google.com/maps/contrib/115388087176681223742",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjURjlFP0pr19vaSr5eEawXDWQ0x5pJ1PV-unk2gu8XdO60=s100-p-k-no-mo"
+                        }
+                    ]
+                }
+            ],
+            "title": "Avalon at Mission Bay",
+            "note": "",
+            "url": "https://www.google.com/maps/place/Avalon+at+Mission+Bay/data=!4m2!3m1!1s0x808f7fd6dd702f27:0xb55a40a334590773",
+            "comment": ""
+        }
+    },
+    {
+        "title": "829 Folsom St",
+        "note": "",
+        "url": "https://www.google.com/maps/place/829+Folsom+St/data=!4m2!3m1!1s0x80858080a1c30fc1:0x7213603f2ca12df8",
+        "comment": "",
+        "lat": 34.0450985,
+        "lng": -118.1838171,
+        "google": {
+            "place_id": "Eik4MjkgRm9sc29tIFN0LCBMb3MgQW5nZWxlcywgQ0EgOTAwNjMsIFVTQSIxEi8KFAoSCfmeYNv0xcKAEbieL36Zc1mbEL0GKhQKEgnTFztO8cXCgBHtid4fm5pLJw",
+            "display_name": "829 Folsom St",
+            "types": "Street Address",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": null,
+            "user_rating_count": null,
+            "opening_hours": [],
+            "short_formatted_address": "829 Folsom St, Los Angeles",
+            "photos": "",
+            "title": "829 Folsom St",
+            "note": "",
+            "url": "https://www.google.com/maps/place/829+Folsom+St/data=!4m2!3m1!1s0x80858080a1c30fc1:0x7213603f2ca12df8",
+            "comment": ""
+        }
+    },
+    {
+        "title": "Potrero 1010 Apartments",
+        "note": "",
+        "url": "https://www.google.com/maps/place/Potrero+1010+Apartments/data=!4m2!3m1!1s0x808f7fcc497edea1:0x3656b4c67dae9ee0",
+        "comment": "",
+        "lat": 37.766644899999996,
+        "lng": -122.3976045,
+        "google": {
+            "place_id": "ChIJod5-Scx_j4AR4J6ufca0VjY",
+            "display_name": "Potrero 1010 Apartments",
+            "types": "Point Of Interest,Establishment",
+            "icon_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "icon_type": "generic",
+            "rating": 3.6,
+            "user_rating_count": 127,
+            "opening_hours": [
+                {
+                    "open": {
+                        "day": 0,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 0,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 1,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 1,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 2,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 2,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 3,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 3,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 4,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 4,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 5,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 5,
+                        "hour": 18,
+                        "minute": 0
+                    }
+                },
+                {
+                    "open": {
+                        "day": 6,
+                        "hour": 10,
+                        "minute": 0
+                    },
+                    "close": {
+                        "day": 6,
+                        "hour": 17,
+                        "minute": 0
+                    }
+                }
+            ],
+            "short_formatted_address": "1010 16th St, San Francisco",
+            "photos": [
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJYsvQeLtK73yk9zAmJHNmY6fIVswvUVd6F7H8VvMFyN5KbBn4fihPT-x73E6_kd1LGNfxrPfznB9_VDwbUpv0reLQF76ECkTO2t9efs5JztnlXk9lwLmzXuCuqDWwZ60M3adl8u7MYLUmOrG2GXS6gB5u-0qjCPC9bE",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Potrero 1010 Apartments",
+                            "uri": "//maps.google.com/maps/contrib/100379418065098108646",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWlzwGppLKUsXd84BIhP9vQ3m2SvkOYrVC0F4aBngaQpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJY3vZ5l4WgeQ9s8L46BfgTFfHSCHj5YwBFNhHYqA07_-8sl4e2nQ6P4LkQcg0uAuobSsX2qG2HzRfekHlo8P-hkXq8yctORDoZsQGAipA8AecVppRvIDS755r_aWyTjMajr2NkFGo3PJJiLboYabZYtHqGiBCA9ZQLl",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Potrero 1010 Apartments",
+                            "uri": "//maps.google.com/maps/contrib/100379418065098108646",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWlzwGppLKUsXd84BIhP9vQ3m2SvkOYrVC0F4aBngaQpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJYxMah_TNx3RW_6IliLEG6UCqHGqsAwoQpq9kGu64dWf4E4_lO8dorsX6x4SRnRe1VeFG_RXo3xkSBeKLB7oRtp4UpqxjInVsXRhvdx8OZ2R5su_zDhp1KWWSE10qV0L19PUvXTiL2nWmrSQBvxj9ZZ8rfUXyyKg1Ho",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Potrero 1010 Apartments",
+                            "uri": "//maps.google.com/maps/contrib/100379418065098108646",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWlzwGppLKUsXd84BIhP9vQ3m2SvkOYrVC0F4aBngaQpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJbs_uRcbBs2UrO2FnZ6iEqPAcSZCJqtddaUX2HaYGRGYFIkjVko4p1TUqMy7Armc7SizgW_3rUXiXDyjZI8hN5XgGvNT9rEFaFQzVA_QBrrWAlXsB1YE_GltrHcSx9FAo-sa5yPZP0cTUs9IugXdQAQeuDSxfvQqLUl",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Potrero 1010 Apartments",
+                            "uri": "//maps.google.com/maps/contrib/100379418065098108646",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWlzwGppLKUsXd84BIhP9vQ3m2SvkOYrVC0F4aBngaQpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJZ0DiWwumJdwlhpRLpGNuMhSa65yeYkE1c6Syqc3reFLeska4Ml5EqD-q91TKi8Xar0EbUMJII0FPfpLaybDITP-EGKIkjOpdGpgt8Iee5AaHCXI5HatzdE8rBzdw3GfsUxHqiCZZt3DbphIDnOQ-PrAXlOZp3Lp-il",
+                    "widthPx": 1920,
+                    "heightPx": 1080,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Potrero 1010 Apartments",
+                            "uri": "//maps.google.com/maps/contrib/100379418065098108646",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjWlzwGppLKUsXd84BIhP9vQ3m2SvkOYrVC0F4aBngaQpA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJZFUzrJ6PV1Gw29rwk31vFMaCnuvLW_5XWlTsE72ZJuLktbXGvaKkLGGyoKTVnd_xgHvASlelMHQQh3kxAgJnKChtWKkNqEwULpEXyS3dDWALuGKcQy-_xt4iR5gQIGM2rhiXmzxXzlUjX901Swf2nRqqHF8_dMg_Lt",
+                    "widthPx": 4032,
+                    "heightPx": 3024,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Josh L",
+                            "uri": "//maps.google.com/maps/contrib/111368889974718071249",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjV7FUqCA3TTCDDUkaEBXZ5LWYv_Ec6uWdM1R9KtfP3i68ss=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJYyqMFS7kgUJs_jcfQWyLUPUpCCDkIgnSK7sZGF0uR1uY7FjlsZteSrhxDkw4mGyTJw7bMLFkpnC_3F3fUVa4WWbGh39EcJXzNAZrBsfI6aHhMrr4HVR_1C8QMIkLSC4_SK15yjW8kImUHqakquLbLTRUyYuFGoVHYi",
+                    "widthPx": 1677,
+                    "heightPx": 1116,
+                    "authorAttributions": [
+                        {
+                            "displayName": "t k",
+                            "uri": "//maps.google.com/maps/contrib/104805852448964926311",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjXzUvxUjtIZHQ8ve1EcQUlFrI3RZTrArbSHeoLp2G5f0MA=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJZPyePstUK04Vj59mIwaVNGA-SO2rfGoCfYmVIOA892pmNYwyeR86Lq9e12YSKs532qqFiYg57_daw5gjc3uuKyfi3TNqjRnhR7dovOPTzsgFAAKxxvqi18_20G52ui8A04qdIWPj9ilrVHyyBdogh5iTSJzmwNIYwn",
+                    "widthPx": 3024,
+                    "heightPx": 4032,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Jeff (Jeff)",
+                            "uri": "//maps.google.com/maps/contrib/113451331167778378433",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjXDOPONeoUmsENFSnVBQTYuVvakCjSYKo4TY5NXAUrDyHhR=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJaqzr5shor0dz2hB0rBNv030I5-J9QQlSuEDtB8voCR_MWlJL9chOCgcke1Llsr9WiZ6a8zdG1WqjsEE8tiBaxqk2zvogQiHnjiHc8bPeS5YKWiFz1-2JCaFo0njx1gxXGzJKPMK21YSwSTilT2-ZijZzPvO18-TIW1",
+                    "widthPx": 3000,
+                    "heightPx": 4000,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Jeff (Jeff)",
+                            "uri": "//maps.google.com/maps/contrib/113451331167778378433",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjXDOPONeoUmsENFSnVBQTYuVvakCjSYKo4TY5NXAUrDyHhR=s100-p-k-no-mo"
+                        }
+                    ]
+                },
+                {
+                    "name": "places/ChIJod5-Scx_j4AR4J6ufca0VjY/photos/ATplDJZqQDXW_fe4fy_sNEJ3935w7sIGF_5MMQKFANb7A0jAV5W9WxUlzQw4xfP_QIHf3A091vZYpg0gBrRZRnEefEyArq-6ZyDqa2qT2ZneQsDm4-pEmmCHt1M7070zlsH8gbWhizBQNan4eGswmj09bGLLBPI1Z45pF85I",
+                    "widthPx": 2766,
+                    "heightPx": 3805,
+                    "authorAttributions": [
+                        {
+                            "displayName": "Jeff (Jeff)",
+                            "uri": "//maps.google.com/maps/contrib/113451331167778378433",
+                            "photoUri": "//lh3.googleusercontent.com/a-/ALV-UjXDOPONeoUmsENFSnVBQTYuVvakCjSYKo4TY5NXAUrDyHhR=s100-p-k-no-mo"
+                        }
+                    ]
+                }
+            ],
+            "title": "Potrero 1010 Apartments",
+            "note": "",
+            "url": "https://www.google.com/maps/place/Potrero+1010+Apartments/data=!4m2!3m1!1s0x808f7fcc497edea1:0x3656b4c67dae9ee0",
+            "comment": ""
+        }
+    }
+]

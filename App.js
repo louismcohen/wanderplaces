@@ -10,6 +10,10 @@ import { BlurView } from 'expo-blur';
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import jsonFiles from './data/Data';
+
+console.log({jsonFiles});
+
 const Tab = createBottomTabNavigator();
 
 const CustomTabBar = (props) => {
