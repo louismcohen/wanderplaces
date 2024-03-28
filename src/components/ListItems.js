@@ -82,29 +82,35 @@ const PlaceInfo = ({ info }) => {
     // console.log({info})
     const separator = ' • ';
 
-    let itemInfoString = '';
+    let itemInfoString = [];
 
     if (primaryCategory) {
-        itemInfoString += primaryCategory;
+        itemInfoString.push(primaryCategory);
     }
 
     if (closesAt || opensAt) {
-        itemInfoString += `${separator}`;
+        itemInfoString.push(`${separator}`);
 
         if (currentlyOpen && closesAt) {
-            itemInfoString += `Open until ${closesAt}`;
+            itemInfoString.push(`Open until ${closesAt}`);
         } else if (!currentlyOpen && opensAt) {
-            itemInfoString += `Closed. Opens at ${opensAt}`;
+            itemInfoString.push(`Closed. Opens at ${opensAt}`);
         }
     }
 
     if (rating) {
         const ratingCountFormatted = ratingCount.toLocaleString();
+        (itemInfoString.length - 1) % 2 == 0 && itemInfoString.length > 1 ? itemInfoString.push('\n') : itemInfoString.push(`${separator}`);
 
-        itemInfoString += `${separator}★ ${rating} (${ratingCountFormatted})`
+        itemInfoString.push(`★ ${rating} (${ratingCountFormatted})`);
     }
 
+    console.log(itemInfoString.length)
+    
     return (
-        <Text>{itemInfoString}</Text>
+        <View style={{ flexDirection: 'column' }}>
+            <Text>{itemInfoString}</Text>
+
+        </View>
     )
 }

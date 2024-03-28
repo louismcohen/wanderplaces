@@ -1,18 +1,11 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { useNavigation } from '@react-navigation/native';
 import { FlatList, StyleSheet } from 'react-native';
 
-import Collections from '../../Collections';
 import { TouchableOpacity, Text, View } from 'react-native-ui-lib';
 import { moderateScale } from 'react-native-size-matters';
 import hexToRgba from 'hex-to-rgba';
 
 import { Ionicons } from '@expo/vector-icons';
-import PlaceDetail from './PlaceDetail';
-
-
-const CollectionsHomeStack = createNativeStackNavigator();
 
 const collectionsHomeItems = [
     {
@@ -57,9 +50,7 @@ const LibraryListItem = ({ item, navigation }) => {
     )
 }
 
-const LibraryList = () => {
-    const navigation = useNavigation();
-
+export default Library = ({ navigation }) => {
     return (
         <FlatList
             contentContainerStyle={{ gap: 1 }}
@@ -69,55 +60,6 @@ const LibraryList = () => {
             keyExtractor={item => item.id}
             scrollEnabled={false}
         />
-    )
-}
-
-export default Library = ({ navigation, route }) => {
-    return (
-        <CollectionsHomeStack.Navigator
-            screenOptions={{
-                headerLargeTitle: true,
-                headerTransparent: true,
-                headerBlurEffect: 'regular',
-            }}
-        >
-            <CollectionsHomeStack.Group>
-                <CollectionsHomeStack.Screen 
-                    name='Library'
-                    component={LibraryList}
-                />
-                <CollectionsHomeStack.Screen 
-                    name='Collections'
-                    component={Collections}
-                />
-                {/* <CollectionsHomeStack.Screen 
-                    name='Places'
-                />
-                <CollectionsHomeStack.Screen 
-                    name='Categories'
-                />
-                <CollectionsHomeStack.Screen 
-                    name='Tags'
-                /> */}
-                <CollectionsHomeStack.Screen
-                    name='Mae Hong Son Loop'
-                    component={CollectionItem}
-                />
-            </CollectionsHomeStack.Group>
-           
-           <CollectionsHomeStack.Group
-                screenOptions={{
-                    presentation: 'modal',
-                }}
-           >
-            <CollectionsHomeStack.Screen
-                    name='PlaceDetail'
-                    component={PlaceDetail}
-                />
-           </CollectionsHomeStack.Group>
-
-
-        </CollectionsHomeStack.Navigator>
     )
 }
 
@@ -150,7 +92,7 @@ const getIconContainerStyles = (iconColor) => StyleSheet.create({
     libraryListItemIconContainer: {
         backgroundColor: `${hexToRgba(iconColor, 0.70)}`,
         // backgroundColor: `${'#1F01B9'}${70}`,
-        borderRadius: '50%',
+        borderRadius: 999,
         borderColor: 'rgba(0,0,0,0.15)',
         borderWidth: 1,
 

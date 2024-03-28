@@ -6,6 +6,8 @@ import Collections from './Collections';
 import Library from './src/screens/Library';
 
 import { NavigationContainer } from '@react-navigation/native';
+import TabNavigator from './src/navigation/TabNavigator';
+
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BlurView } from 'expo-blur';
 
@@ -41,55 +43,7 @@ export default App = () => {
         animated={true}
       />
       <NavigationContainer>
-        <Tab.Navigator 
-          // tabBar={(props) => <CustomTabBar {...props} />}
-          initialRouteName='Library'
-          screenOptions={{
-            headerShown: false,
-            tabBarStyle: {
-              // position: 'absolute',
-              // backgroundColor: 'rgba(255,255,255,0.8)',
-            },
-            tabBarLabelStyle: {
-              fontSize: 13,
-              // fontFamily: 'SpaceGrotesk_600SemiBold'
-            },
-            // tabBarBackground: () => (
-            //   <BlurView tint='dark' intensity={50} />
-            // )
-          }}
-        >
-          <Tab.Screen 
-            name='Library' 
-            component={Library} 
-            options={{
-              tabBarIcon: ({color, size}) => (
-                // <FontAwesome name='th-list' color={color} size={size} />
-                <MaterialIcons name='collections' color={color} size={size} />
-              )
-            }}  
-          />
-          <Tab.Screen 
-            name='Map' 
-            component={PlacesMap} 
-            options={{
-              headerShown: false,
-              tabBarIcon: ({color, size}) => (
-                <FontAwesome6 name='map-location-dot' color={color} size={size} />
-              )
-            }} 
-
-          />
-          <Tab.Screen 
-            name='Community' 
-            component={TableView} 
-            options={{
-              tabBarIcon: ({color, size}) => (
-                <FontAwesome name='users' color={color} size={size} />
-              )
-            }}          
-          />
-        </Tab.Navigator>
+        <TabNavigator />
       </NavigationContainer>
     </SafeAreaProvider>
   )

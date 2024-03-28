@@ -6031,6 +6031,11 @@ scheduler@^0.23.0:
   dependencies:
     loose-envify "^1.1.0"
 
+search-array@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/search-array/-/search-array-1.6.0.tgz#0937f45f4d906caa83fb0585aadcbc5455f2572e"
+  integrity sha512-7gRZ5m4JcI+lFQjQSjTfmD7HoJ//I41DmbHTDuHIVyCyEZhj43hxnXOcCZoB9L2dbSfUPPyu2khu7HzDy9IJ0w==
+
 semver@7.3.2:
   version "7.3.2"
   resolved "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz"

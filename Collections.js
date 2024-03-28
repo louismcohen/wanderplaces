@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { moderateScale } from 'react-native-size-matters';
 import CollectionItem from './CollectionItem';
 
+import JsonSearch from 'search-array';
+import { QuickJsonSearch } from './src/utils/utils';
 import getColorForEmoji from './src/utils/emojiColor';
 import hexToRgba from 'hex-to-rgba';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -70,24 +72,12 @@ const Item = ({item, onPress, navigation}) => {
     )
 }
 
-const CollectionsList = () => {
-    const navigation = useNavigation();
-    const [collections, setCollections] = useState([]);
-
-    useEffect(() => {
-        const dataWithEmojiColors = data.map(collection => ({
-            ...collection,
-            emojiColor: getColorForEmoji(collection.emoji),
-        }))
-
-        setCollections(dataWithEmojiColors);
-    }, [data])
-
+const CollectionsList = ({ data, navigation }) => {
     return (
         <FlatList 
             contentContainerStyle={{ gap: 1 }}
             contentInsetAdjustmentBehavior='automatic'
-            data={collections}
+            data={data}
             renderItem={({item}) => <Item item={item} navigation={navigation} onPress={item.title} />}
             keyExtractor={item => item.id}
         />
@@ -96,18 +86,42 @@ const CollectionsList = () => {
 
 export default Collections = ({ navigation, route }) => {
     const [search, setSearch] = useState('');
+    const [collections, setCollections] = useState([]);
+    const [filteredCollections, setFilteredCollections] = useState([]);
 
-    navigation.setOptions({
-        headerSearchBarOptions: {
-            placeholder: 'Name, Places, Categories, and More',
-            onChangeText: (event) => setSearch(event.nativeEvent.text),
-            onCancelButtonPress: (event) => setSearch(''),
-            autoCapitalize: 'none',
-        },
-    })
+    useEffect(() => {
+        const dataWithEmojiColors = data.map(collection => ({
+            ...collection,
+            emojiColor: getColorForEmoji(collection.emoji),
+        }))
+
+        setCollections(dataWithEmojiColors);
+    }, [data]);
+
+    useEffect(() => {
+        if (search === '') {
+            setFilteredCollections(collections);
+        } else {
+            const filtered = QuickJsonSearch(search, collections);
+            setFilteredCollections(filtered);
+        }
+
+    }, [search, collections])
+
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerSearchBarOptions: {
+                placeholder: 'Name, Places, Categories, and More',
+                onChangeText: (event) => setSearch(event.nativeEvent.text),
+                onCancelButtonPress: (event) => setSearch(''),
+                autoCapitalize: 'none',
+            },
+        })
+    }, [navigation])
+    
 
     return (
-        <CollectionsList />
+        <CollectionsList data={filteredCollections} navigation={navigation} />
 
     )
 }
