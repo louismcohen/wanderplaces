@@ -1,9 +1,6 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import PlacesMap from './PlacesMap';
-import Collections from './Collections';
-import Library from './src/screens/Library';
 
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigator from './src/navigation/TabNavigator';
@@ -11,7 +8,6 @@ import TabNavigator from './src/navigation/TabNavigator';
 import { BottomTabBar, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BlurView } from 'expo-blur';
 
-import { MaterialIcons, FontAwesome, FontAwesome6 } from '@expo/vector-icons';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const Tab = createBottomTabNavigator();

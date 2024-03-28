@@ -3,11 +3,11 @@ import { FlatList, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { moderateScale } from 'react-native-size-matters';
-import CollectionItem from './CollectionItem';
+import CollectionItem from '../components/CollectionItem';
 
 import JsonSearch from 'search-array';
-import { QuickJsonSearch } from './src/utils/utils';
-import getColorForEmoji from './src/utils/emojiColor';
+import { QuickJsonSearch } from '../utils/utils';
+import getColorForEmoji from '../utils/emojiColor';
 import hexToRgba from 'hex-to-rgba';
 import { LinearGradient } from 'expo-linear-gradient';
 

@@ -6,14 +6,14 @@ import { getHeaderTitle } from '@react-navigation/elements';
 import { View, Text, SortableList, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { moderateScale } from 'react-native-size-matters';
-import PlaceDetail from './src/screens/PlaceDetail';
+import PlaceDetail from '../screens/PlaceDetail';
 
-import { getFilteredPlaces } from './src/utils/utils';
+import { getFilteredPlaces } from '../utils/utils';
 
 import { FontAwesome6, MaterialIcons, Ionicons } from '@expo/vector-icons';
 
-import { HeaderButton, headerRightStyles } from './src/components/HeaderRight';
-import { ListItem, PlaceDetails, PlaceItem } from './src/components/ListItems';
+import { HeaderButton, headerRightStyles } from './HeaderRight';
+import { ListItem, PlaceDetails, PlaceItem } from './ListItems';
 
 // console.log('in Collections');
 

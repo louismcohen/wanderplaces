@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Library from '../screens/Library';
-import Collections from '../../Collections';
-import CollectionItem from '../../CollectionItem';
+import Collections from '../screens/Collections';
+import CollectionItem from '../components/CollectionItem';
 import PlaceDetail from '../screens/PlaceDetail';
 
 const LibraryNavigator = () => {
