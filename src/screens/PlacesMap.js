@@ -223,7 +223,7 @@ export default PlacesMap = () => {
       <GestureHandlerRootView styles={styles.container} onLayout={onLayoutRootView}>
         <MapView
           ref={mapViewRef}
-          provider={ PROVIDER_GOOGLE }
+          // provider={ PROVIDER_GOOGLE }
           style={ styles.map }
           initialRegion={initialRegion}
           // onRegionChange={() => console.log(mapViewRef.current)}

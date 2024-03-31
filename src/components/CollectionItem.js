@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState} from 'react';
+import React, { useEffect, useLayoutEffect, useState} from 'react';
 import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -6,14 +6,20 @@ import { getHeaderTitle } from '@react-navigation/elements';
 import { View, Text, SortableList, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { moderateScale } from 'react-native-size-matters';
+import PlaceDetail from '../screens/PlaceDetail';
+
+import { getFilteredPlaces } from '../utils/utils';
 
 import { FontAwesome6, MaterialIcons, Ionicons } from '@expo/vector-icons';
+
+import { HeaderButton, headerRightStyles } from './HeaderRight';
+import { ListItem, PlaceDetails, PlaceItem } from './ListItems';
 
 // console.log('in Collections');
 
 const CollectionsStack = createNativeStackNavigator();
 
-const data = [
+const places = [
     {
         id: '1',
         title: 'Kai Tod Fried Chicken',
@@ -113,9 +119,9 @@ const ItemInfo = ({ info }) => {
     )
 }
 
-const Item = ({info}) => {
+const Item = ({ info, navigation }) => {
     return (
-    <TouchableOpacity flex style={{flexDirection: 'row', backgroundColor: '#ffffff'}}>
+    <TouchableOpacity flex style={{flexDirection: 'row', backgroundColor: '#ffffff'}} onPress={() => navigation.navigate('PlaceDetail', info)}>
         <View style={{
             padding: moderateScale(16),
             flex: '1 1 auto',
@@ -141,13 +147,24 @@ const Item = ({info}) => {
     )
 }
 
-const ListView = () => {
+const filteredResults = (query) => {
+    const queryLowerCase = query.toLowerCase();
+    const filtered = places.filter(place => 
+            place.title.toLowerCase().includes(queryLowerCase)
+            || place.primaryCategory.toLowerCase().includes(queryLowerCase)
+            || place?.note.toLowerCase().includes(queryLowerCase)
+        )   
+
+    return filtered;
+}
+
+const ListView = ({ data, navigation }) => {
     return (
         <FlatList
             contentContainerStyle={{ gap: 1 }}
             contentInsetAdjustmentBehavior='automatic'
             data={data}
-            renderItem={({item}) => <Item info={item} />}
+            renderItem={({item}) => <PlaceItem info={item} navigation={navigation} navigateTo={'PlaceDetail'} />}
             keyExtractor={item => item.id}
             style={{
                 // backgroundColor: '#F2F2F7',
@@ -174,79 +191,91 @@ const customHeader = ({ navigation, route, options, back }) => {
     )
 }
 
-const HeaderButton = ({ icon }) => {
-    const styles = (pressed) => StyleSheet.create({
-        headerButton: {
-            borderRadius: 500,
-            padding: 8,
-            color: `#EBEBF530`,
-            opacity: pressed ? 0.5 : 1.0,
-            backgroundColor: '#76768024',
-        }
-    })
+// const HeaderButton = ({ icon }) => {
+//     const styles = (pressed) => StyleSheet.create({
+//         headerButton: {
+//             borderRadius: 500,
+//             padding: 8,
+//             color: `#EBEBF530`,
+//             opacity: pressed ? 0.5 : 1.0,
+//             backgroundColor: '#76768024',
+//         }
+//     })
 
-    return (
-        <Pressable style={({ pressed }) => styles(pressed).headerButton}>
-            <Ionicons name={icon} color={'#007AFF'} size={16} />
-        </Pressable>
-    )
-}
+//     return (
+//         <Pressable style={({ pressed }) => styles(pressed).headerButton}>
+//             <Ionicons name={icon} color={'#007AFF'} size={16} />
+//         </Pressable>
+//     )
+// }
 
 const HeaderRight = () => {
     return (
-        <View style={{ flexDirection: 'row', gap: 8 }}>
-            <HeaderButton icon='pencil' />
-            <HeaderButton icon='filter' />
-            {/* <HeaderButton icon='swap-vertical' /> */}
+        <View style={headerRightStyles.container}>
+            <HeaderButton name='pencil' />
+            <HeaderButton name='filter' />
+            {/* <HeaderButton name='swap-vertical' /> */}
         </View>
     )
 }
+
+const headerRightButtons = [
+    {
+        name: 'pencil',
+        onPress: () => console.log('pencil pressed'),
+    },
+    {
+        name: 'filter',
+        onPress: () => console.log('filter pressed'),
+    }
+]
 
 
 
 export default CollectionItem = ({ navigation, route }) => {
     // const insets = useSafeAreaInsets();
     // const navigation = useNavigation();
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        setData(places);
+    }, [places])
+
     const [search, setSearch] = useState('');
+    useEffect(() => {
+        const filtered = getFilteredPlaces(places, search);
+        setData(filtered);
+
+    }, [search])
+
+    const { emoji, title } = route.params;
 
     useLayoutEffect(() => {
         navigation.setOptions({
+            headerTitle: `${emoji} ${title}`,
+            headerBackTitleVisible: false,
+            headerShadowVisible: true,
             headerLargeTitle: true,
             headerTransparent: true,
             headerBlurEffect: 'regular',
-            headerRight: () => (
-                <HeaderRight />
-            ),
+            headerLargeStyle: {
+                backgroundColor: `${'#E88484'}${33}`
+            },
+            headerStyle: {
+                backgroundColor: `${'#E88484'}${10}`
+            },
+            headerRight: () => <HeaderRight />,
             headerSearchBarOptions: {
                 placeholder: 'Name, Category, Note, and More',
                 onChangeText: (event) => setSearch(event.nativeEvent.text),
                 onCancelButtonPress: (event) => setSearch(''),
+                autoCapitalize: 'none',
             },
         })
     }, [navigation])
 
     return (
-        <ListView />
-        // <CollectionsStack.Navigator
-        //     screenOptions={{
-        //         headerRight: () => (
-        //             <HeaderRight />
-        //         ),
-        //         headerLargeTitle: true,
-        //         headerTransparent: true,
-        //         headerBlurEffect: 'regular',
-        //     }}
-        // >
-        //     <CollectionsStack.Screen
-        //         name='Mae Hong Son Loop'
-        //         component={ListView}
-        //         options={{
-        //             // headerLargeTitle: true,
-        //             // headerTransparent: true,
-        //             // headerBlurEffect: 'light',
-        //         }}
-        //     />
-        // </CollectionsStack.Navigator>
+        <ListView data={data} navigation={navigation} />
     )
 }
 
