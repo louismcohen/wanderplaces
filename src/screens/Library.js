@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
-import { ApiContext } from '../api/ApiContext';
+// import { ApiContext } from '../api/ApiContext';
 
 import { TouchableOpacity, Text, View } from 'react-native-ui-lib';
 import { moderateScale } from 'react-native-size-matters';
@@ -52,7 +52,7 @@ const LibraryListItem = ({ item, navigation }) => {
 }
 
 export default Library = ({ navigation }) => {
-    const jsonData = useContext(ApiContext);
+    // const jsonData = useContext(ApiContext);
     
     return (
         <FlatList

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { ApiProvider } from './src/api/ApiContext';
+// import { ApiProvider } from './src/api/ApiContext';
 import { StyleSheet, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
@@ -38,7 +38,7 @@ export default App = () => {
 
 
   return (
-    <ApiProvider>
+    // <ApiProvider>
       <SafeAreaProvider>
         <StatusBar
           animated={true}
@@ -47,7 +47,7 @@ export default App = () => {
           <TabNavigator />
         </NavigationContainer>
       </SafeAreaProvider>
-    </ApiProvider>
+    // </ApiProvider>
   )
 };
 
