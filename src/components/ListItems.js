@@ -59,6 +59,7 @@ export const ListItem = ({ info, type, navigation, navigateTo }) => {
 }
 
 export const PlaceItem = ({ info, navigation, navigateTo }) => {
+    // console.log({info});
     return (
         <ListItem info={info} type={'place'} navigation={navigation} navigateTo={navigateTo} />
     )
@@ -68,7 +69,7 @@ const PlaceDetails = ({ info }) => {
     return (
         <View style={styles.detailsContainer}>
             <View>
-                <Text adjustsFontSizeToFit numberOfLines={1} style={styles.title}>{info.emoji} {info.title}</Text>
+                <Text adjustsFontSizeToFit numberOfLines={1} style={styles.title}>{info.emoji ? `${info.emoji} ` : null}{info.title}</Text>
                 <PlaceInfo info={info} />
             </View>
             
@@ -78,14 +79,14 @@ const PlaceDetails = ({ info }) => {
 }
 
 const PlaceInfo = ({ info }) => {
-    const { rating, ratingCount, currentlyOpen, closesAt, opensAt, primaryCategory } = info;
+    const { rating, user_rating_count, currentlyOpen = true, closesAt = '8:00 PM', opensAt = '7:00 AM', primary_type } = info;
     // console.log({info})
     const separator = ' • ';
 
     let itemInfoString = [];
 
-    if (primaryCategory) {
-        itemInfoString.push(primaryCategory);
+    if (primary_type) {
+        itemInfoString.push(primary_type);
     }
 
     if (closesAt || opensAt) {
@@ -99,13 +100,13 @@ const PlaceInfo = ({ info }) => {
     }
 
     if (rating) {
-        const ratingCountFormatted = ratingCount.toLocaleString();
+        const ratingCountFormatted = user_rating_count.toLocaleString();
         (itemInfoString.length - 1) % 2 == 0 && itemInfoString.length > 1 ? itemInfoString.push('\n') : itemInfoString.push(`${separator}`);
 
         itemInfoString.push(`★ ${rating} (${ratingCountFormatted})`);
     }
 
-    console.log(itemInfoString.length)
+    // console.log(itemInfoString.length)
     
     return (
         <View style={{ flexDirection: 'column' }}>

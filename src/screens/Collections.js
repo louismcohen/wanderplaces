@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useContext } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { moderateScale } from 'react-native-size-matters';
 import CollectionItem from '../components/CollectionItem';
+import { ApiContext } from '../api/ApiContext';
+
 
 import JsonSearch from 'search-array';
 import { QuickJsonSearch } from '../utils/utils';
@@ -11,7 +13,7 @@ import getColorForEmoji from '../utils/emojiColor';
 import hexToRgba from 'hex-to-rgba';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const data = [
+const mockData = [
     {
         id: 1,
         title: 'Mae Hong Son Loop',
@@ -58,14 +60,14 @@ const Icon = ({item}) => {
 }
 
 const Item = ({item, onPress, navigation}) => {
-    // console.log({onPress, navigation})
-    
+    console.log({item});
+        
     return (
-        <TouchableOpacity style={styles.itemContainer} onPress={() => navigation.navigate(item.title, item)}>
+        <TouchableOpacity style={styles.itemContainer} onPress={() => navigation.navigate('CollectionItem', item)}>
             <Icon item={item} />
             <View style={styles.itemTitleContainer}>
-                <Text style={styles.itemTitle}>{item.title}</Text>
-                <Text style={styles.itemSubtitle}>{item.placesCount} Places</Text>
+                <Text style={styles.itemTitle}>{item.name}</Text>
+                <Text style={styles.itemSubtitle}>{item.places_count} Places</Text>
             </View>
             
         </TouchableOpacity>
@@ -78,25 +80,28 @@ const CollectionsList = ({ data, navigation }) => {
             contentContainerStyle={{ gap: 1 }}
             contentInsetAdjustmentBehavior='automatic'
             data={data}
-            renderItem={({item}) => <Item item={item} navigation={navigation} onPress={item.title} />}
-            keyExtractor={item => item.id}
+            renderItem={({item}) => <Item item={item} navigation={navigation} onPress={item.name} />}
+            keyExtractor={item => item._id}
         />
     )
 }
 
 export default Collections = ({ navigation, route }) => {
+    const [data, setData] = useState([]);
     const [search, setSearch] = useState('');
-    const [collections, setCollections] = useState([]);
+    // const [collections, setCollections] = useState([]);
     const [filteredCollections, setFilteredCollections] = useState([]);
 
-    useEffect(() => {
-        const dataWithEmojiColors = data.map(collection => ({
-            ...collection,
-            emojiColor: getColorForEmoji(collection.emoji),
-        }))
+    const { collections, places } = useContext(ApiContext);
 
-        setCollections(dataWithEmojiColors);
-    }, [data]);
+    // useEffect(() => {
+    //     const dataWithEmojiColors = data.map(collection => ({
+    //         ...collection,
+    //         emojiColor: getColorForEmoji(collection.emoji),
+    //     }))
+
+    //     setCollections(dataWithEmojiColors);
+    // }, [data]);
 
     useEffect(() => {
         if (search === '') {

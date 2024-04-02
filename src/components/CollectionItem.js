@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState} from 'react';
+import React, { useEffect, useLayoutEffect, useState, useContext } from 'react';
 import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -7,6 +7,7 @@ import { View, Text, SortableList, Button, TouchableOpacity } from 'react-native
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { moderateScale } from 'react-native-size-matters';
 import PlaceDetail from '../screens/PlaceDetail';
+import { ApiContext } from '../api/ApiContext';
 
 import { getFilteredPlaces } from '../utils/utils';
 
@@ -17,9 +18,7 @@ import { ListItem, PlaceDetails, PlaceItem } from './ListItems';
 
 // console.log('in Collections');
 
-const CollectionsStack = createNativeStackNavigator();
-
-const places = [
+const mockPlaces = [
     {
         id: '1',
         title: 'Kai Tod Fried Chicken',
@@ -88,14 +87,14 @@ const places = [
 ]
 
 const ItemInfo = ({ info }) => {
-    const { rating, ratingCount, currentlyOpen, closesAt, opensAt, primaryCategory } = info;
+    const { rating, user_rating_count, currentlyOpen = true, closesAt = '8:00 PM', opensAt = '7:00 AM', primary_type } = info;
     // console.log({info})
     const separator = ' • ';
 
     let itemInfoString = '';
 
-    if (primaryCategory) {
-        itemInfoString += primaryCategory;
+    if (primary_type) {
+        itemInfoString += primary_type;
     }
 
     if (closesAt || opensAt) {
@@ -109,7 +108,7 @@ const ItemInfo = ({ info }) => {
     }
 
     if (rating) {
-        const ratingCountFormatted = ratingCount.toLocaleString();
+        const ratingCountFormatted = user_rating_count?.toLocaleString();
 
         itemInfoString += `${separator}★ ${rating} (${ratingCountFormatted})`
     }
@@ -165,7 +164,7 @@ const ListView = ({ data, navigation }) => {
             contentInsetAdjustmentBehavior='automatic'
             data={data}
             renderItem={({item}) => <PlaceItem info={item} navigation={navigation} navigateTo={'PlaceDetail'} />}
-            keyExtractor={item => item.id}
+            keyExtractor={item => item._id}
             style={{
                 // backgroundColor: '#F2F2F7',
             }}
@@ -237,22 +236,24 @@ export default CollectionItem = ({ navigation, route }) => {
     // const navigation = useNavigation();
     const [data, setData] = useState([]);
 
-    useEffect(() => {
-        setData(places);
-    }, [places])
+    // useEffect(() => {
+    //     setData(places);
+    // }, [places])
+
+    const { emoji, name } = route.params;
+
+    const { places } = useContext(ApiContext);
 
     const [search, setSearch] = useState('');
     useEffect(() => {
-        const filtered = getFilteredPlaces(places, search);
+        const filtered = getFilteredPlaces(name, places, search);
         setData(filtered);
 
     }, [search])
 
-    const { emoji, title } = route.params;
-
     useLayoutEffect(() => {
         navigation.setOptions({
-            headerTitle: `${emoji} ${title}`,
+            headerTitle: `${emoji} ${name}`,
             headerBackTitleVisible: false,
             headerShadowVisible: true,
             headerLargeTitle: true,

@@ -1,32 +1,80 @@
 import React, { createContext, useState, useEffect } from 'react';
-import data from '../../data/combined_data.json';
+import { supabase } from '../utils/supabase';
+
+import collections from '../data/collections.json';
+import places from '../data/places.json';
 
 const ApiContext = createContext();
 
-const createCollectionNames = (data) => {
-  const names = data.map(item => Object.keys(item)[0]);
-  console.log(data[names[3]]);
-  return names;
-}
-
 const ApiProvider = ({ children }) => {
   const [apiData, setApiData] = useState(null);
+  const [loginData, setLoginData] = useState(null);
+  const [loading, setLoading] = useState(false)
 
-  // Simulating API call
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        // const response = await fetch('https://api.example.com/data');
-        // const data = await response.json();
-        const collectionNames = createCollectionNames(data);
-        setApiData(data);
-      } catch (error) {
-        console.error('Error fetching API data:', error);
-      }
-    };
+    setApiData({ collections, places })
+  }, [collections, places])
+  
 
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const login = async () => {
+  //     try {
+  //       const { data, error } = await supabase.auth.signInWithPassword({
+  //         email: process.env.EXPO_PUBLIC_SUPABASE_EMAIL,
+  //         password: process.env.EXPO_PUBLIC_SUPABASE_PASSWORD,
+  //       })
+  //       setLoginData(data);
+  //     } catch (error) {
+  //       console.error('Error logging into Supabase:', error);
+  //     }
+  //   }
+
+  //   login();
+  // }, [])
+
+  // useEffect(() => {
+  //   const databases = ['collections', 'places', 'places_collections'];
+
+  //   const fetchDb = async (db) => {
+  //     try {
+  //       // const { data, error } = await supabase
+  //       //   .from('places_collections')
+  //       //   .select(`
+  //       //     *,
+  //       //     google_data:place_id (
+  //       //       *
+  //       //     ),
+  //       //     places (
+  //       //       *
+  //       //     ),
+  //       //     collections (
+  //       //       *
+  //       //     )
+  //       //   `)
+  //       const { data, error } = await supabase.rpc('get_places');
+        
+  //       console.log(data)
+  //       if (error) console.error(error);
+  //       return data;
+  //     } catch (error) {
+  //       console.error('Error fetching API data:', error);
+  //     }
+  //   };
+
+  //   const fetchData = async (databases) => {
+  //     // const [ collections, places, places_collections ] = await Promise.all(databases.map(db => fetchDb(db)));
+  //     setApiData({
+  //       collections,
+  //       places,
+  //       places_collections
+  //     })
+  //   }
+
+  //   if (loginData) {
+  //     fetchDb('places_collections')
+  //     // fetchData(databases);
+  //   }
+  // }, [loginData]);
 
   return (
     <ApiContext.Provider value={apiData}>

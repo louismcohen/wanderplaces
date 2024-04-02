@@ -32,7 +32,7 @@ const LibraryNavigator = () => {
                 // Individual Collection Items
             >
                 <Stack.Screen 
-                    name='Mae Hong Son Loop'
+                    name='CollectionItem'
                     component={CollectionItem}
                 />
             </Stack.Group>

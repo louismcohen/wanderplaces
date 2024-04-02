@@ -1,12 +1,13 @@
 import _ from 'lodash';
 import JsonSearch from 'search-array';
 
-export const getFilteredPlaces = (places, query) => {
+export const getFilteredPlaces = (collectionName, places, query) => {
     const queryLowerCase = query.toLowerCase();
     const filtered = places.filter(place => 
+            place.name === collectionName && (
             place.title.toLowerCase().includes(queryLowerCase)
             || place.primaryCategory.toLowerCase().includes(queryLowerCase)
-            || place?.note.toLowerCase().includes(queryLowerCase)
+            || place?.note.toLowerCase().includes(queryLowerCase))
         )   
 
     return filtered;
