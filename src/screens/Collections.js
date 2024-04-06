@@ -5,10 +5,9 @@ import { View, Text, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { moderateScale } from 'react-native-size-matters';
 import CollectionItem from '../components/CollectionItem';
 import { ApiContext } from '../api/ApiContext';
+import Search from '@smakss/search';
 
-
-import JsonSearch from 'search-array';
-import { QuickJsonSearch } from '../utils/utils';
+import { QuickJsonSearch, searchPlacesCollections } from '../utils/utils';
 import getColorForEmoji from '../utils/emojiColor';
 import hexToRgba from 'hex-to-rgba';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -59,9 +58,7 @@ const Icon = ({item}) => {
     )
 }
 
-const Item = ({item, onPress, navigation}) => {
-    console.log({item});
-        
+const Item = ({item, onPress, navigation}) => {       
     return (
         <TouchableOpacity style={styles.itemContainer} onPress={() => navigation.navigate('CollectionItem', item)}>
             <Icon item={item} />
@@ -92,7 +89,7 @@ export default Collections = ({ navigation, route }) => {
     // const [collections, setCollections] = useState([]);
     const [filteredCollections, setFilteredCollections] = useState([]);
 
-    const { collections, places } = useContext(ApiContext);
+    const { collections, places, placesCollections } = useContext(ApiContext);
 
     // useEffect(() => {
     //     const dataWithEmojiColors = data.map(collection => ({
@@ -107,7 +104,9 @@ export default Collections = ({ navigation, route }) => {
         if (search === '') {
             setFilteredCollections(collections);
         } else {
-            const filtered = QuickJsonSearch(search, collections);
+            const combined = searchPlacesCollections(search, collections, places);
+            console.log({combined});
+            const filtered = QuickJsonSearch(search, placesCollections);
             setFilteredCollections(filtered);
         }
 
@@ -157,7 +156,7 @@ const styles = StyleSheet.create({
 
 const iconStyles = (color) => StyleSheet.create({
     icon: {
-        fontSize: 24,
+        fontSize: 32,
         display: 'flex',
         lineHeight: 40,
         width: 40,

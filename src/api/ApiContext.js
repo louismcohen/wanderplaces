@@ -10,9 +10,17 @@ const ApiProvider = ({ children }) => {
   const [apiData, setApiData] = useState(null);
   const [loginData, setLoginData] = useState(null);
   const [loading, setLoading] = useState(false)
-
+  
   useEffect(() => {
-    setApiData({ collections, places })
+    const placesCollections = collections.map(collection => {
+      const placesInThisCollection = places.filter(place => place.collection_id === collection._id);
+      return {
+        ...collection,
+        places: placesInThisCollection,
+      };
+    })
+
+    setApiData({ collections, places, placesCollections })
   }, [collections, places])
   
 

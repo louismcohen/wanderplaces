@@ -260,10 +260,10 @@ export default CollectionItem = ({ navigation, route }) => {
             headerTransparent: true,
             headerBlurEffect: 'regular',
             headerLargeStyle: {
-                backgroundColor: `${'#E88484'}${33}`
+                backgroundColor: `#${(Math.random() * 0xfffff * 1000000).toString(16).slice(0, 6)}${33}`
             },
             headerStyle: {
-                backgroundColor: `${'#E88484'}${10}`
+                backgroundColor: `#${(Math.random() * 0xfffff * 1000000).toString(16).slice(0, 6)}${10}`
             },
             headerRight: () => <HeaderRight />,
             headerSearchBarOptions: {

@@ -34,3 +34,18 @@ export const QuickJsonSearch = (query, data) => {
     const filtered = searcher.query(query);
     return filtered;
 }
+
+export const searchPlacesCollections = (query, collections, places) => {
+    const placesSearcher = new JsonSearch(places);
+    const filteredPlaces = placesSearcher.query(query);
+    console.log({filteredPlaces});
+
+    const collectionsSearcher = new JsonSearch(collections);
+    const filteredCollections = collectionsSearcher.query(query);
+    console.log({filteredCollections});
+
+    const collectionsFoundFromPlaces = collections.some(collection => filteredPlaces.map(place => place.collection_id).includes(collection._id));
+    const result = [...new Set([...filteredCollections, collectionsFoundFromPlaces])];
+
+    return result;
+}
