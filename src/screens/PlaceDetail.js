@@ -3,7 +3,7 @@ import { moderateScale } from 'react-native-size-matters';
 import { View, Text, TouchableOpacity } from 'react-native-ui-lib';
 
 const Header = ({ navigation, route, options, back }) => {
-    console.log(route)
+    // console.log(route)
     return (
         <View>
             <Text>{route.params.title}</Text>

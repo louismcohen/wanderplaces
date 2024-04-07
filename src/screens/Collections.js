@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect, useContext } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useTheme } from '@react-navigation/native';
 import { View, Text, Button, TouchableOpacity } from 'react-native-ui-lib'
 import { moderateScale } from 'react-native-size-matters';
 import CollectionItem from '../components/CollectionItem';
@@ -11,6 +11,9 @@ import { QuickJsonSearch, searchPlacesCollections } from '../utils/utils';
 import getColorForEmoji from '../utils/emojiColor';
 import hexToRgba from 'hex-to-rgba';
 import { LinearGradient } from 'expo-linear-gradient';
+
+import { HeaderButton, headerRightStyles } from '../components/HeaderRight';
+import { FontAwesome6, MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 const mockData = [
     {
@@ -83,6 +86,16 @@ const CollectionsList = ({ data, navigation }) => {
     )
 }
 
+const HeaderRight = () => {
+    return (
+        <View style={headerRightStyles.container}>
+            <HeaderButton name='pencil' />
+            <HeaderButton name='filter' />
+            <HeaderButton name='add' />
+        </View>
+    )
+}
+
 export default Collections = ({ navigation, route }) => {
     const [data, setData] = useState([]);
     const [search, setSearch] = useState('');
@@ -105,7 +118,7 @@ export default Collections = ({ navigation, route }) => {
             setFilteredCollections(collections);
         } else {
             const combined = searchPlacesCollections(search, collections, places);
-            console.log({combined});
+            // console.log({combined});
             const filtered = QuickJsonSearch(search, placesCollections);
             setFilteredCollections(filtered);
         }
@@ -120,6 +133,7 @@ export default Collections = ({ navigation, route }) => {
                 onCancelButtonPress: (event) => setSearch(''),
                 autoCapitalize: 'none',
             },
+            headerRight: () => <HeaderRight />
         })
     }, [navigation])
     

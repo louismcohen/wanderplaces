@@ -9,7 +9,7 @@ import { moderateScale } from 'react-native-size-matters';
 import PlaceDetail from '../screens/PlaceDetail';
 import { ApiContext } from '../api/ApiContext';
 
-import { getFilteredPlaces } from '../utils/utils';
+import { QuickJsonSearch, getFilteredPlaces } from '../utils/utils';
 
 import { FontAwesome6, MaterialIcons, Ionicons } from '@expo/vector-icons';
 
@@ -232,24 +232,25 @@ const headerRightButtons = [
 
 
 export default CollectionItem = ({ navigation, route }) => {
-    // const insets = useSafeAreaInsets();
-    // const navigation = useNavigation();
+    const collection = route.params;
     const [data, setData] = useState([]);
+    const [placesInThisCollection, setPlacesInThisCollection] = useState();
 
-    // useEffect(() => {
-    //     setData(places);
-    // }, [places])
-
-    const { emoji, name } = route.params;
+    const { emoji, name } = collection;
 
     const { places } = useContext(ApiContext);
 
+    useEffect(() => {
+        setPlacesInThisCollection(places.filter(place => place.collection_id === collection._id));
+    }, [places])
+
     const [search, setSearch] = useState('');
     useEffect(() => {
-        const filtered = getFilteredPlaces(name, places, search);
+        // const filtered = getFilteredPlaces(name, placesInThisCollection, search);
+        const filtered = placesInThisCollection ? QuickJsonSearch(search, placesInThisCollection) : null;
         setData(filtered);
 
-    }, [search])
+    }, [search, placesInThisCollection])
 
     useLayoutEffect(() => {
         navigation.setOptions({

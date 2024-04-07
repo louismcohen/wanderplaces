@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 // import {  } from 'react-native-ui-lib'
 
 const BASE_COLOR = '173,173,173'
-const buttonColor = `rgba(${BASE_COLOR},0.60)`;
+const buttonColor = `rgba(${BASE_COLOR},0.30)`;
 
 styles = StyleSheet.create({
     headerButton: {
