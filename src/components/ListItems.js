@@ -8,7 +8,7 @@ const getItemType = (type, info) => {
     switch (type) {
         case 'library':
         case 'place':
-            return <PlaceDetails info={info} />
+            return <PlaceDetails info={info} />            
         case 'collection':
         case 'category':
         case 'tag':
@@ -55,6 +55,20 @@ export const ListItem = ({ info, type, navigation, navigateTo }) => {
                 <FontAwesome6 name='chevron-right' style={{ color: 'rgba(0,0,0,0.33)' }} />
             </View>
         </TouchableOpacity>
+    )
+}
+
+export const ListItemContainer = ({ content, navigation, navigateTo }) => {
+    return (
+        <TouchableOpacity flex style={styles.container} onPress={() => navigation.navigate(navigateTo, info)}>
+            <View style={styles.leftContainer}>
+                {content}
+            </View>
+            
+            <View style={styles.rightContainer}>
+                <FontAwesome6 name='chevron-right' style={{ color: 'rgba(0,0,0,0.33)' }} />
+            </View>
+        </TouchableOpacity>      
     )
 }
 
