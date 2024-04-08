@@ -6,6 +6,8 @@ import { StyleSheet, View, Text, TouchableOpacity, SectionList, FlatList, Toucha
 import { ListItemContainer } from '../components/ListItems';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { FontAwesome6 } from '@expo/vector-icons';
+
 const Header = ({ navigation, route, options, back }) => {
     // console.log(route)
     return (
@@ -15,26 +17,76 @@ const Header = ({ navigation, route, options, back }) => {
     )
 }
 
-const ListItem = ({ title, value }) => {
-    const { colors } = useTheme();
+const ListItem = ({ icon, title, detail }) => {
     const styles = StyleSheet.create({
-        container: {
-            padding: 16,
+        listItem: {
+            // flex: 1,
+            flexDirection: 'row',
+            // justifyContent: 'space-between',
+            // alignItems: 'center',
+            // paddingVertical: 12,
+            paddingHorizontal: 16,
+
         },
-        item: {
-            padding: 16,
-            backgroundColor: 'white',
+        borderContainer: {
+            flexGrow: 1,
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
+            // borderBottomColor: 'red',
+            // borderBottomWidth: 1,
+            paddingVertical: 12,
+        },
+        listItemTitleContainer: {
+            flexDirection: 'row',
+            gap: 12,
+            justifyContent: 'center',
+            alignItems: 'center',
+            paddingRight: 16,
+        },
+        iconContainer: {
+            backgroundColor: `#${(Math.random() * 0xaaaaaa * 1000000).toString(16).slice(0, 6)}`,
+            // padding: 6,
+            width: 32,
+            height: 32,
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+            borderRadius: 4,
+        },
+        listItemTitle: {
+            fontSize: 17,
+        },
+        listItemDetailContainer: {
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+        },
+        listItemDetail: {
+            fontSize: 14,
+            color: 'rgba(0,0,0,0.5)',
+            textAlign: 'right',
         }
     })
 
 
 
     return (
-        null 
-        // <ListItemContainer content={<Content title={title} value={value} navigation =  />} />
+        <View style={styles.listItem}>
+            <View style={styles.borderContainer}>
+                <View style={styles.listItemTitleContainer}>
+                    <View style={styles.iconContainer}>
+                        <FontAwesome6 name={icon} size={17} color='white' />
+                    </View>
+                    <Text style={styles.listItemTitle}>{title}</Text>
+                </View>
+                <View style={styles.listItemDetailContainer}>
+                    <Text numberOfLines={3} style={styles.listItemDetail}>{detail}</Text>
+                </View>
+            </View>
+
+        </View>
     )
 
 }
@@ -64,29 +116,48 @@ const Content = ({ title, value }) => {
 const HeaderTitle = ({ emoji, title }) => {
     const styles = StyleSheet.create({
         container: {
+            overflow: 'visible',
+            // backgroundColor: 'white',
             // flex: 1,
-            paddingTop: 16,
+            paddingVertical: 8,
+            paddingHorizontal: 16,
+            // paddingTop: 16,
             flexDirection: 'row',
-            justifyContent: 'center',
-            // alignItems: 'stretch',
-            gap: 8,
-            borderColor: 'red',
-            borderWidth: 1,
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            gap: 12,
+            // borderColor: 'red',
+            // borderWidth: 1,
             overflow: 'hidden',
         },
         emojiContainer: {
-            width: 36,
-            height: 36,
+            width: 44,
+            height: 44,
             borderRadius: 8,
             borderColor: 'rgba(0,0,0,0.20)',
             borderWidth: 1,
-            padding: 4,
+            // padding: 8,
             justifyContent: 'center',
             alignItems: 'center',
-            alignSelf: 'flex-start',
+            alignSelf: 'center',
+            backgroundColor: 'white',
+
+            shadowColor: 'rgba(0,0,0,1.0)',
+            shadowOffset: {
+                width: 0,
+                height: 2,
+            },
+            shadowOpacity: 0.05,
+            shadowRadius: 3,
+
+            elevation: 4,
+        },
+        emoji: {
+            fontSize: 24,
             textAlign: 'center',
         },
         title: {
+            flex: 1,
             fontSize: 24,
             fontWeight: '700',
         },
@@ -95,9 +166,55 @@ const HeaderTitle = ({ emoji, title }) => {
     return (
         <View style={styles.container}>
             <View style={styles.emojiContainer}>
-                <Text>{emoji}</Text>
+                <Text style={styles.emoji}>{emoji}</Text>
             </View>
-            <Text numberOfLines={1} style={styles.title}>{title}</Text>
+            <Text numberOfLines={2} style={styles.title}>{title}</Text>
+        </View>
+    )
+}
+
+const Section = ({ title, content }) => {
+    const styles = StyleSheet.create({
+        sectionContainer: {
+            flexGrow: 0,
+            flexShrink: 1,
+            flexDirection: 'column',
+            gap: 7,
+            justifyContent: 'center',
+            alignItems: 'stretch',
+            paddingHorizontal: 16,
+            paddingVertical: 12,
+
+            shadowColor: 'rgba(0,0,0,1.0)',
+            shadowOffset: {
+                width: 0,
+                height: 2,
+            },
+            shadowOpacity: 0.05,
+            shadowRadius: 3,
+
+            elevation: 5,
+        },
+        headerContainer: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+        },
+        sectionHeaderText: {
+            fontSize: 13,
+            fontWeight: '400',
+            color: 'rgba(0,0,0,0.5)',
+            textTransform: 'uppercase'
+        },
+    });
+
+    return (
+        <View style={styles.sectionContainer}>
+            <View style={styles.headerContainer}>
+                <Text style={styles.sectionHeaderText}>{title}</Text>
+                {/* <Text style={styles.sectionHeaderText}>Saved</Text> */}
+            </View>
+            {content}
         </View>
     )
 }
@@ -105,47 +222,43 @@ const HeaderTitle = ({ emoji, title }) => {
 export default PlaceDetail = ({ navigation, route }) => {
     const place = route.params;
     const [noteInput, setNoteInput] = useState(place.note);
-    const sections = [
+    
+    const listData = [
         {
-            title: 'Emoji',
-            data: [place.emoji],
-        },
-        {
-            title: 'Note',
-            data: [place.note],
-        },
-    ];
-
-    const data = [
-        {
-            title: 'Emoji',
-            value: place.emoji,
-        },
-        {
-            title: 'Note',
-            value: place.note,
-        },
-        {
+            icon: 'boxes-stacked',
             title: 'Categories',
-            value: place.categories
+            detail: place.types.split(',').slice(0, 3).join(', '),
         },
         {
-            title: 'Tags',
-            value: place.tags
-        }
-    ];
+            icon: 'star-half-stroke',
+            title: 'Rating',
+            detail: place.rating ? `★ ${place.rating?.toLocaleString()} (${place.user_rating_count?.toLocaleString()})` : 'No ratings',
+        },
+        {
+            icon: 'clock',
+            title: 'Hours',
+            detail: 'Closed now\nOpens tomorrow at 6:00 AM',
+        },
+        {
+            icon: 'check',
+            title: 'Visited',
+            detail: 'Yes, I\'ve been here',
+        },
+    ]
     
     const styles = StyleSheet.create({
         container: {
             flex: 1,
-            padding: 16,
+            // padding: 16,
+            paddingTop: 24,
             justifyContent: 'flex-start',
+            // overflow: 'visible',
             // gap: 16,
         },
         infoContainer: {
             flex: 1,
             flexDirection: 'column',
-            gap: 16,
+            // gap: 16,
         },
         list: {
             flex: 0,
@@ -169,6 +282,18 @@ export default PlaceDetail = ({ navigation, route }) => {
             gap: 7,
             justifyContent: 'center',
             alignItems: 'stretch',
+            paddingHorizontal: 16,
+            paddingVertical: 12,
+
+            shadowColor: 'rgba(0,0,0,1.0)',
+            shadowOffset: {
+                width: 0,
+                height: 2,
+            },
+            shadowOpacity: 0.05,
+            shadowRadius: 3,
+
+            elevation: 5,
         },
         sectionHeaderText: {
             fontSize: 13,
@@ -176,23 +301,29 @@ export default PlaceDetail = ({ navigation, route }) => {
             color: 'rgba(0,0,0,0.67)',
             textTransform: 'uppercase'
         },
+        flatList: { 
+            backgroundColor: 'white', 
+            borderRadius: 10, 
+            borderColor: 'rgba(0,0,0,0.15)', 
+            borderWidth: 1, 
+        },
         listItemContainer: {
             backgroundColor: 'white',
             borderRadius: 10,    
-            flexDirection: 'column', 
-            justifyContent: 'flex-start', 
-            alignItems: 'stretch',
+            borderColor: 'rgba(0,0,0,0.15)', 
+            borderWidth: 1, 
         },
         listItem: {
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
             paddingVertical: 12,
             paddingHorizontal: 16,
+            justifyContent: 'flex-start',
+            alignItems: 'stretch',
         },
         inputText: {
             fontSize: 17,
-            color: 'rgba(0,0,0,0.85)'
+            lineHeight: 17,
+            color: 'rgba(0,0,0,0.85)',
+            
         },
         listItemTitle: {
             fontSize: 14    ,
@@ -205,9 +336,10 @@ export default PlaceDetail = ({ navigation, route }) => {
 
     useLayoutEffect(() => {
         navigation.setOptions({
-            headerTitle: () => <HeaderTitle emoji={place.emoji} title={place.title} />,
+            // headerShown: true    ,
+            // header: () => <HeaderTitle emoji={place.emoji} title={place.title} />,
             // title: '',
-            headerLargeTitle: false,
+            // headerLargeTitle: false,
             // headerTitleStyle: {
             //     fontSize: 24,
             // },
@@ -215,7 +347,7 @@ export default PlaceDetail = ({ navigation, route }) => {
             //     fontSize: 24,
             // },
             // headerTitleAlign: 'center',
-            headerTransparent: false,
+            // headerTransparent: false,
             // header: ({ navigation, route, options, back }) => <Header route={route} />
     }, [navigation])
 })
@@ -229,34 +361,39 @@ export default PlaceDetail = ({ navigation, route }) => {
                     renderItem={({ item }) => <ListItemContainer content={<Content title={item.title} value={item.value} navigation={navigation} navigateTo={''} />} />}
                     contentContainerStyle={{ gap: 1 }}
                 /> */}
+                <HeaderTitle emoji={place.emoji ? place.emoji : '😃'} title={place.title} />
+                {/* <Text numberOfLines={1} style={{ fontSize: 28, fontWeight: '700', paddingBottom: 16,}}>{place.title}</Text> */}
                 <View style={styles.infoContainer}>
-                    <View style={styles.sectionContainer}>
-                        <Text style={styles.sectionHeaderText}>note</Text>
+                    <Section
+                        title={'note'}
+                        content={
                             <View style={styles.listItemContainer}> 
                                 <View style={styles.listItem}>
                                     <TextInput 
                                         editable
                                         multiline
                                         style={styles.inputText}
+                                        placeholder='Any additional info about this place?'
                                         onChangeText={(text) => setNoteInput(text)}
                                         value={noteInput}
                                         numberOfLines={2} />
                                 </View>
                             </View>
-                    </View>
-                    <View style={styles.sectionContainer}>
-                        <Text style={styles.sectionHeaderText}>details</Text>
-                            <View style={styles.listItemContainer}> 
-                            <View style={styles.listItem}>
-                                <Text style={styles.listItemTitle}>Category</Text>
-                                <Text style={styles.listItemDetail}>{place.primary_type}</Text>
-                            </View>
-                            <View style={styles.listItem}> 
-                                <Text style={styles.listItemTitle}>Rating</Text>
-                                <Text style={styles.listItemDetail}>★ {place.rating} ({place.user_rating_count})</Text>
-                            </View>
-                            </View>
-                    </View>
+                        }
+                    />                 
+                    <Section 
+                        title={'details'} 
+                        content={
+                            <FlatList 
+                                style={styles.flatList}
+                                data={listData}
+                                // ListHeaderComponent={<Text style={styles.sectionHeaderText}>details</Text>}
+                                renderItem={({ item }) => <ListItem icon={item.icon} title={item.title} detail={item.detail} />}
+                                ItemSeparatorComponent={<View style={{ height: 1, marginHorizontal: 16, backgroundColor: 'rgba(0,0,0,0.1)'}} />}
+                            />
+                        } 
+                    />
+                    <Section title={'location'} />
                 </View>
             </View>
         </TouchableWithoutFeedback>

@@ -43,6 +43,9 @@ const LibraryNavigator = () => {
                 <Stack.Screen 
                     name='PlaceDetail'
                     component={PlaceDetail}
+                    options={{
+                        headerShown: false,
+                    }}
                 />
             </Stack.Group>
         </Stack.Navigator>
