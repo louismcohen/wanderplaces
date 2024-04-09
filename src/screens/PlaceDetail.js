@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import { useTheme } from '@react-navigation/native'
 import { moderateScale } from 'react-native-size-matters';
 import { StyleSheet, View, Text, TouchableOpacity, SectionList, FlatList, TouchableHighlight, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import MiniMap from './MiniMap';
 
 import { ListItemContainer } from '../components/ListItems';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -194,11 +195,14 @@ const Section = ({ title, content }) => {
             shadowRadius: 3,
 
             elevation: 5,
+
+
         },
         headerContainer: {
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
+            
         },
         sectionHeaderText: {
             fontSize: 13,
@@ -393,7 +397,10 @@ export default PlaceDetail = ({ navigation, route }) => {
                             />
                         } 
                     />
-                    <Section title={'location'} />
+                    <Section 
+                        title={'location'}
+                        content={<MiniMap place={place} />}
+                    />
                 </View>
             </View>
         </TouchableWithoutFeedback>
