@@ -1,6 +1,7 @@
 import MapView, { Marker } from 'react-native-maps';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { showLocation } from 'react-native-map-link';
+import RoundMarker from './RoundMarker';
 
 const MiniMap = ({ place }) => {
     console.log({ minimap: place });
@@ -74,10 +75,8 @@ const MiniMap = ({ place }) => {
                         stopPropagation
                         coordinate={initialRegion}
                         // title={place.title}
-                    >
-                        <View style={styles.marker}>
-                            <Text>{place.emoji}</Text>
-                        </View>
+                    >  
+                        <RoundMarker emoji={place.emoji} />
                     </Marker>
                 </MapView>
             </TouchableOpacity>

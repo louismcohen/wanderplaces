@@ -20,7 +20,16 @@ const ApiProvider = ({ children }) => {
       };
     })
 
-    setApiData({ collections, places, placesCollections })
+    const placesWithDefaultEmojis = places.map(place => {
+      const collectionForThisPlace = collections.find(collection => collection._id === place.collection_id);
+
+      return {
+        ...place,
+        emoji: place.emoji ? place.emoji : collectionForThisPlace.emoji,
+      }
+    })
+
+    setApiData({ collections, places: placesWithDefaultEmojis, placesCollections })
   }, [collections, places])
   
 
