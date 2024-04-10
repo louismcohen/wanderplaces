@@ -122,7 +122,7 @@ const HeaderTitle = ({ emoji, title }) => {
             // flex: 1,
             paddingVertical: 8,
             paddingHorizontal: 16,
-            // paddingTop: 16,
+            paddingTop: 24,
             flexDirection: 'row',
             justifyContent: 'flex-start',
             alignItems: 'center',
@@ -148,7 +148,7 @@ const HeaderTitle = ({ emoji, title }) => {
                 width: 0,
                 height: 2,
             },
-            shadowOpacity: 0.05,
+            shadowOpacity: 0.10,
             shadowRadius: 3,
 
             elevation: 4,
@@ -191,7 +191,7 @@ const Section = ({ title, content }) => {
                 width: 0,
                 height: 2,
             },
-            shadowOpacity: 0.05,
+            shadowOpacity: 0.10,
             shadowRadius: 3,
 
             elevation: 5,
@@ -254,7 +254,6 @@ export default PlaceDetail = ({ navigation, route }) => {
         container: {
             flex: 1,
             // padding: 16,
-            paddingTop: 24,
             justifyContent: 'flex-start',
             // overflow: 'visible',
             // gap: 16,
@@ -294,7 +293,7 @@ export default PlaceDetail = ({ navigation, route }) => {
                 width: 0,
                 height: 2,
             },
-            shadowOpacity: 0.05,
+            shadowOpacity: 0.10,
             shadowRadius: 3,
 
             elevation: 5,
