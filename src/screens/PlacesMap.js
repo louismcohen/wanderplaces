@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useRef, useCallback, useContext } from 'react';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
@@ -28,6 +28,8 @@ import {
   setCustomTouchableOpacity
 } from 'react-native-global-props';
 import { parse } from 'react-native-svg';
+import { ApiContext } from '../api/ApiContext';
+import RoundMarker from '../components/RoundMarker';
 
 const defaultStyle = {
   // fontFamily: 'SpaceGrotesk_500Medium',
@@ -67,6 +69,7 @@ const testMarker = {
 }
 
 export default PlacesMap = () => {
+  const { collections, places } = useContext(ApiContext);
   const bottomTabBarHeight = useBottomTabBarHeight();
 
   SplashScreen.preventAutoHideAsync();
@@ -147,7 +150,7 @@ export default PlacesMap = () => {
   }, []);
 
   const calculateSnapPointHeight = (snapPoint, window) => {
-    return snapPoint.toString().includes('%')
+    return snapPoint?.toString().includes('%')
     ? parseFloat(snapPoint) / 100 * window.height
     : snapPoint
   }
@@ -231,7 +234,8 @@ export default PlacesMap = () => {
           showsUserLocation
           onMarkerPress={
             (e) => {
-              changeBottomSheetPosition(1)
+              // console.log(e);
+              // changeBottomSheetPosition(1)
           }}
           onPress={
             (e) => {
@@ -241,7 +245,7 @@ export default PlacesMap = () => {
             }
           }
           >
-          <Marker
+          {/* <Marker
             stopPropagation
             coordinate={{
               latitude: testMarker.latitude,
@@ -250,7 +254,22 @@ export default PlacesMap = () => {
             title={testMarker.title}
             description={testMarker.description}
             onPress={() => setMarkerSelected(testMarker)}
-          />
+          /> */}
+          {places 
+            ? places.map(place => {
+              return (
+                <Marker
+                  key={place._id}
+                  stopPropagation
+                  coordinate={{ latitude: place.lat, longitude: place.lng }}
+                  onPress={() => setMarkerSelected(place)}
+                >
+                  <RoundMarker emoji={place.emoji} />
+                </Marker>
+              )
+            })
+            : null 
+          }
             {/* <Image source={require('./src/images/restaurant_pinlet.png')} style={{maxWidth: 30, maxHeight: 30, objectFit: 'contain'}} /> */}
             {/* </Marker> */}
         </MapView>

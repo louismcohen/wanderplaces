@@ -1,0 +1,177 @@
+[
+    {
+      "_id": 24,
+      "name": "Bali",
+      "description:": "",
+      "emoji": "🏝️",
+      "places_count": 45
+    },
+    {
+      "_id": 10,
+      "name": "Boricua",
+      "description:": "",
+      "emoji": "🇵🇷",
+      "places_count": 10
+    },
+    {
+      "_id": 23,
+      "name": "East Java",
+      "description:": "",
+      "emoji": "🇮🇩",
+      "places_count": 3
+    },
+    {
+      "_id": 3,
+      "name": "Euroadtrip 2023",
+      "description:": "",
+      "emoji": "🛣️",
+      "places_count": 31
+    },
+    {
+      "_id": 4,
+      "name": "Furniture Stores",
+      "description:": "",
+      "emoji": "🛋️",
+      "places_count": 7
+    },
+    {
+      "_id": 14,
+      "name": "Jakarta",
+      "description:": "",
+      "emoji": "🇮🇩",
+      "places_count": 20
+    },
+    {
+      "_id": 9,
+      "name": "Joshua Tree",
+      "description:": "",
+      "emoji": "🏕️",
+      "places_count": 3
+    },
+    {
+      "_id": 18,
+      "name": "Koh Chang",
+      "description:": "",
+      "emoji": "🏝️",
+      "places_count": 1
+    },
+    {
+      "_id": 5,
+      "name": "Koh Phangan",
+      "description:": "",
+      "emoji": "🏝️",
+      "places_count": 33
+    },
+    {
+      "_id": 20,
+      "name": "Koh Samui",
+      "description:": "",
+      "emoji": "🏝️",
+      "places_count": 36
+    },
+    {
+      "_id": 16,
+      "name": "Labor Day 2023",
+      "description:": "",
+      "emoji": "🌄",
+      "places_count": 12
+    },
+    {
+      "_id": 15,
+      "name": "Luang Prabang",
+      "description:": "",
+      "emoji": "🇱🇦",
+      "places_count": 30
+    },
+    {
+      "_id": 12,
+      "name": "Mae Hong Son Loop",
+      "description:": "",
+      "emoji": "🛵",
+      "places_count": 64
+    },
+    {
+      "_id": 17,
+      "name": "Nong Khiaw",
+      "description:": "",
+      "emoji": "🇱🇦",
+      "places_count": 1
+    },
+    {
+      "_id": 6,
+      "name": "PPF",
+      "description:": "",
+      "emoji": "🎁",
+      "places_count": 10
+    },
+    {
+      "_id": 25,
+      "name": "Paso Robles",
+      "description:": "",
+      "emoji": "🍷",
+      "places_count": 18
+    },
+    {
+      "_id": 11,
+      "name": "Penida & Lombok",
+      "description:": "",
+      "emoji": "🏝️",
+      "places_count": 17
+    },
+    {
+      "_id": 13,
+      "name": "Peter's Bachelor Party",
+      "description:": "",
+      "emoji": "🥩",
+      "places_count": 9
+    },
+    {
+      "_id": 22,
+      "name": "SE Asia 2023-24",
+      "description:": "",
+      "emoji": "🌏",
+      "places_count": 67
+    },
+    {
+      "_id": 1,
+      "name": "SF Apartments",
+      "description:": "",
+      "emoji": "🏙️",
+      "places_count": 12
+    },
+    {
+      "_id": 7,
+      "name": "Samoeng Loop",
+      "description:": "",
+      "emoji": "🏍️",
+      "places_count": 10
+    },
+    {
+      "_id": 19,
+      "name": "San Diego",
+      "description:": "",
+      "emoji": "🏙️",
+      "places_count": 16
+    },
+    {
+      "_id": 8,
+      "name": "Santa Ynez",
+      "description:": "",
+      "emoji": "🍷",
+      "places_count": 4
+    },
+    {
+      "_id": 21,
+      "name": "Vang Vieng",
+      "description:": "",
+      "emoji": "🇱🇦",
+      "places_count": 16
+    },
+    {
+      "_id": 2,
+      "name": "Yogyakarta",
+      "description:": "",
+      "emoji": "🛕",
+      "places_count": 28
+    }
+  ]

@@ -35,6 +35,29 @@
     <string>1</string>
     <key>GMSApiKey</key>
     <string>AIzaSyBVWoxT7UAn5cgvXUjLGOSmnzkRPUS5RI8</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>comgooglemaps</string>
+      <string>citymapper</string>
+      <string>uber</string>
+      <string>lyft</string>
+      <string>transit</string>
+      <string>truckmap</string>
+      <string>waze</string>
+      <string>yandexnavi</string>
+      <string>moovit</string>
+      <string>yandextaxi</string>
+      <string>yandexmaps</string>
+      <string>kakaomap</string>
+      <string>tmap</string>
+      <string>szn-mapy</string>
+      <string>mapsme</string>
+      <string>osmandmaps</string>
+      <string>gett</string>
+      <string>nmap</string>
+      <string>dgis</string>
+      <string>lftgpas</string>
+    </array>
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>NSAppTransportSecurity</key>
@@ -44,6 +67,14 @@
       <key>NSAllowsLocalNetworking</key>
       <true/>
     </dict>
+    <key>UIAppFonts</key>
+    <array>
+      <string>SpaceGrotesk_300Light.ttf</string>
+      <string>SpaceGrotesk_400Regular.ttf</string>
+      <string>SpaceGrotesk_500Medium.ttf</string>
+      <string>SpaceGrotesk_600SemiBold.ttf</string>
+      <string>SpaceGrotesk_700Bold.ttf</string>
+    </array>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>
     <key>UIRequiredDeviceCapabilities</key>
