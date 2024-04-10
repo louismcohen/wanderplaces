@@ -3,6 +3,7 @@ import { useTheme } from '@react-navigation/native'
 import { moderateScale } from 'react-native-size-matters';
 import { StyleSheet, View, Text, TouchableOpacity, SectionList, FlatList, TouchableHighlight, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import MiniMap from '../components/MiniMap';
+import EmojiPicker from 'rn-emoji-keyboard'
 
 import { ListItemContainer } from '../components/ListItems';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -114,7 +115,7 @@ const Content = ({ title, value }) => {
     )
 }
 
-const HeaderTitle = ({ emoji, title }) => {
+const HeaderTitle = ({ emoji, title, openEmojiPicker }) => {
     const styles = StyleSheet.create({
         container: {
             overflow: 'visible',
@@ -166,9 +167,9 @@ const HeaderTitle = ({ emoji, title }) => {
 
     return (
         <View style={styles.container}>
-            <View style={styles.emojiContainer}>
+            <TouchableOpacity style={styles.emojiContainer} onPress={openEmojiPicker}>
                 <Text style={styles.emoji}>{emoji}</Text>
-            </View>
+            </TouchableOpacity>
             <Text numberOfLines={2} style={styles.title}>{title}</Text>
         </View>
     )
@@ -224,8 +225,11 @@ const Section = ({ title, content }) => {
 }
 
 export default PlaceDetail = ({ navigation, route }) => {
+    const [viewHeight, setViewHeight] = useState();
+    const [isEmojiPickerOpen ,setIsEmojiPickerOpen] = useState(false);
     const place = route.params;
     const [noteInput, setNoteInput] = useState(place.note);
+    const [emoji, setEmoji] = useState(place.emoji || '😃');
     
     const listData = [
         {
@@ -356,7 +360,7 @@ export default PlaceDetail = ({ navigation, route }) => {
 })
 
     return (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss} onLayout={(event) => setViewHeight(event.nativeEvent.layout.height * 0.8)}>
             <View style={styles.container}>
                 {/* <FlatList 
                     style={styles.list}
@@ -364,8 +368,18 @@ export default PlaceDetail = ({ navigation, route }) => {
                     renderItem={({ item }) => <ListItemContainer content={<Content title={item.title} value={item.value} navigation={navigation} navigateTo={''} />} />}
                     contentContainerStyle={{ gap: 1 }}
                 /> */}
-                <HeaderTitle emoji={place.emoji ? place.emoji : '😃'} title={place.title} />
+                <HeaderTitle emoji={emoji} title={place.title} openEmojiPicker={() => setIsEmojiPickerOpen(true)} />
                 {/* <Text numberOfLines={1} style={{ fontSize: 28, fontWeight: '700', paddingBottom: 16,}}>{place.title}</Text> */}
+                {viewHeight ? <EmojiPicker 
+                    open={isEmojiPickerOpen} 
+                    onClose={() => setIsEmojiPickerOpen(false)} 
+                    onEmojiSelected={(emojiObject) => setEmoji(emojiObject.emoji)}
+                    // categoryPosition='top'
+                    enableRecentlyUsed
+                    enableSearchBar
+                    defaultHeight={viewHeight}
+                    // enableSearchAnimation
+                /> : null}
                 <View style={styles.infoContainer}>
                     <Section
                         title={'note'}
