@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Image } from 'react-native'
 import { View, Text, TouchableOpacity } from 'react-native-ui-lib';
+import { useContext } from 'react';
+import { ApiContext } from '../api/ApiContext';
 
 import { FontAwesome6 } from '@expo/vector-icons';
 import { getPlacePhotoUri } from '../api/Google.api';
@@ -90,6 +92,9 @@ export const PlaceItem = ({ info, navigation, navigateTo }) => {
 }
 
 const PlaceDetails = ({ info }) => {
+    const { collections } = useContext(ApiContext);
+    const thisCollection = collections.find(collection => collection._id === info.collection_id);
+
     const [photoUri, setPhotoUri] = useState();
 
     useEffect(() => {
@@ -112,7 +117,7 @@ const PlaceDetails = ({ info }) => {
             <View style={styles.detailsContainer}>
                 
                 <View>
-                    <Text adjustsFontSizeToFit numberOfLines={2} style={styles.title}>{info.emoji ? `${info.emoji} ` : null}{info.title}</Text>
+                    <Text adjustsFontSizeToFit numberOfLines={2} style={styles.title}>{info.emoji ? `${info.emoji} ` : `${thisCollection.emoji} `}{info.title}</Text>
                     <PlaceInfo info={info} />
                 </View>
                 

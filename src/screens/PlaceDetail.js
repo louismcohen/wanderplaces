@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import { useTheme } from '@react-navigation/native'
 import { moderateScale } from 'react-native-size-matters';
 import { StyleSheet, View, Text, TouchableOpacity, SectionList, FlatList, TouchableHighlight, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
@@ -9,6 +9,7 @@ import { ListItemContainer } from '../components/ListItems';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { FontAwesome6 } from '@expo/vector-icons';
+import { ApiContext } from '../api/ApiContext';
 
 const Header = ({ navigation, route, options, back }) => {
     // console.log(route)
@@ -225,11 +226,45 @@ const Section = ({ title, content }) => {
 }
 
 export default PlaceDetail = ({ navigation, route }) => {
+    console.log(route.params._id)
     const [viewHeight, setViewHeight] = useState();
     const [isEmojiPickerOpen ,setIsEmojiPickerOpen] = useState(false);
-    const place = route.params;
+    const [place, setPlace] = useState(route.params);
     const [noteInput, setNoteInput] = useState(place.note);
-    const [emoji, setEmoji] = useState(place.emoji || '😃');
+    const [selectedEmoji, setSelectedEmoji] = useState('');
+    const { collections } = useContext(ApiContext);
+
+    useEffect(() => {
+        const thisCollection = collections.find(collection => collection._id === route.params.collection_id);
+
+        if (place && !place.emoji) {
+            setPlace({
+                ...place,
+                emoji: thisCollection.emoji,
+            })
+        }
+    }, [place])
+
+    useEffect(() => {
+        console.log('set place for emoji', selectedEmoji, {place})
+        setPlace({
+            ...place,
+            emoji: selectedEmoji,
+        })
+        
+    }, [selectedEmoji]);
+
+    useEffect(() => {
+        setPlace({
+            ...place,
+            note: noteInput,
+        })
+    }, [noteInput]);
+
+    useEffect(() => {
+        // console.log(place.emoji)
+        // console.log({place})
+    }, [place]);
     
     const listData = [
         {
@@ -368,16 +403,20 @@ export default PlaceDetail = ({ navigation, route }) => {
                     renderItem={({ item }) => <ListItemContainer content={<Content title={item.title} value={item.value} navigation={navigation} navigateTo={''} />} />}
                     contentContainerStyle={{ gap: 1 }}
                 /> */}
-                <HeaderTitle emoji={emoji} title={place.title} openEmojiPicker={() => setIsEmojiPickerOpen(true)} />
+                <HeaderTitle emoji={selectedEmoji || place.emoji} title={place.title} openEmojiPicker={() => setIsEmojiPickerOpen(true)} />
                 {/* <Text numberOfLines={1} style={{ fontSize: 28, fontWeight: '700', paddingBottom: 16,}}>{place.title}</Text> */}
                 {viewHeight ? <EmojiPicker 
                     open={isEmojiPickerOpen} 
                     onClose={() => setIsEmojiPickerOpen(false)} 
-                    onEmojiSelected={(emojiObject) => setEmoji(emojiObject.emoji)}
-                    // categoryPosition='top'
+                    onEmojiSelected={(emojiObject) => setSelectedEmoji(emojiObject.emoji)}
+                    categoryPosition='bottom'
                     enableRecentlyUsed
                     enableSearchBar
                     defaultHeight={viewHeight}
+                    styles={{ header: {
+                        fontSize: 13,
+                        textTransform: 'uppercase',
+                    }}}
                     // enableSearchAnimation
                 /> : null}
                 <View style={styles.infoContainer}>
@@ -392,8 +431,13 @@ export default PlaceDetail = ({ navigation, route }) => {
                                         style={styles.inputText}
                                         placeholder='Any additional info about this place?'
                                         onChangeText={(text) => setNoteInput(text)}
+                                        onEndEditing={(event) => setPlace({ ...place, note: event.nativeEvent.text})}
+                                        // onSubmitEditing={() => console.log('on submit editing')}
                                         value={noteInput}
-                                        numberOfLines={2} />
+                                        numberOfLines={2} 
+                                        spellCheck={false}
+                                        // blurOnSubmit={true}
+                                    />
                                 </View>
                             </View>
                         }

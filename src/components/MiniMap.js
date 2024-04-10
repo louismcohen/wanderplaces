@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { showLocation } from 'react-native-map-link';
 
 const MiniMap = ({ place }) => {
+    console.log({ minimap: place });
     const styles = StyleSheet.create({
         container: {
             flexGrow: 1,
@@ -75,7 +76,7 @@ const MiniMap = ({ place }) => {
                         // title={place.title}
                     >
                         <View style={styles.marker}>
-                            <Text>😃</Text>
+                            <Text>{place.emoji}</Text>
                         </View>
                     </Marker>
                 </MapView>
