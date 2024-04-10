@@ -5,10 +5,13 @@ import { StyleSheet, View, Text, TouchableOpacity, SectionList, FlatList, Toucha
 import MiniMap from '../components/MiniMap';
 import EmojiPicker from 'rn-emoji-keyboard'
 
+import { showLocation } from 'react-native-map-link';
+
+
 import { ListItemContainer } from '../components/ListItems';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { FontAwesome6 } from '@expo/vector-icons';
+import { FontAwesome6, Ionicons } from '@expo/vector-icons';
 import { ApiContext } from '../api/ApiContext';
 
 const Header = ({ navigation, route, options, back }) => {
@@ -176,11 +179,9 @@ const HeaderTitle = ({ emoji, title, openEmojiPicker }) => {
     )
 }
 
-const Section = ({ title, content }) => {
+const Section = ({ title, auxComponent, content }) => {
     const styles = StyleSheet.create({
         sectionContainer: {
-            flexGrow: 0,
-            flexShrink: 1,
             flexDirection: 'column',
             gap: 7,
             justifyContent: 'center',
@@ -197,20 +198,20 @@ const Section = ({ title, content }) => {
             shadowRadius: 3,
 
             elevation: 5,
-
-
         },
         headerContainer: {
             flexDirection: 'row',
             justifyContent: 'space-between',
-            alignItems: 'center',
-            
         },
         sectionHeaderText: {
+            flexShrink: 1,
             fontSize: 13,
-            fontWeight: '400',
             color: 'rgba(0,0,0,0.5)',
-            textTransform: 'uppercase'
+            textTransform: 'uppercase',
+        },
+        sectionAuxComponent: {
+            justifyContent: 'center',
+            alignItems: 'center',
         },
     });
 
@@ -218,10 +219,35 @@ const Section = ({ title, content }) => {
         <View style={styles.sectionContainer}>
             <View style={styles.headerContainer}>
                 <Text style={styles.sectionHeaderText}>{title}</Text>
-                {/* <Text style={styles.sectionHeaderText}>Saved</Text> */}
+                <View style={styles.sectionAuxComponent}>{auxComponent}</View>
             </View>
             {content}
         </View>
+    )
+}
+
+const SectionAuxLink = ({ icon, text, onPress }) => {
+    const styles = StyleSheet.create({
+        container: {
+            flexDirection: 'row',
+            gap: 4,
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+        text: {
+            fontSize: 13,
+            color: 'rgba(0,0,0,0.5)',
+        },
+    });
+
+    return (
+        <TouchableOpacity
+            style={styles.container}
+            onPress={onPress}
+        >
+            <Ionicons name={icon} style={styles.text} />
+            <Text style={styles.text}>{text}</Text>
+        </TouchableOpacity>
     )
 }
 
@@ -456,6 +482,18 @@ export default PlaceDetail = ({ navigation, route }) => {
                     />
                     <Section 
                         title={'location'}
+                        auxComponent={
+                        <SectionAuxLink 
+                            icon='open-outline' 
+                            text='Open in Maps' 
+                                onPress={() => showLocation({
+                                latitude: place.lat,
+                                longitude: place.lng,
+                                title: place.title,
+                                googlePlaceId: place.google_place_id,
+            
+                            })} 
+                        />}
                         content={<MiniMap place={place} />}
                     />
                 </View>

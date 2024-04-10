@@ -58,15 +58,9 @@ const MiniMap = ({ place }) => {
     }
     return (
         <View style={{ flexDirection: 'column', gap: 8, }}>
-            <TouchableOpacity 
+            <View 
                 style={styles.container} 
-                onPress={() => showLocation({
-                    latitude: place.lat,
-                    longitude: place.lng,
-                    title: place.title,
-                    googlePlaceId: place.google_place_id,
-
-                })}>
+            >
                 <MapView 
                     style={{ height: '100%', width: '100%', borderRadius: 10, }}
                     initialRegion={initialRegion}
@@ -79,7 +73,7 @@ const MiniMap = ({ place }) => {
                         <RoundMarker emoji={place.emoji} />
                     </Marker>
                 </MapView>
-            </TouchableOpacity>
+            </View>
             <Text style={{ fontSize: 13, color: 'rgba(0,0,0,0.5)', alignSelf: 'flex-end' }}>{place.short_formatted_address}</Text>
          </View>
     )  
