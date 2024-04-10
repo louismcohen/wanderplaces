@@ -28,6 +28,7 @@
     "expo-linear-gradient": "~12.7.2",
     "expo-splash-screen": "~0.26.4",
     "expo-status-bar": "~1.11.1",
+    "expo-system-ui": "~2.9.3",
     "hex-to-rgba": "^2.0.1",
     "lodash": "^4.17.21",
     "minisearch": "^6.3.0",

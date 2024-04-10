@@ -1,8 +1,9 @@
-import React from 'react';
-import { StyleSheet } from 'react-native'
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Image } from 'react-native'
 import { View, Text, TouchableOpacity } from 'react-native-ui-lib';
 
 import { FontAwesome6 } from '@expo/vector-icons';
+import { getPlacePhotoUri } from '../api/Google.api';
 
 const getItemType = (type, info) => {
     switch (type) {
@@ -21,18 +22,27 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255,255,255,1.0)',
     },
     leftContainer: {
-        padding: 16,
-        flex: '1 1 auto',
         flexGrow: 1,
+        paddingRight: 16,
     },
     rightContainer: {
         paddingRight: 16, 
         flex: '0 1 auto', 
         alignSelf: 'center'
     },
+    imageContainer: {
+        flexShrink: 1,
+        width: 80,
+        backgroundColor: 'rgba(0,0,0,0.1)',
+        // height: '100%',
+    },
     detailsContainer: {
+        flex: 1,
         flexDirection: 'column',
         gap: 8,
+        paddingVertical: 16,
+        justifyContent: 'center',
+        alignItems: 'flex-start',
     },
     title: {
         fontSize: 20,
@@ -80,14 +90,34 @@ export const PlaceItem = ({ info, navigation, navigateTo }) => {
 }
 
 const PlaceDetails = ({ info }) => {
+    const [photoUri, setPhotoUri] = useState();
+
+    useEffect(() => {
+        const getPhoto = async () => {
+            if (!info.photos) return null;
+            const photo = await getPlacePhotoUri({ name: info.photos[0].name, maxHeight: 240 });
+            setPhotoUri(photo);
+        }
+
+        getPhoto();
+    }, []); 
+    
+    
     return (
-        <View style={styles.detailsContainer}>
-            <View>
-                <Text adjustsFontSizeToFit numberOfLines={1} style={styles.title}>{info.emoji ? `${info.emoji} ` : null}{info.title}</Text>
-                <PlaceInfo info={info} />
+        <View style={{ flexDirection: 'row', gap: 8 }}>
+            {photoUri 
+                ? <Image width={80} resizeMode='cover' source={{ uri: photoUri }} />
+                : <View style={styles.imageContainer} />
+            }
+            <View style={styles.detailsContainer}>
+                
+                <View>
+                    <Text adjustsFontSizeToFit numberOfLines={2} style={styles.title}>{info.emoji ? `${info.emoji} ` : null}{info.title}</Text>
+                    <PlaceInfo info={info} />
+                </View>
+                
+                {info.note ? <Text style={styles.placeNote}>{info.note}</Text> : null}
             </View>
-            
-            {info.note ? <Text style={styles.placeNote}>{info.note}</Text> : null}
         </View>
     )
 }
