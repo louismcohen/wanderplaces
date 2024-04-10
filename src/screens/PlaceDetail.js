@@ -125,7 +125,7 @@ const HeaderTitle = ({ emoji, title, openEmojiPicker }) => {
             overflow: 'visible',
             // backgroundColor: 'white',
             // flex: 1,
-            paddingVertical: 8,
+            paddingVertical: 16,
             paddingHorizontal: 16,
             paddingTop: 24,
             flexDirection: 'row',
@@ -444,7 +444,33 @@ export default PlaceDetail = ({ navigation, route }) => {
             fontSize: 14,
             color: 'rgba(0,0,0,0.5)',
         }
-    })
+    });
+
+    const renderSectionHeader = (({ section: { title } }) => {
+        if (title === 'location') {
+            return (
+                <SectionHeader
+                    title={title}
+                    auxComponent={
+                        <SectionAuxLink 
+                            icon='open-outline' 
+                            text='Open in Maps' 
+                                onPress={() => showLocation({
+                                latitude: place.lat,
+                                longitude: place.lng,
+                                title: place.title,
+                                googlePlaceId: place.google_place_id,
+            
+                            })} 
+                        />}
+                />
+            )
+        } else {
+            return (
+                <SectionHeader title={title} />
+            )
+        };
+    });
 
     const renderSectionItem = ({ item, index, section }) => {
         switch (section.title) {
@@ -531,7 +557,7 @@ export default PlaceDetail = ({ navigation, route }) => {
                         style={{ flex: 1, paddingHorizontal: 16, }}
                         sections={sectionData}
                         renderItem={renderSectionItem}
-                        renderSectionHeader={({ section: { title } }) => <SectionHeader title={title} />}
+                        renderSectionHeader={renderSectionHeader}
                         renderSectionFooter={() => <View style={{ height: 16}} />}
                         ItemSeparatorComponent={() => <View style={{ height: 1, marginHorizontal: 16, backgroundColor: 'rgba(0,0,0,0.1)'}} />}
                         // CellRendererComponent={({props}) => {props}}
