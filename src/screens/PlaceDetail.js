@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import { useTheme } from '@react-navigation/native'
 import { moderateScale } from 'react-native-size-matters';
 import { StyleSheet, View, Text, TouchableOpacity, SectionList, FlatList, TouchableHighlight, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import MiniMap from './MiniMap';
+import MiniMap from '../components/MiniMap';
 
 import { ListItemContainer } from '../components/ListItems';
 import { SafeAreaView } from 'react-native-safe-area-context';

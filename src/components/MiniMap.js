@@ -1,5 +1,6 @@
 import MapView, { Marker } from 'react-native-maps';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import {showLocation} from 'react-native-map-link';
 
 const MiniMap = ({ place }) => {
     const styles = StyleSheet.create({
@@ -54,7 +55,7 @@ const MiniMap = ({ place }) => {
         longitudeDelta: 0.1,
     }
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container}>
             <MapView 
                 style={{ height: 200 }}
                 initialRegion={initialRegion}
@@ -69,7 +70,7 @@ const MiniMap = ({ place }) => {
                     </View>
                 </Marker>
             </MapView>
-         </View>
+         </TouchableOpacity>
     )  
 };
 

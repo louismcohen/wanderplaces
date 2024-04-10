@@ -5736,6 +5736,11 @@ react-native-global-props@^1.1.5:
   resolved "https://registry.npmjs.org/react-native-global-props/-/react-native-global-props-1.1.5.tgz"
   integrity sha512-QDeAdRel6zyJfbgyFxZi9QXZe78OdlANxJae0rJn76uTqdt/A+iWBVjJy3NmaN/fpKy0uV0HhW6Hu4xM0QCisQ==
 
+react-native-map-link@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-map-link/-/react-native-map-link-3.1.0.tgz#39ba1593e24dc91d1a02b762bb1cd1d846e1ffc0"
+  integrity sha512-ZcLIc92JiPMqYm41oo9ZK4lpcUWjEm7xVoGiL52M8naG49RaDstsrF4EV2Qi5B2K6m0wGNzDtUx0M92yM5krvA==
+
 react-native-maps@1.10.0:
   version "1.10.0"
   resolved "https://registry.npmjs.org/react-native-maps/-/react-native-maps-1.10.0.tgz"
