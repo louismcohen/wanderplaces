@@ -85,13 +85,6 @@ export const ListItemContainer = ({ content, navigation, navigateTo }) => {
 }
 
 export const PlaceItem = ({ info, navigation, navigateTo }) => {
-    // console.log({info});
-    return (
-        <ListItem info={info} type={'place'} navigation={navigation} navigateTo={navigateTo} />
-    )
-}
-
-const PlaceDetails = ({ info }) => {
     const { collections } = useContext(ApiContext);
     const thisCollection = collections.find(collection => collection._id === info.collection_id);
 
@@ -106,18 +99,29 @@ const PlaceDetails = ({ info }) => {
 
         getPhoto();
     }, []); 
-    
-    
+
+    const infoWithEmoji = {
+        ...info,
+        emoji: info.emoji ? info.emoji : thisCollection.emoji,
+        photoUri,
+    }
+
+    return (
+        <ListItem info={infoWithEmoji} type={'place'} navigation={navigation} navigateTo={navigateTo} />
+    )
+}
+
+const PlaceDetails = ({ info }) => {  
     return (
         <View style={{ flexDirection: 'row', gap: 8 }}>
-            {photoUri 
-                ? <Image width={80} resizeMode='cover' source={{ uri: photoUri }} />
+            {info.photoUri 
+                ? <Image width={80} resizeMode='cover' source={{ uri: info.photoUri }} />
                 : <View style={styles.imageContainer} />
             }
             <View style={styles.detailsContainer}>
                 
                 <View>
-                    <Text adjustsFontSizeToFit numberOfLines={2} style={styles.title}>{info.emoji ? `${info.emoji} ` : `${thisCollection.emoji} `}{info.title}</Text>
+                    <Text adjustsFontSizeToFit numberOfLines={2} style={styles.title}>{`${info.emoji} `}{info.title}</Text>
                     <PlaceInfo info={info} />
                 </View>
                 

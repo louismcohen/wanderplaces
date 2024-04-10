@@ -13,6 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { FontAwesome6, Ionicons } from '@expo/vector-icons';
 import { ApiContext } from '../api/ApiContext';
+import { render } from 'react-dom';
 
 const Header = ({ navigation, route, options, back }) => {
     // console.log(route)
@@ -32,7 +33,6 @@ const ListItem = ({ icon, title, detail }) => {
             // alignItems: 'center',
             // paddingVertical: 12,
             paddingHorizontal: 16,
-
         },
         borderContainer: {
             flexGrow: 1,
@@ -179,6 +179,35 @@ const HeaderTitle = ({ emoji, title, openEmojiPicker }) => {
     )
 }
 
+const SectionHeader = ({ title, auxComponent }) => {
+    const styles = StyleSheet.create({
+        headerContainer: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            paddingBottom: 7,
+            // borderColor: 'green',
+            // borderWidth: 1,
+        },
+        sectionHeaderText: {
+            flexShrink: 1,
+            fontSize: 13,
+            color: 'rgba(0,0,0,0.5)',
+            textTransform: 'uppercase',
+        },
+        sectionAuxComponent: {
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+    });
+
+    return (
+        <View style={styles.headerContainer}>
+            <Text style={styles.sectionHeaderText}>{title}</Text>
+            <View style={styles.sectionAuxComponent}>{auxComponent}</View>
+        </View>     
+    )
+}
+
 const Section = ({ title, auxComponent, content }) => {
     const styles = StyleSheet.create({
         sectionContainer: {
@@ -199,28 +228,11 @@ const Section = ({ title, auxComponent, content }) => {
 
             elevation: 5,
         },
-        headerContainer: {
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-        },
-        sectionHeaderText: {
-            flexShrink: 1,
-            fontSize: 13,
-            color: 'rgba(0,0,0,0.5)',
-            textTransform: 'uppercase',
-        },
-        sectionAuxComponent: {
-            justifyContent: 'center',
-            alignItems: 'center',
-        },
     });
 
     return (
         <View style={styles.sectionContainer}>
-            <View style={styles.headerContainer}>
-                <Text style={styles.sectionHeaderText}>{title}</Text>
-                <View style={styles.sectionAuxComponent}>{auxComponent}</View>
-            </View>
+            <SectionHeader title={title} auxComponent={auxComponent} />
             {content}
         </View>
     )
@@ -252,7 +264,6 @@ const SectionAuxLink = ({ icon, text, onPress }) => {
 }
 
 export default PlaceDetail = ({ navigation, route }) => {
-    console.log(route.params._id)
     const [viewHeight, setViewHeight] = useState();
     const [isEmojiPickerOpen ,setIsEmojiPickerOpen] = useState(false);
     const [place, setPlace] = useState(route.params);
@@ -287,11 +298,6 @@ export default PlaceDetail = ({ navigation, route }) => {
         })
     }, [noteInput]);
 
-    useEffect(() => {
-        // console.log(place.emoji)
-        // console.log({place})
-    }, [place]);
-    
     const listData = [
         {
             icon: 'boxes-stacked',
@@ -314,12 +320,30 @@ export default PlaceDetail = ({ navigation, route }) => {
             detail: 'Yes, I\'ve been here',
         },
     ]
+
+    const sectionData = [
+        {
+            title: 'note',
+            data: [route.params],
+        },
+        {
+            title: 'details',
+            data: [route.params],
+        },
+        {
+            title: 'location',
+            data: [route.params],
+        },
+        {
+            title: 'photos',
+            data: [route.params],
+        },
+    ]
     
     const styles = StyleSheet.create({
         container: {
             flex: 1,
             // padding: 16,
-            justifyContent: 'flex-start',
             // overflow: 'visible',
             // gap: 16,
         },
@@ -374,12 +398,32 @@ export default PlaceDetail = ({ navigation, route }) => {
             borderRadius: 10, 
             borderColor: 'rgba(0,0,0,0.15)', 
             borderWidth: 1, 
+
+            shadowColor: 'rgba(0,0,0,1.0)',
+            shadowOffset: {
+                width: 0,
+                height: 2,
+            },
+            shadowOpacity: 0.10,
+            shadowRadius: 3,
+
+            elevation: 5,
         },
         listItemContainer: {
             backgroundColor: 'white',
             borderRadius: 10,    
             borderColor: 'rgba(0,0,0,0.15)', 
             borderWidth: 1, 
+
+            shadowColor: 'rgba(0,0,0,1.0)',
+            shadowOffset: {
+                width: 0,
+                height: 2,
+            },
+            shadowOpacity: 0.10,
+            shadowRadius: 3,
+
+            elevation: 5,
         },
         listItem: {
             paddingVertical: 12,
@@ -402,6 +446,50 @@ export default PlaceDetail = ({ navigation, route }) => {
         }
     })
 
+    const renderSectionItem = ({ item, index, section }) => {
+        switch (section.title) {
+            case 'note':
+                return (
+                    <View style={styles.listItemContainer}> 
+                        <View style={styles.listItem}>
+                            <TextInput 
+                                editable
+                                multiline
+                                style={styles.inputText}
+                                placeholder='Any additional info about this place?'
+                                onChangeText={(text) => setNoteInput(text)}
+                                onEndEditing={(event) => setPlace({ ...place, note: event.nativeEvent.text})}
+                                // onSubmitEditing={() => console.log('on submit editing')}
+                                value={noteInput}
+                                numberOfLines={2} 
+                                spellCheck={false}
+                                // blurOnSubmit={true}
+                            />
+                        </View>
+                    </View>
+                );
+            case 'details':
+                return (
+                    <FlatList 
+                        style={styles.flatList}
+                        data={listData}
+                        // contentContainerStyle={{ borderWidth: 1, borderColor: 'red' }}
+                        // ListHeaderComponent={<SectionHeader title={'details'} />}
+                        renderItem={({ item }) => <ListItem icon={item.icon} title={item.title} detail={item.detail} />}
+                        ItemSeparatorComponent={<View style={{ height: 1, marginHorizontal: 16, backgroundColor: 'rgba(0,0,0,0.1)'}} />}
+                    />
+                );
+            case 'location':
+                return (
+                    <MiniMap place={item} />
+                )
+            case 'photos':
+                return null;
+            default:
+                return null;
+        }
+    }
+
     useLayoutEffect(() => {
         navigation.setOptions({
             // headerShown: true    ,
@@ -421,16 +509,9 @@ export default PlaceDetail = ({ navigation, route }) => {
 })
 
     return (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss} onLayout={(event) => setViewHeight(event.nativeEvent.layout.height * 0.8)}>
+        <TouchableWithoutFeedback style={{ flex: 1, }} onPress={Keyboard.dismiss} onLayout={(event) => setViewHeight(event.nativeEvent.layout.height * 0.8)}>
             <View style={styles.container}>
-                {/* <FlatList 
-                    style={styles.list}
-                    data={data}
-                    renderItem={({ item }) => <ListItemContainer content={<Content title={item.title} value={item.value} navigation={navigation} navigateTo={''} />} />}
-                    contentContainerStyle={{ gap: 1 }}
-                /> */}
                 <HeaderTitle emoji={selectedEmoji || place.emoji} title={place.title} openEmojiPicker={() => setIsEmojiPickerOpen(true)} />
-                {/* <Text numberOfLines={1} style={{ fontSize: 28, fontWeight: '700', paddingBottom: 16,}}>{place.title}</Text> */}
                 {viewHeight ? <EmojiPicker 
                     open={isEmojiPickerOpen} 
                     onClose={() => setIsEmojiPickerOpen(false)} 
@@ -446,7 +527,21 @@ export default PlaceDetail = ({ navigation, route }) => {
                     // enableSearchAnimation
                 /> : null}
                 <View style={styles.infoContainer}>
-                    <Section
+                    <SectionList 
+                        style={{ flex: 1, paddingHorizontal: 16, }}
+                        sections={sectionData}
+                        renderItem={renderSectionItem}
+                        renderSectionHeader={({ section: { title } }) => <SectionHeader title={title} />}
+                        renderSectionFooter={() => <View style={{ height: 16}} />}
+                        ItemSeparatorComponent={() => <View style={{ height: 1, marginHorizontal: 16, backgroundColor: 'rgba(0,0,0,0.1)'}} />}
+                        // CellRendererComponent={({props}) => {props}}
+                    />
+                    {/* <FlatList
+                        data={sectionData}
+                        style={styles.flatList}
+                        renderItem={renderSectionItem}
+                        /> */}
+                    {/* <Section
                         title={'note'}
                         content={
                             <View style={styles.listItemContainer}> 
@@ -467,17 +562,18 @@ export default PlaceDetail = ({ navigation, route }) => {
                                 </View>
                             </View>
                         }
-                    />                 
+                    />
                     <Section 
                         title={'details'} 
                         content={
                             <FlatList 
                                 style={styles.flatList}
                                 data={listData}
-                                // ListHeaderComponent={<Text style={styles.sectionHeaderText}>details</Text>}
+                                // contentContainerStyle={{ borderWidth: 1, borderColor: 'red' }}
+                                // ListHeaderComponent={<SectionHeader title={'details'} />}
                                 renderItem={({ item }) => <ListItem icon={item.icon} title={item.title} detail={item.detail} />}
                                 ItemSeparatorComponent={<View style={{ height: 1, marginHorizontal: 16, backgroundColor: 'rgba(0,0,0,0.1)'}} />}
-                            />
+                            />    
                         } 
                     />
                     <Section 
@@ -496,6 +592,11 @@ export default PlaceDetail = ({ navigation, route }) => {
                         />}
                         content={<MiniMap place={place} />}
                     />
+                    <Section
+                        title={'photos'}
+                        content={null
+                        } 
+                    /> */}
                 </View>
             </View>
         </TouchableWithoutFeedback>
