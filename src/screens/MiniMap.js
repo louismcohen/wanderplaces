@@ -29,7 +29,7 @@ const MiniMap = ({ place }) => {
 
             width: 36, 
             height: 36, 
-            backgroundColor: 'white', 
+            backgroundColor: 'rgba(255,255,255,0.85)', 
             justifyContent: 'center', 
             alignItems: 'center',
 
@@ -45,7 +45,7 @@ const MiniMap = ({ place }) => {
         },
     });
 
-    console.log(Object.keys(place))
+    console.log(place.lat, place.lng);
     const { lat, lng } = place;
     const initialRegion = {
         latitude: lat,
