@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useMemo, useRef, useCallback, useContext } from 'react';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import React, { useState, useEffect, useMemo, useRef, useCallback, useContext, memo } from 'react';
+import MapView from 'react-native-map-clustering';
+import { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
 import { StyleSheet, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions, KeyboardAvoidingView, Platform } from 'react-native';
@@ -11,6 +12,8 @@ import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 import * as Haptics from 'expo-haptics';
 import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 import { FontAwesome6, Ionicons } from '@expo/vector-icons';
+
+import MapMarker from '../components/MapMarker';
 
 const SPACE_GROTESK_FAMILY = {
   '300Light': 'SpaceGrotesk_300Light',
@@ -30,6 +33,7 @@ import {
 import { parse } from 'react-native-svg';
 import { ApiContext } from '../api/ApiContext';
 import RoundMarker from '../components/RoundMarker';
+import ClusterMarker from '../components/ClusterMarker';
 
 const defaultStyle = {
   // fontFamily: 'SpaceGrotesk_500Medium',
@@ -244,6 +248,7 @@ export default PlacesMap = () => {
               textFieldRef.current.blur();
             }
           }
+          renderCluster={(props) => <ClusterMarker {...props} />}
           >
           {/* <Marker
             stopPropagation
@@ -255,17 +260,23 @@ export default PlacesMap = () => {
             description={testMarker.description}
             onPress={() => setMarkerSelected(testMarker)}
           /> */}
+          {/* {places 
+            ? places.map(place => {
+              return (
+                <MapMarker key={place._id} place={place} onPress={() => setMarkerSelected(place)} />
+              )
+            })
+            : null 
+          } */}
           {places 
             ? places.map(place => {
               return (
-                <Marker
+                <MapMarker
                   key={place._id}
-                  stopPropagation
+                  place={place}
                   coordinate={{ latitude: place.lat, longitude: place.lng }}
                   onPress={() => setMarkerSelected(place)}
-                >
-                  <RoundMarker emoji={place.emoji} />
-                </Marker>
+                />
               )
             })
             : null 

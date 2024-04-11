@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02119DFB753C41F580908E67 /* SpaceGrotesk_500Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF7619FDB42C414DBC4CB371 /* SpaceGrotesk_500Medium.ttf */; };
-		05274611F36B4ABAA539B7E9 /* SpaceGrotesk_600SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBA34525D6704BE793DEB10F /* SpaceGrotesk_600SemiBold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		31733628D6DC497D9F530BD6 /* SpaceGrotesk_500Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D66029D5D7EF4C20A7727C16 /* SpaceGrotesk_500Medium.ttf */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		88BC230099904EC183DB9AB9 /* SpaceGrotesk_300Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AFB725414EE4B6F8B8C447B /* SpaceGrotesk_300Light.ttf */; };
+		52C40A78FEA74B4B9AF203E3 /* SpaceGrotesk_300Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 154FCEAF44574EB7BFF366A0 /* SpaceGrotesk_300Light.ttf */; };
 		96905EF65AED1B983A6B3ABC /* libPods-Wanderplaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Wanderplaces.a */; };
-		99361DBCF9654F23AF900D35 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00543C32E1D0437C8F3645A5 /* noop-file.swift */; };
-		AD69301BD98947AF8019563E /* SpaceGrotesk_700Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D241AAF51BE46AB88D14FA7 /* SpaceGrotesk_700Bold.ttf */; };
+		9AC983772AE9417BB2D84D1A /* SpaceGrotesk_400Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F7613262BBB428387B428AE /* SpaceGrotesk_400Regular.ttf */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
+		B68C860B5E904997B7694488 /* SpaceGrotesk_600SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0703293DE0F34F0387D08B26 /* SpaceGrotesk_600SemiBold.ttf */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		D9EF72C8B5D84E09BFE7ED2C /* SpaceGrotesk_400Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBF8662CFEC84429B71234D8 /* SpaceGrotesk_400Regular.ttf */; };
+		CD60198D05354DADA2F5F6DB /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C83066C222479790671C99 /* noop-file.swift */; };
+		FC9CC84527C048D28C366587 /* SpaceGrotesk_700Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34BDB74864F34A13986B0392 /* SpaceGrotesk_700Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00543C32E1D0437C8F3645A5 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Wanderplaces/noop-file.swift"; sourceTree = "<group>"; };
+		0703293DE0F34F0387D08B26 /* SpaceGrotesk_600SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_600SemiBold.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_600SemiBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Wanderplaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wanderplaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Wanderplaces/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Wanderplaces/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Wanderplaces/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Wanderplaces/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Wanderplaces/main.m; sourceTree = "<group>"; };
-		2AFB725414EE4B6F8B8C447B /* SpaceGrotesk_300Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_300Light.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_300Light.ttf"; sourceTree = "<group>"; };
+		154FCEAF44574EB7BFF366A0 /* SpaceGrotesk_300Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_300Light.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_300Light.ttf"; sourceTree = "<group>"; };
+		34BDB74864F34A13986B0392 /* SpaceGrotesk_700Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_700Bold.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_700Bold.ttf"; sourceTree = "<group>"; };
 		58EEBF8E8E6FB1BC6CAF49B5 /* libPods-Wanderplaces.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Wanderplaces.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D241AAF51BE46AB88D14FA7 /* SpaceGrotesk_700Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_700Bold.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_700Bold.ttf"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-Wanderplaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wanderplaces.debug.xcconfig"; path = "Target Support Files/Pods-Wanderplaces/Pods-Wanderplaces.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-Wanderplaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wanderplaces.release.xcconfig"; path = "Target Support Files/Pods-Wanderplaces/Pods-Wanderplaces.release.xcconfig"; sourceTree = "<group>"; };
+		8F7613262BBB428387B428AE /* SpaceGrotesk_400Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_400Regular.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_400Regular.ttf"; sourceTree = "<group>"; };
+		A94610F5BA0244E49158F758 /* Wanderplaces-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Wanderplaces-Bridging-Header.h"; path = "Wanderplaces/Wanderplaces-Bridging-Header.h"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = Wanderplaces/SplashScreen.storyboard; sourceTree = "<group>"; };
-		ABB3A35B6E654B7ABCE02723 /* Wanderplaces-Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Wanderplaces-Bridging-Header.h"; path = "Wanderplaces/Wanderplaces-Bridging-Header.h"; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		CF7619FDB42C414DBC4CB371 /* SpaceGrotesk_500Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_500Medium.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_500Medium.ttf"; sourceTree = "<group>"; };
-		DBF8662CFEC84429B71234D8 /* SpaceGrotesk_400Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_400Regular.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_400Regular.ttf"; sourceTree = "<group>"; };
-		EBA34525D6704BE793DEB10F /* SpaceGrotesk_600SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_600SemiBold.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_600SemiBold.ttf"; sourceTree = "<group>"; };
+		D66029D5D7EF4C20A7727C16 /* SpaceGrotesk_500Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SpaceGrotesk_500Medium.ttf; path = "../assets/fonts/space-grotesk/SpaceGrotesk_500Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F4C83066C222479790671C99 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "Wanderplaces/noop-file.swift"; sourceTree = "<group>"; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Wanderplaces/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,8 +67,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				00543C32E1D0437C8F3645A5 /* noop-file.swift */,
-				ABB3A35B6E654B7ABCE02723 /* Wanderplaces-Bridging-Header.h */,
+				F4C83066C222479790671C99 /* noop-file.swift */,
+				A94610F5BA0244E49158F758 /* Wanderplaces-Bridging-Header.h */,
 			);
 			name = Wanderplaces;
 			sourceTree = "<group>";
@@ -82,14 +82,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		78D7D9F0A6E34223B7D5D958 /* Resources */ = {
+		69275CD8F3D0409D9B0E0414 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2AFB725414EE4B6F8B8C447B /* SpaceGrotesk_300Light.ttf */,
-				DBF8662CFEC84429B71234D8 /* SpaceGrotesk_400Regular.ttf */,
-				CF7619FDB42C414DBC4CB371 /* SpaceGrotesk_500Medium.ttf */,
-				EBA34525D6704BE793DEB10F /* SpaceGrotesk_600SemiBold.ttf */,
-				5D241AAF51BE46AB88D14FA7 /* SpaceGrotesk_700Bold.ttf */,
+				154FCEAF44574EB7BFF366A0 /* SpaceGrotesk_300Light.ttf */,
+				8F7613262BBB428387B428AE /* SpaceGrotesk_400Regular.ttf */,
+				D66029D5D7EF4C20A7727C16 /* SpaceGrotesk_500Medium.ttf */,
+				0703293DE0F34F0387D08B26 /* SpaceGrotesk_600SemiBold.ttf */,
+				34BDB74864F34A13986B0392 /* SpaceGrotesk_700Bold.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -111,7 +111,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D65327D7A22EEC0BE12398D9 /* Pods */,
 				D7E4C46ADA2E9064B798F356 /* ExpoModulesProviders */,
-				78D7D9F0A6E34223B7D5D958 /* Resources */,
+				69275CD8F3D0409D9B0E0414 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -168,13 +168,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Wanderplaces" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				27E19F503641E90F8303A360 /* [Expo] Configure project */,
+				756F931E291AEFDEF6D31122 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				C01ABCAA2798854A30F0F007 /* [CP] Embed Pods Frameworks */,
+				E5FEE367802FDD7A630E987A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,11 +224,11 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				88BC230099904EC183DB9AB9 /* SpaceGrotesk_300Light.ttf in Resources */,
-				D9EF72C8B5D84E09BFE7ED2C /* SpaceGrotesk_400Regular.ttf in Resources */,
-				02119DFB753C41F580908E67 /* SpaceGrotesk_500Medium.ttf in Resources */,
-				05274611F36B4ABAA539B7E9 /* SpaceGrotesk_600SemiBold.ttf in Resources */,
-				AD69301BD98947AF8019563E /* SpaceGrotesk_700Bold.ttf in Resources */,
+				52C40A78FEA74B4B9AF203E3 /* SpaceGrotesk_300Light.ttf in Resources */,
+				9AC983772AE9417BB2D84D1A /* SpaceGrotesk_400Regular.ttf in Resources */,
+				31733628D6DC497D9F530BD6 /* SpaceGrotesk_500Medium.ttf in Resources */,
+				B68C860B5E904997B7694488 /* SpaceGrotesk_600SemiBold.ttf in Resources */,
+				FC9CC84527C048D28C366587 /* SpaceGrotesk_700Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +272,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		27E19F503641E90F8303A360 /* [Expo] Configure project */ = {
+		756F931E291AEFDEF6D31122 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -314,7 +314,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wanderplaces/Pods-Wanderplaces-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C01ABCAA2798854A30F0F007 /* [CP] Embed Pods Frameworks */ = {
+		E5FEE367802FDD7A630E987A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,7 +342,7 @@
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */,
-				99361DBCF9654F23AF900D35 /* noop-file.swift in Sources */,
+				CD60198D05354DADA2F5F6DB /* noop-file.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
