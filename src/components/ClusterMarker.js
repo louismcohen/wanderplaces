@@ -9,7 +9,7 @@ const ClusterMarker = ({ properties, geometry, id, onPress, tracksViewChanges })
         // borderColor: 'rgba(20,10,255,0.2)',
         borderColor: 'rgba(0,0,0,0.5',
 
-        backgroundColor: 'rgba(0,0,0,0.85)',
+        backgroundColor: 'rgba(0,0,0,0.75)',
 
         width: 40,
         height: 40,
@@ -22,8 +22,8 @@ const ClusterMarker = ({ properties, geometry, id, onPress, tracksViewChanges })
             width: 0,
             height: 3,
         },
-        shadowOpacity: 0.40,
-        shadowRadius: 6,
+        shadowOpacity: 0.7,
+        shadowRadius: 4,
 
         elevation: 5,
       },

@@ -3,7 +3,7 @@ import MapView from 'react-native-map-clustering';
 import { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
-import { StyleSheet, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions, KeyboardAvoidingView, Platform } from 'react-native';
+import { StyleSheet, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions, KeyboardAvoidingView, Platform, LayoutAnimation } from 'react-native';
 import { View, TextField, Button } from 'react-native-ui-lib';
 import Animated, { useSharedValue, useDerivedValue } from 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -249,6 +249,7 @@ export default PlacesMap = () => {
             }
           }
           renderCluster={(props) => <ClusterMarker {...props} />}
+          layoutAnimationConf={LayoutAnimation.Presets.easeInEaseOut}
           >
           {/* <Marker
             stopPropagation
