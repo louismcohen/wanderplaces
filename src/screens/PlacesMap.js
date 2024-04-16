@@ -248,7 +248,7 @@ export default PlacesMap = () => {
               textFieldRef.current.blur();
             }
           }
-          renderCluster={(props) => <ClusterMarker {...props} />}
+          renderCluster={(props) => <ClusterMarker key={props.id} {...props} />}
           layoutAnimationConf={LayoutAnimation.Presets.easeInEaseOut}
           >
           {/* <Marker

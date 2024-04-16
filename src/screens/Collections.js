@@ -155,16 +155,18 @@ const styles = StyleSheet.create({
     },
     itemTitleContainer: {
         flexDirection: 'column',
-        gap: 2,
+        gap: 4,
     },
     itemTitle: {
         fontSize: 20,
         fontWeight: 700,
+        fontFamily: 'Mona-Bold',
     },
     itemSubtitle: {
         fontSize: 13,
         fontWeight: 400,
-        color: 'rgba(0,0,0,0.50)'
+        color: 'rgba(0,0,0,0.50)',
+        fontFamily: 'Mona-Regular'
     }
 })
 

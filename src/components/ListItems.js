@@ -49,10 +49,12 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: '700',
+        fontFamily: 'Mona-Bold'
     },
     placeNote: {
         fontSize: 13,
         opacity: 0.5,
+        fontFamily: 'Mona-Regular'
     },
 })
 
@@ -120,7 +122,7 @@ const PlaceDetails = ({ info }) => {
             }
             <View style={styles.detailsContainer}>
                 
-                <View>
+                <View style={{ flexDirection: 'column', gap: 4,}}>
                     <Text adjustsFontSizeToFit numberOfLines={2} style={styles.title}>{`${info.emoji} `}{info.title}</Text>
                     <PlaceInfo info={info} />
                 </View>
@@ -133,7 +135,13 @@ const PlaceDetails = ({ info }) => {
 
 const PlaceInfo = ({ info }) => {
     const { rating, user_rating_count, currentlyOpen = true, closesAt = '8:00 PM', opensAt = '7:00 AM', primary_type } = info;
-    // console.log({info})
+    const styles = StyleSheet.create({
+        text: {
+            fontSize: 14,
+            fontFamily: 'Mona-Regular',
+        }
+    })
+    
     const separator = ' • ';
 
     let itemInfoString = [];
@@ -163,7 +171,7 @@ const PlaceInfo = ({ info }) => {
     
     return (
         <View style={{ flexDirection: 'column' }}>
-            <Text>{itemInfoString}</Text>
+            <Text style={styles.text}>{itemInfoString}</Text>
 
         </View>
     )

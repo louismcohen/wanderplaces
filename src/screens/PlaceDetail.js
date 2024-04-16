@@ -62,6 +62,7 @@ const ListItem = ({ icon, title, detail }) => {
         },
         listItemTitle: {
             fontSize: 17,
+            fontFamily: 'Mona-Medium',
         },
         listItemDetailContainer: {
             flex: 1,
@@ -73,6 +74,7 @@ const ListItem = ({ icon, title, detail }) => {
             fontSize: 14,
             color: 'rgba(0,0,0,0.5)',
             textAlign: 'right',
+            fontFamily: 'Mona-Regular',
         }
     })
 
@@ -166,6 +168,7 @@ const HeaderTitle = ({ emoji, title, openEmojiPicker }) => {
             flex: 1,
             fontSize: 24,
             fontWeight: '700',
+            fontFamily: 'Mona-BoldWide',
         },
     })
 
@@ -190,6 +193,7 @@ const SectionHeader = ({ title, auxComponent }) => {
         },
         sectionHeaderText: {
             flexShrink: 1,
+            fontFamily: 'Mona-SemiBoldWide',
             fontSize: 13,
             color: 'rgba(0,0,0,0.5)',
             textTransform: 'uppercase',
@@ -435,6 +439,7 @@ export default PlaceDetail = ({ navigation, route }) => {
             fontSize: 17,
             lineHeight: 17,
             color: 'rgba(0,0,0,0.85)',
+            fontFamily: 'Mona-Regular',
             
         },
         listItemTitle: {

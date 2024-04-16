@@ -14,10 +14,19 @@ const LibraryNavigator = () => {
                 headerLargeTitle: true,
                 headerTransparent: true,
                 headerBlurEffect: 'regular',
+                headerLargeTitleStyle: {
+                    fontFamily: 'Mona-BoldWide'
+                },
+                headerTitleStyle: {
+                    fontFamily: 'Mona-SemiBoldWide',
+                },
+                headerBackTitleStyle: {
+                    fontFamily: 'Mona-Regular'
+                }
             }}
         >      
             <Stack.Group
-                // Main Library Lists
+                
             >
                 <Stack.Screen 
                     name='Library'

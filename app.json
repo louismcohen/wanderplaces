@@ -43,7 +43,7 @@
           "dgis",
           "lftgpas"
         ]
-     },
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -67,10 +67,20 @@
             "./assets/fonts/space-grotesk/SpaceGrotesk_400Regular.ttf",
             "./assets/fonts/space-grotesk/SpaceGrotesk_500Medium.ttf",
             "./assets/fonts/space-grotesk/SpaceGrotesk_600SemiBold.ttf",
-            "./assets/fonts/space-grotesk/SpaceGrotesk_700Bold.ttf"
+            "./assets/fonts/space-grotesk/SpaceGrotesk_700Bold.ttf",
+            "node_modules/@expo-google-fonts/syne/Syne_400Regular.ttf",
+            "node_modules/@expo-google-fonts/syne/Syne_500Medium.ttf",
+            "node_modules/@expo-google-fonts/syne/Syne_600SemiBold.ttf",
+            "node_modules/@expo-google-fonts/syne/Syne_700Bold.ttf",
+            "node_modules/@expo-google-fonts/syne/Syne_800ExtraBold.ttf"
           ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "883d02fd-b126-4404-a7b9-298c9c495b79"
+      }
+    }
   }
 }

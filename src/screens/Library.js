@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
     libraryListItemTitle: {
         fontSize: 24,
         fontWeight: 500,
+        fontFamily: 'Mona-Medium'
     }
 })
 
