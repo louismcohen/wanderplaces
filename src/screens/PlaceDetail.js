@@ -72,6 +72,7 @@ const ListItem = ({ icon, title, detail }) => {
         },
         listItemDetail: {
             fontSize: 14,
+            lineHeight: 16,
             color: 'rgba(0,0,0,0.5)',
             textAlign: 'right',
             fontFamily: 'Mona-Regular',
@@ -193,10 +194,11 @@ const SectionHeader = ({ title, auxComponent }) => {
         },
         sectionHeaderText: {
             flexShrink: 1,
-            fontFamily: 'Mona-SemiBoldWide',
+            fontFamily: 'Mona-MediumWide',
             fontSize: 13,
             color: 'rgba(0,0,0,0.5)',
             textTransform: 'uppercase',
+            letterSpacing: 0.5,
         },
         sectionAuxComponent: {
             justifyContent: 'center',
@@ -253,6 +255,7 @@ const SectionAuxLink = ({ icon, text, onPress }) => {
         text: {
             fontSize: 13,
             color: 'rgba(0,0,0,0.5)',
+            fontFamily: 'Mona-RegularWide'
         },
     });
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Image } from 'react-native'
-import { View, Text, TouchableOpacity } from 'react-native-ui-lib';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { useContext } from 'react';
 import { ApiContext } from '../api/ApiContext';
 

@@ -1,6 +1,5 @@
 import MapView, { Marker } from 'react-native-maps';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { showLocation } from 'react-native-map-link';
 import RoundMarker from './RoundMarker';
 
 const MiniMap = ({ place }) => {
@@ -48,6 +47,12 @@ const MiniMap = ({ place }) => {
 
             elevation: 5,
         },
+        addressText: {
+            fontSize: 13, 
+            color: 'rgba(0,0,0,0.5)', 
+            alignSelf: 'flex-end',
+            fontFamily: 'Mona-Light',
+        }
     });
 
     const initialRegion = {
@@ -74,7 +79,7 @@ const MiniMap = ({ place }) => {
                     </Marker>
                 </MapView>
             </View>
-            <Text style={{ fontSize: 13, color: 'rgba(0,0,0,0.5)', alignSelf: 'flex-end' }}>{place.short_formatted_address}</Text>
+            <Text style={styles.addressText}>{place.short_formatted_address}</Text>
          </View>
     )  
 };

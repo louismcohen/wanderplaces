@@ -14,6 +14,9 @@ const TabNavigator = () => {
             initialRouteName='LibraryNavigator'
             screenOptions={{
                 headerShown: false,
+                tabBarLabelStyle: {
+                    fontFamily: 'Mona-Medium'
+                }
             }}
         >
             <Tab.Screen

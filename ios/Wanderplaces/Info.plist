@@ -30,6 +30,12 @@
           <string>com.louiscohen.wanderplaces</string>
         </array>
       </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>exp+wanderplaces</string>
+        </array>
+      </dict>
     </array>
     <key>CFBundleVersion</key>
     <string>1</string>
@@ -74,6 +80,11 @@
       <string>SpaceGrotesk_500Medium.ttf</string>
       <string>SpaceGrotesk_600SemiBold.ttf</string>
       <string>SpaceGrotesk_700Bold.ttf</string>
+      <string>Syne_400Regular.ttf</string>
+      <string>Syne_500Medium.ttf</string>
+      <string>Syne_600SemiBold.ttf</string>
+      <string>Syne_700Bold.ttf</string>
+      <string>Syne_800ExtraBold.ttf</string>
     </array>
     <key>UILaunchStoryboardName</key>
     <string>SplashScreen</string>

@@ -4,7 +4,7 @@ import { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font'; 
 import { StyleSheet, Text, TextInput, Keyboard, TouchableWithoutFeedback, Image, Dimensions, KeyboardAvoidingView, Platform, LayoutAnimation } from 'react-native';
-import { View, TextField, Button } from 'react-native-ui-lib';
+import { View, TextField } from 'react-native';
 import Animated, { useSharedValue, useDerivedValue } from 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import BottomSheet, { BottomSheetScrollView } from '@gorhom/bottom-sheet';
@@ -14,6 +14,7 @@ import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 import { FontAwesome6, Ionicons } from '@expo/vector-icons';
 
 import MapMarker from '../components/MapMarker';
+import MapSearch from '../components/MapSearch';
 
 const SPACE_GROTESK_FAMILY = {
   '300Light': 'SpaceGrotesk_300Light',
@@ -227,6 +228,8 @@ export default PlacesMap = () => {
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={{ flex: 1 }}
       >
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+
       <GestureHandlerRootView styles={styles.container} onLayout={onLayoutRootView}>
         <MapView
           ref={mapViewRef}
@@ -239,13 +242,13 @@ export default PlacesMap = () => {
           onMarkerPress={
             (e) => {
               // console.log(e);
-              // changeBottomSheetPosition(1)
+              changeBottomSheetPosition(1)
           }}
           onPress={
             (e) => {
               bottomSheetRef.current.close()
               setMarkerSelected(null);
-              textFieldRef.current.blur();
+              // textFieldRef.current.blur();
             }
           }
           renderCluster={(props) => <ClusterMarker key={props.id} {...props} />}
@@ -286,8 +289,9 @@ export default PlacesMap = () => {
             {/* </Marker> */}
         </MapView>
         {/* <Line style={styles.line} /> */}
+          <MapSearch />
           <Animated.View style={{top: bottomSheetPosition}} />
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            {/* <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
               <View style={{...styles.textFieldView}}>
                 <TextField
                   ref={textFieldRef}
@@ -313,7 +317,7 @@ export default PlacesMap = () => {
                   // borderWidth={1}
                 />
               </View>
-            </TouchableWithoutFeedback>
+            </TouchableWithoutFeedback> */}
             
             <BottomSheet
               ref={bottomSheetRef}
@@ -336,22 +340,17 @@ export default PlacesMap = () => {
                   <FontAwesome6 icon='magnifying-glass' color='black' size={48} />
                   {markerSelected 
                     ? <><Text style={ styles.headerText }>{markerSelected?.title}</Text>
-                      <Text>{markerSelected.description}</Text></>
+                      <Text>{markerSelected?.description}</Text></>
                     : null
                   }
-                  <TextField
-                    containerStyle={styles.textField}
-                    placeholder={'Search for a place'}
-                    onFocus={() => bottomSheetRef.current.expand()}
-                    leadingAccessory={
-                      <FontAwesome6 icon='magnifying-glass' size={48} />
-                    }
-                  />
                 </BottomSheetScrollView>
               </TouchableWithoutFeedback>
             </BottomSheet>        
-  
+                    
+      
       </GestureHandlerRootView>
+      </TouchableWithoutFeedback>
+
       </KeyboardAvoidingView>
     )
   }

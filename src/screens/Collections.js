@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect, useContext } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { useTheme } from '@react-navigation/native';
-import { View, Text, Button, TouchableOpacity } from 'react-native-ui-lib'
+import { View, Text, Button, TouchableOpacity } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import CollectionItem from '../components/CollectionItem';
 import { ApiContext } from '../api/ApiContext';

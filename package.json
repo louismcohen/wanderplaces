@@ -10,6 +10,7 @@
     "postinstall": "node postinstall.js"
   },
   "dependencies": {
+    "@expo-google-fonts/sora": "^0.2.3",
     "@expo-google-fonts/space-grotesk": "^0.2.3",
     "@expo-google-fonts/syne": "^0.2.3",
     "@expo/metro-runtime": "~3.1.3",
@@ -54,7 +55,6 @@
     "react-native-screens": "~3.29.0",
     "react-native-size-matters": "^0.4.2",
     "react-native-svg": "14.1.0",
-    "react-native-ui-lib": "^7.16.0",
     "react-native-url-polyfill": "^2.0.0",
     "react-native-web": "~0.19.6",
     "rn-emoji-keyboard": "^1.6.1",

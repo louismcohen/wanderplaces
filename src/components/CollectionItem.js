@@ -3,7 +3,7 @@ import { FlatList, Pressable, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { getHeaderTitle } from '@react-navigation/elements';
-import { View, Text, SortableList, Button, TouchableOpacity } from 'react-native-ui-lib'
+import { View, Text, SortableList, Button, TouchableOpacity } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { moderateScale } from 'react-native-size-matters';
 import PlaceDetail from '../screens/PlaceDetail';

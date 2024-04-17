@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { ApiContext } from '../api/ApiContext';
 
-import { TouchableOpacity, Text, View } from 'react-native-ui-lib';
+import { TouchableOpacity, Text, View } from 'react-native';
 import { moderateScale } from 'react-native-size-matters';
 import hexToRgba from 'hex-to-rgba';
 
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     },
     libraryListItem: {
         flexDirection: 'row',
-        gap: 8,
+        gap: 12,
         alignItems: 'center',
         justifyContent: 'flex-start',
         // backgroundColor: '#ffffff',

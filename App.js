@@ -47,10 +47,15 @@ export default App = () => {
     'Mona-Medium': require('./assets/fonts/mona-sans/Mona-Sans-Medium.ttf'),
     'Mona-SemiBold': require('./assets/fonts/mona-sans/Mona-Sans-SemiBold.ttf'),
     'Mona-Bold': require('./assets/fonts/mona-sans/Mona-Sans-Bold.ttf'),
+    'Mona-RegularWide': require('./assets/fonts/mona-sans/Mona-Sans-RegularWide.ttf'),
     'Mona-MediumWide': require('./assets/fonts/mona-sans/Mona-Sans-MediumWide.ttf'),
     'Mona-SemiBoldWide': require('./assets/fonts/mona-sans/Mona-Sans-SemiBoldWide.ttf'),
     'Mona-BoldWide': require('./assets/fonts/mona-sans/Mona-Sans-BoldWide.ttf'),
     'Mona-RegularNarrow': require('./assets/fonts/mona-sans/Mona-Sans-RegularNarrow.ttf'),
+    'Sora-Regular': require('@expo-google-fonts/sora/Sora_400Regular.ttf'),
+    'Sora-Medium': require('@expo-google-fonts/sora/Sora_500Medium.ttf'),
+    'Sora-SemiBold': require('@expo-google-fonts/sora/Sora_600SemiBold.ttf'),
+    'Sora-Bold': require('@expo-google-fonts/sora/Sora_700Bold.ttf'),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -65,9 +70,10 @@ export default App = () => {
 
   return (
     <ApiProvider>
-      <SafeAreaProvider>
+      <SafeAreaProvider onLayout={onLayoutRootView}>
         <StatusBar
           animated={true}
+
         />
         <NavigationContainer>
           <TabNavigator />
