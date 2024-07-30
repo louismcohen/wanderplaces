@@ -14,4 +14,4 @@ const MapMarker = ({ place, onPress }) => {
     )
 }
 
-export default MapMarker;
+export default memo(MapMarker);

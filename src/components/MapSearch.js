@@ -24,7 +24,7 @@ const FilterButton = ({ text, count }) => {
             backgroundColor: 'rgba(255,255,255,1.0)',
 
             flexDirection: 'row',
-            gap: 4,
+            gap: 6,
             justifyContent: 'center',
             alignItems: 'center',
 
@@ -50,7 +50,7 @@ const FilterButton = ({ text, count }) => {
             lineHeight: 20,
             color: 'rgba(255,255,255,1.0)',
             textAlign: 'center',
-            fontFamily: 'Mona-Regular'
+            fontFamily: 'Mona-Bold'
         },
         text: {
             color: 'rgba(0,0,0,0.70)',
@@ -113,10 +113,10 @@ const MapSearch = () => {
             borderColor: 'rgba(0,0,0,0.15)',
 
             paddingVertical: 12,
-            paddingHorizontal: 16,
+            paddingHorizontal: 12,
 
             flexDirection: 'row',
-            gap: 12,
+            gap: 8,
             justifyContent: 'flex-start',
             alignItems: 'center',
 

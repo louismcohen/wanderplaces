@@ -272,11 +272,29 @@ const SectionAuxLink = ({ icon, text, onPress }) => {
 
 export default PlaceDetail = ({ navigation, route }) => {
     const [viewHeight, setViewHeight] = useState();
-    const [isEmojiPickerOpen ,setIsEmojiPickerOpen] = useState(false);
-    const [place, setPlace] = useState(route.params);
-    const [noteInput, setNoteInput] = useState(place.note);
+    const [isEmojiPickerOpen, setIsEmojiPickerOpen] = useState(false);
+    const [place, setPlace] = useState();
+    const [noteInput, setNoteInput] = useState();
     const [selectedEmoji, setSelectedEmoji] = useState('');
-    const { collections } = useContext(ApiContext);
+    const { collections, places, setPlaces } = useContext(ApiContext);
+
+    useEffect(() => {    
+        setPlace(places.find(p => p._id === route.params._id))
+    }, [places])
+
+    useEffect(() => {
+        if (place) {
+            const updatedPlaces = places.map(p => {
+                if (p._id === place._id) {
+                    return place
+                };
+                return p;
+            })
+    
+            setPlaces(updatedPlaces);
+        }
+
+    }, [place]);
 
     useEffect(() => {
         const thisCollection = collections.find(collection => collection._id === route.params.collection_id);
@@ -290,31 +308,34 @@ export default PlaceDetail = ({ navigation, route }) => {
     }, [place])
 
     useEffect(() => {
-        console.log('set place for emoji', selectedEmoji, {place})
-        setPlace({
-            ...place,
-            emoji: selectedEmoji,
-        })
-        
+        if (place) {
+            setPlace({
+                ...place,
+                emoji: selectedEmoji,
+            })
+        }
     }, [selectedEmoji]);
 
     useEffect(() => {
-        setPlace({
-            ...place,
-            note: noteInput,
-        })
+        if (place) {
+            setPlace({
+                ...place,
+                note: noteInput,
+            })
+        }
+
     }, [noteInput]);
 
     const listData = [
         {
             icon: 'boxes-stacked',
             title: 'Categories',
-            detail: place.types.split(',').slice(0, 3).join(', '),
+            detail: place?.types?.split(',').slice(0, 3).join(', '),
         },
         {
             icon: 'star-half-stroke',
             title: 'Rating',
-            detail: place.rating ? `★ ${place.rating?.toLocaleString()} (${place.user_rating_count?.toLocaleString()})` : 'No ratings',
+            detail: place?.rating ? `★ ${place.rating?.toLocaleString()} (${place.user_rating_count?.toLocaleString()})` : 'No ratings',
         },
         {
             icon: 'clock',
@@ -494,6 +515,7 @@ export default PlaceDetail = ({ navigation, route }) => {
                                 onChangeText={(text) => setNoteInput(text)}
                                 onEndEditing={(event) => setPlace({ ...place, note: event.nativeEvent.text})}
                                 // onSubmitEditing={() => console.log('on submit editing')}
+                                defaultValue={place?.note}
                                 value={noteInput}
                                 numberOfLines={2} 
                                 spellCheck={false}
@@ -545,7 +567,7 @@ export default PlaceDetail = ({ navigation, route }) => {
     return (
         <TouchableWithoutFeedback style={{ flex: 1, }} onPress={Keyboard.dismiss} onLayout={(event) => setViewHeight(event.nativeEvent.layout.height * 0.8)}>
             <View style={styles.container}>
-                <HeaderTitle emoji={selectedEmoji || place.emoji} title={place.title} openEmojiPicker={() => setIsEmojiPickerOpen(true)} />
+                <HeaderTitle emoji={selectedEmoji || place?.emoji} title={place?.title} openEmojiPicker={() => setIsEmojiPickerOpen(true)} />
                 {viewHeight ? <EmojiPicker 
                     open={isEmojiPickerOpen} 
                     onClose={() => setIsEmojiPickerOpen(false)} 

@@ -1,37 +1,55 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
 import { supabase } from '../utils/supabase';
 
-import collections from '../data/collections.json';
-import places from '../data/places.json';
+import collectionsData from '../data/collections.json';
+import placesData from '../data/places.json';
 
 const ApiContext = createContext();
 
 const ApiProvider = ({ children }) => {
-  const [apiData, setApiData] = useState(null);
+  const [apiData, setApiData] = useState();
+  const [collections, setCollections] = useState(collectionsData);
+  const [places, setPlaces] = useState(placesData);
+  const [placesCollections, setPlacesCollections] = useState();
+
   const [loginData, setLoginData] = useState(null);
-  const [loading, setLoading] = useState(false)
-  
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    const placesCollections = collections.map(collection => {
-      const placesInThisCollection = places.filter(place => place.collection_id === collection._id);
+    if (!collections || !places) return;
+
+    const placesCollectionsData = collections.map((collection) => {
+      // console.log(places.slice(0,3));
+      const placesInThisCollection = places.filter(
+        (place) => place.collection_id === collection._id
+      );
       return {
         ...collection,
         places: placesInThisCollection,
       };
-    })
+    });
 
-    const placesWithDefaultEmojis = places.map(place => {
-      const collectionForThisPlace = collections.find(collection => collection._id === place.collection_id);
+    setPlacesCollections(placesCollectionsData);
+
+    const placesWithDefaultEmojis = places.map((place) => {
+      const collectionForThisPlace = collections.find(
+        (collection) => collection._id === place.collection_id
+      );
 
       return {
         ...place,
         emoji: place.emoji ? place.emoji : collectionForThisPlace.emoji,
-      }
-    })
+      };
+    });
 
-    setApiData({ collections, places: placesWithDefaultEmojis, placesCollections })
-  }, [collections, places])
-  
+    setApiData({
+      collections,
+      setCollections,
+      places: placesWithDefaultEmojis,
+      setPlaces,
+      placesCollections,
+    });
+  }, [collections, places]);
 
   // useEffect(() => {
   //   const login = async () => {
@@ -69,7 +87,7 @@ const ApiProvider = ({ children }) => {
   //       //     )
   //       //   `)
   //       const { data, error } = await supabase.rpc('get_places');
-        
+
   //       console.log(data)
   //       if (error) console.error(error);
   //       return data;
@@ -93,11 +111,9 @@ const ApiProvider = ({ children }) => {
   //   }
   // }, [loginData]);
 
-  return (
-    <ApiContext.Provider value={apiData}>
-      {children}
-    </ApiContext.Provider>
-  );
+  return <ApiContext.Provider value={apiData}>{children}</ApiContext.Provider>;
 };
 
-export { ApiContext, ApiProvider };
+const useApiData = () => useContext(ApiContext);
+
+export { ApiContext, ApiProvider, useApiData };

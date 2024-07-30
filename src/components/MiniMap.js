@@ -3,7 +3,6 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import RoundMarker from './RoundMarker';
 
 const MiniMap = ({ place }) => {
-    console.log({ minimap: place });
     const styles = StyleSheet.create({
         container: {
             flexGrow: 1,

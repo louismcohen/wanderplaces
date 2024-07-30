@@ -115,9 +115,9 @@ export const PlaceItem = ({ info, navigation, navigateTo }) => {
 
 const PlaceDetails = ({ info }) => {  
     return (
-        <View style={{ flexDirection: 'row', gap: 8 }}>
+        <View style={{ flexDirection: 'row', gap: 8, justifyContent: 'center', alignItems: 'center', }}>
             {info.photoUri 
-                ? <Image width={80} resizeMode='cover' source={{ uri: info.photoUri }} />
+                ? <Image width={80} height={80} resizeMode='cover' source={{ uri: info.photoUri }} style={{ marginLeft: 8, borderRadius: 8,}} />
                 : <View style={styles.imageContainer} />
             }
             <View style={styles.detailsContainer}>
