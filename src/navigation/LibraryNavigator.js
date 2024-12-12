@@ -4,6 +4,7 @@ import Collections from '../screens/Collections';
 import CollectionItem from '../components/CollectionItem';
 import PlaceDetail from '../screens/PlaceDetail';
 import Places from '../screens/Places';
+import Categories from '../screens/Categories';
 
 const LibraryNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -30,6 +31,7 @@ const LibraryNavigator = () => {
         <Stack.Screen name='Library' component={Library} />
         <Stack.Screen name='Collections' component={Collections} />
         <Stack.Screen name='Places' component={Places} />
+        <Stack.Screen name='Categories' component={Categories} />
       </Stack.Group>
       <Stack.Group
       // Individual Collection Items

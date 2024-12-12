@@ -4,16 +4,63 @@ import { supabase } from '../utils/supabase';
 import collectionsData from '../data/collections.json';
 import placesData from '../data/places.json';
 
+const placesSorted = placesData.sort((a, b) => a.title.localeCompare(b.title));
+
+const getCategories = (places) => {
+  const categories = [
+    ...new Set(
+      places.reduce((acc, place) => [...acc, ...place.types.split(',')], [])
+    ),
+  ].sort((a, b) => a.localeCompare(b));
+
+  const categoriesMap = places.reduce((acc, place) => {
+    const currentCategories = Object.keys(acc);
+    const types = place.types.split(',');
+    const newMap = types.reduce((mapAcc, type) => {
+      if (currentCategories.includes(type)) {
+        return mapAcc;
+      } else {
+        const placeWithThisCategory = places.reduce((filtered, place) => {
+          if (place.types.includes(type)) {
+            return [...filtered, place._id];
+          } else {
+            return filtered;
+          }
+        }, []);
+
+        return {
+          ...mapAcc,
+          [type]: {
+            placeIds: placeWithThisCategory,
+            count: placeWithThisCategory.length,
+          },
+        };
+      }
+    }, {});
+
+    return {
+      ...acc,
+      ...newMap,
+    };
+  }, {});
+
+  console.log(categoriesMap);
+
+  return categoriesMap;
+};
+
 const ApiContext = createContext();
 
 const ApiProvider = ({ children }) => {
   const [apiData, setApiData] = useState();
   const [collections, setCollections] = useState(collectionsData);
-  const [places, setPlaces] = useState(placesData);
+  const [places, setPlaces] = useState(placesSorted);
   const [placesCollections, setPlacesCollections] = useState();
 
-  const [loginData, setLoginData] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [categories, setCategories] = useState([]);
+
+  // const [loginData, setLoginData] = useState(null);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (!collections || !places) return;
@@ -42,14 +89,18 @@ const ApiProvider = ({ children }) => {
       };
     });
 
-    setApiData({
-      collections,
-      setCollections,
-      places: placesWithDefaultEmojis,
-      setPlaces,
-      placesCollections,
-    });
-  }, [collections, places]);
+    setCategories(getCategories(places));
+    setPlaces(placesWithDefaultEmojis);
+
+    // setApiData({
+    //   collections,
+    //   setCollections,
+    //   places: placesWithDefaultEmojis,
+    //   setPlaces,
+    //   placesCollections,
+    //   categories,
+    // });
+  }, []);
 
   // useEffect(() => {
   //   const login = async () => {
@@ -111,7 +162,18 @@ const ApiProvider = ({ children }) => {
   //   }
   // }, [loginData]);
 
-  return <ApiContext.Provider value={apiData}>{children}</ApiContext.Provider>;
+  return (
+    <ApiContext.Provider
+      value={{
+        collections,
+        places,
+        placesCollections,
+        categories,
+      }}
+    >
+      {children}
+    </ApiContext.Provider>
+  );
 };
 
 const useApiData = () => useContext(ApiContext);
