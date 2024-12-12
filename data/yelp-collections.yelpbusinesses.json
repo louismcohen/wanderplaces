@@ -11474,13 +11474,14 @@
   "rating": 4.5,
   "review_count": 293,
   "updatedAt": {
-    "$date": "2021-07-08T00:14:42.671Z"
+    "$date": "2024-12-12T00:04:00.214Z"
   },
   "addedIndex": 58,
   "note": "Dandanmien",
   "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
   "special_hours": [],
-  "website": "https://chongqingspecialnoodles.com/"
+  "website": "https://chongqingspecialnoodles.com/",
+  "visited": true
 },
 {
   "_id": {
@@ -31167,7 +31168,7 @@
   },
   "note": "",
   "updatedAt": {
-    "$date": "2022-04-18T05:41:19.867Z"
+    "$date": "2024-12-12T00:03:24.641Z"
   },
   "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
   "categories": [
@@ -31259,7 +31260,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "625cf9ffe8a54cf90356397d"
       }
@@ -31292,7 +31293,8 @@
   "special_hours": [],
   "website": "http://www.malibuseafood.com/",
   "is_claimed": true,
-  "is_closed": false
+  "is_closed": false,
+  "visited": true
 },
 {
   "_id": {
@@ -47342,7 +47344,7 @@
   },
   "note": "Lobster roll (possibly with squid ink)",
   "updatedAt": {
-    "$date": "2021-07-08T00:14:42.647Z"
+    "$date": "2024-12-12T00:02:58.095Z"
   },
   "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
   "categories": [
@@ -47427,7 +47429,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "625cf9a8e8a54cf903561c3e"
       }
@@ -47461,7 +47463,8 @@
   "special_hours": [],
   "website": "http://www.broadstreetmalibu.com/",
   "is_claimed": true,
-  "is_closed": false
+  "is_closed": false,
+  "visited": false
 },
 {
   "_id": {
@@ -58080,7 +58083,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "625cfa3ae8a54cf903564b91"
       }
@@ -58111,7 +58114,7 @@
   "rating": 4.5,
   "review_count": 245,
   "updatedAt": {
-    "$date": "2022-04-18T05:42:18.835Z"
+    "$date": "2024-12-12T00:04:23.181Z"
   },
   "addedIndex": 232,
   "note": "Cambodian seafood dishes",
@@ -58119,7 +58122,8 @@
   "special_hours": [],
   "website": "http://ajseafoodshack.com/",
   "is_claimed": true,
-  "is_closed": false
+  "is_closed": false,
+  "visited": true
 },
 {
   "_id": {
@@ -71204,7 +71208,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "625cfa73e8a54cf903565d6a"
       }
@@ -71237,11 +71241,13 @@
   "rating": 4,
   "review_count": 1759,
   "updatedAt": {
-    "$date": "2022-04-18T05:43:15.830Z"
+    "$date": "2024-12-11T23:19:21.503Z"
   },
   "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g",
   "is_claimed": true,
-  "is_closed": false
+  "is_closed": false,
+  "special_hours": [],
+  "website": "http://www.teabrick.online/"
 },
 {
   "_id": {
@@ -75850,7 +75856,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "62ac98549b3e2349a7cf00d3"
       }
@@ -75885,9 +75891,10 @@
   "special_hours": [],
   "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
   "updatedAt": {
-    "$date": "2022-06-17T15:05:56.290Z"
+    "$date": "2024-12-11T23:20:00.909Z"
   },
-  "website": "https://www.currykingdomweho.com/order"
+  "website": "https://www.currykingdomweho.com/order",
+  "visited": true
 },
 {
   "_id": {
@@ -76964,9 +76971,10 @@
   "special_hours": [],
   "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
   "updatedAt": {
-    "$date": "2023-01-12T23:41:57.058Z"
+    "$date": "2024-12-11T23:19:42.935Z"
   },
-  "website": "https://order.mealkeyway.com/merchant/3479556746626f366971774a6e435035684c715462673d3d/main"
+  "website": "https://order.mealkeyway.com/merchant/3479556746626f366971774a6e435035684c715462673d3d/main",
+  "visited": true
 },
 {
   "_id": {
@@ -102564,12 +102572,13 @@
     }
   ],
   "updatedAt": {
-    "$date": "2023-09-16T02:16:58.266Z"
+    "$date": "2024-12-12T00:03:45.198Z"
   },
   "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
   "is_claimed": true,
   "is_closed": false,
-  "website": "https://www.monrestaurantgroup.com/monzo"
+  "website": "https://www.monrestaurantgroup.com/monzo",
+  "visited": true
 },
 {
   "_id": {
@@ -109970,9 +109979,10 @@
   "review_count": 627,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2023-03-04T03:50:28.061Z"
+    "$date": "2024-12-12T00:03:49.270Z"
   },
-  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
+  "website": "https://spectrum.capital-seafood.com/"
 },
 {
   "_id": {
@@ -120268,7 +120278,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "64a36181aa8cef1d9c48e959"
       }
@@ -120344,9 +120354,10 @@
     }
   ],
   "updatedAt": {
-    "$date": "2023-07-04T00:02:09.326Z"
+    "$date": "2024-12-12T05:18:13.389Z"
   },
-  "yelpCollectionId": "JUO2dgzoATA2UEBEWP1Mjw"
+  "yelpCollectionId": "JUO2dgzoATA2UEBEWP1Mjw",
+  "website": "http://wifeandthesomm.com/"
 },
 {
   "_id": {
@@ -125718,7 +125729,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "6518516a71b92681acc919dd"
       }
@@ -125764,9 +125775,10 @@
     }
   ],
   "updatedAt": {
-    "$date": "2023-09-30T16:48:42.091Z"
+    "$date": "2024-12-12T05:18:15.778Z"
   },
-  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
+  "website": "http://www.salazarla.com/"
 },
 {
   "_id": {
@@ -128109,7 +128121,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": true,
+      "is_open_now": false,
       "_id": {
         "$oid": "6529d9ae309708295cbf0644"
       }
@@ -128144,9 +128156,10 @@
   "review_count": 481,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2023-10-13T23:58:38.451Z"
+    "$date": "2024-12-12T05:18:11.067Z"
   },
-  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g"
+  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g",
+  "website": "http://habitatcoffeela.com/"
 },
 {
   "_id": {
@@ -132736,9 +132749,10 @@
   "review_count": 1034,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2023-12-02T03:50:21.426Z"
+    "$date": "2024-12-12T00:04:02.261Z"
   },
-  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
+  "website": "https://888seafoodrestaurant.com/"
 },
 {
   "_id": {
@@ -144249,7 +144263,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": true,
+      "is_open_now": false,
       "_id": {
         "$oid": "65ee074421eac8b3ea62b0e0"
       }
@@ -144284,9 +144298,10 @@
   "review_count": 1840,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2024-03-10T19:17:24.644Z"
+    "$date": "2024-12-12T05:17:33.392Z"
   },
-  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
+  "website": "https://www.laaztecatortilleria.online/"
 },
 {
   "_id": {
@@ -145269,7 +145284,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "65ee074821eac8b3ea62b217"
       }
@@ -145305,10 +145320,11 @@
   "review_count": 126,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2024-04-13T14:31:49.511Z"
+    "$date": "2024-12-11T23:19:48.880Z"
   },
   "yelpCollectionId": "mIiIcJNOz7LiG2avtdKF-g",
-  "website": "https://www.oakberry.com/"
+  "website": "https://www.oakberry.com/",
+  "visited": true
 },
 {
   "_id": {
@@ -148742,9 +148758,10 @@
   "review_count": 632,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2024-05-23T00:48:53.609Z"
+    "$date": "2024-12-11T23:19:11.599Z"
   },
-  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
+  "website": "http://afuriramen.com/"
 },
 {
   "_id": {
@@ -149136,9 +149153,10 @@
   "review_count": 49,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2024-05-23T00:48:54.899Z"
+    "$date": "2024-12-12T05:18:06.045Z"
   },
-  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g"
+  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g",
+  "website": "http://www.loopespressoclub.com/"
 },
 {
   "_id": {
@@ -154322,9 +154340,10 @@
     }
   ],
   "updatedAt": {
-    "$date": "2024-07-11T06:17:27.926Z"
+    "$date": "2024-12-12T05:18:03.233Z"
   },
-  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g"
+  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g",
+  "website": "https://kavatcoffee.com/"
 },
 {
   "_id": {
@@ -157536,7 +157555,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "66cb45fbb3e7477aa65a8827"
       }
@@ -157571,9 +157590,10 @@
   "review_count": 780,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2024-08-25T14:55:55.177Z"
+    "$date": "2024-12-12T00:04:18.801Z"
   },
-  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
+  "visited": true
 },
 {
   "_id": {
@@ -159908,9 +159928,10 @@
   "review_count": 20,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2024-09-25T01:57:38.577Z"
+    "$date": "2024-12-12T05:18:08.372Z"
   },
-  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g"
+  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g",
+  "website": "https://www.creatures-plants-coffee.com/"
 },
 {
   "_id": {
@@ -165267,7 +165288,7 @@
         }
       ],
       "hours_type": "REGULAR",
-      "is_open_now": false,
+      "is_open_now": true,
       "_id": {
         "$oid": "673e0ace1ac88b50632f4f83"
       }
@@ -165302,9 +165323,10 @@
   "review_count": 1155,
   "special_hours": [],
   "updatedAt": {
-    "$date": "2024-11-20T16:14:06.796Z"
+    "$date": "2024-12-12T00:04:04.919Z"
   },
-  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg",
+  "website": "http://www.pandainn.com/"
 },
 {
   "_id": {
@@ -166749,4 +166771,826 @@
     "$date": "2024-11-23T23:58:17.312Z"
   },
   "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+},
+{
+  "_id": {
+    "$oid": "6751cdf291e02b2f994186e6"
+  },
+  "alias": "ara-s-shawarma-los-angeles-3",
+  "__v": 0,
+  "addedIndex": 629,
+  "categories": [
+    {
+      "alias": "mediterranean",
+      "title": "Mediterranean",
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ec193"
+      }
+    },
+    {
+      "alias": "hotdogs",
+      "title": "Fast Food",
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ec194"
+      }
+    },
+    {
+      "alias": "kebab",
+      "title": "Kebab",
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ec195"
+      }
+    }
+  ],
+  "coordinates": {
+    "latitude": 34.09836996063423,
+    "longitude": -118.3113413
+  },
+  "createdAt": {
+    "$date": "2024-12-05T15:59:46.889Z"
+  },
+  "display_phone": "(323) 366-2215",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": true,
+          "start": "1000",
+          "end": "0200",
+          "day": 0,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ec197"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1000",
+          "end": "0200",
+          "day": 1,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ec198"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1000",
+          "end": "0200",
+          "day": 2,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ec199"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1000",
+          "end": "0200",
+          "day": 3,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ec19a"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1000",
+          "end": "0200",
+          "day": 4,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ec19b"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1100",
+          "end": "0200",
+          "day": 5,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ec19c"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1100",
+          "end": "0200",
+          "day": 6,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ec19d"
+          }
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": false,
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ec196"
+      }
+    }
+  ],
+  "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/yJj6ixFXv62uyHRpSLX6tQ/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "location": {
+    "address1": "5553 Sunset Blvd",
+    "address2": null,
+    "address3": "",
+    "city": "Los Angeles",
+    "zip_code": "90028",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "5553 Sunset Blvd",
+      "Los Angeles, CA 90028"
+    ],
+    "timezone": "America/Los_Angeles"
+  },
+  "name": "Ara’s Shawarma",
+  "note": "shawarma, Dubai chocolate ",
+  "phone": "+13233662215",
+  "photos": [
+    "https://s3-media3.fl.yelpcdn.com/bphoto/yJj6ixFXv62uyHRpSLX6tQ/o.jpg",
+    "https://s3-media4.fl.yelpcdn.com/bphoto/gTQJS9KnaG8I2R3POAb7Xw/o.jpg",
+    "https://s3-media3.fl.yelpcdn.com/bphoto/nX6_N30eggB9a66f2A-6uw/o.jpg"
+  ],
+  "rating": 4,
+  "review_count": 123,
+  "special_hours": [],
+  "updatedAt": {
+    "$date": "2024-12-05T15:59:49.035Z"
+  },
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+},
+{
+  "_id": {
+    "$oid": "6751cdf391e02b2f994186e8"
+  },
+  "alias": "here-fishy-fishy-los-angeles-37",
+  "__v": 0,
+  "addedIndex": 478,
+  "categories": [
+    {
+      "alias": "sushi",
+      "title": "Sushi Bars",
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ef15d"
+      }
+    },
+    {
+      "alias": "japanese",
+      "title": "Japanese",
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ef15e"
+      }
+    },
+    {
+      "alias": "salad",
+      "title": "Salad",
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ef15f"
+      }
+    }
+  ],
+  "coordinates": {
+    "latitude": 34.0668713882016,
+    "longitude": -118.30886580450148
+  },
+  "createdAt": {
+    "$date": "2024-12-05T15:59:47.491Z"
+  },
+  "display_phone": "(323) 387-6588",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": true,
+          "start": "1700",
+          "end": "0200",
+          "day": 0,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef161"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1700",
+          "end": "0200",
+          "day": 1,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef162"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1700",
+          "end": "0200",
+          "day": 2,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef163"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1700",
+          "end": "0200",
+          "day": 3,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef164"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1700",
+          "end": "0200",
+          "day": 4,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef165"
+          }
+        },
+        {
+          "is_overnight": true,
+          "start": "1700",
+          "end": "0200",
+          "day": 5,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef166"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "1700",
+          "end": "0000",
+          "day": 6,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef167"
+          }
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": false,
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ef160"
+      }
+    }
+  ],
+  "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/N3q11zQpcMbNix0hMW0uuA/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "location": {
+    "address1": "414 S Western Ave",
+    "address2": "Ste B",
+    "address3": "",
+    "city": "Los Angeles",
+    "zip_code": "90020",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "414 S Western Ave",
+      "Ste B",
+      "Los Angeles, CA 90020"
+    ],
+    "timezone": "America/Los_Angeles"
+  },
+  "name": "Here Fishy Fishy",
+  "note": "AYCE sushi, takes reservations ",
+  "phone": "+13233876588",
+  "photos": [
+    "https://s3-media1.fl.yelpcdn.com/bphoto/N3q11zQpcMbNix0hMW0uuA/o.jpg",
+    "https://s3-media1.fl.yelpcdn.com/bphoto/mIPxJKlUvAVKG6QmF_2R8Q/o.jpg",
+    "https://s3-media3.fl.yelpcdn.com/bphoto/ug1GqY4V9F4KV1boqQpzfw/o.jpg"
+  ],
+  "rating": 4.2,
+  "review_count": 647,
+  "special_hours": [],
+  "updatedAt": {
+    "$date": "2024-12-05T15:59:49.421Z"
+  },
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+},
+{
+  "_id": {
+    "$oid": "6751cdf491e02b2f994186ea"
+  },
+  "alias": "sapp-coffee-shop-los-angeles-5",
+  "__v": 0,
+  "addedIndex": 286,
+  "categories": [
+    {
+      "alias": "thai",
+      "title": "Thai",
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ef18b"
+      }
+    }
+  ],
+  "coordinates": {
+    "latitude": 34.10199,
+    "longitude": -118.30323
+  },
+  "createdAt": {
+    "$date": "2024-12-05T15:59:48.140Z"
+  },
+  "display_phone": "(323) 922-1081",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1030",
+          "end": "1900",
+          "day": 0,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef18d"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "1030",
+          "end": "1900",
+          "day": 1,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef18e"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "1030",
+          "end": "1900",
+          "day": 3,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef18f"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "1030",
+          "end": "2100",
+          "day": 4,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef190"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "1030",
+          "end": "2100",
+          "day": 5,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef191"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "1030",
+          "end": "2100",
+          "day": 6,
+          "_id": {
+            "$oid": "6751cdf5077b245f7b2ef192"
+          }
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": false,
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ef18c"
+      }
+    }
+  ],
+  "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/U4_fC4VhCGse5Vh-2y5tMA/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "location": {
+    "address1": "5183 Hollywood Blvd",
+    "address2": "",
+    "address3": "",
+    "city": "Los Angeles",
+    "zip_code": "90027",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "5183 Hollywood Blvd",
+      "Los Angeles, CA 90027"
+    ],
+    "timezone": "America/Los_Angeles"
+  },
+  "name": "Sapp Coffee Shop",
+  "note": "",
+  "phone": "+13239221081",
+  "photos": [
+    "https://s3-media1.fl.yelpcdn.com/bphoto/U4_fC4VhCGse5Vh-2y5tMA/o.jpg",
+    "https://s3-media4.fl.yelpcdn.com/bphoto/dxmLYBPnEfxAUiETzAazHg/o.jpg",
+    "https://s3-media3.fl.yelpcdn.com/bphoto/iGXYxV23GAmTOZyf93_0uA/o.jpg"
+  ],
+  "rating": 4.3,
+  "review_count": 1183,
+  "special_hours": [
+    {
+      "date": "2024-12-24",
+      "is_closed": null,
+      "start": "1030",
+      "end": "1500",
+      "is_overnight": false,
+      "_id": {
+        "$oid": "6751cdf5077b245f7b2ef193"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-12-05T15:59:49.889Z"
+  },
+  "yelpCollectionId": "g6DLKiR2ReMs-N5hN6zDwg"
+},
+{
+  "_id": {
+    "$oid": "6751cdf491e02b2f994186eb"
+  },
+  "alias": "stagger-coffee-los-angeles",
+  "__v": 0,
+  "addedIndex": 142,
+  "categories": [
+    {
+      "alias": "coffee",
+      "title": "Coffee & Tea",
+      "_id": {
+        "$oid": "6751cdf6077b245f7b2ef1bb"
+      }
+    }
+  ],
+  "coordinates": {
+    "latitude": 34.05789229528906,
+    "longitude": -118.29371917417288
+  },
+  "createdAt": {
+    "$date": "2024-12-05T15:59:48.509Z"
+  },
+  "display_phone": "",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1600",
+          "day": 0,
+          "_id": {
+            "$oid": "6751cdf6077b245f7b2ef1bd"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1600",
+          "day": 1,
+          "_id": {
+            "$oid": "6751cdf6077b245f7b2ef1be"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1600",
+          "day": 2,
+          "_id": {
+            "$oid": "6751cdf6077b245f7b2ef1bf"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1600",
+          "day": 3,
+          "_id": {
+            "$oid": "6751cdf6077b245f7b2ef1c0"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1600",
+          "day": 4,
+          "_id": {
+            "$oid": "6751cdf6077b245f7b2ef1c1"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1700",
+          "day": 5,
+          "_id": {
+            "$oid": "6751cdf6077b245f7b2ef1c2"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1700",
+          "day": 6,
+          "_id": {
+            "$oid": "6751cdf6077b245f7b2ef1c3"
+          }
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": false,
+      "_id": {
+        "$oid": "6751cdf6077b245f7b2ef1bc"
+      }
+    }
+  ],
+  "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/Zkz0M3--4NNnE4fNGgwp8A/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "location": {
+    "address1": "3069 W 8th St",
+    "address2": "",
+    "address3": null,
+    "city": "Los Angeles",
+    "zip_code": "90005",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "3069 W 8th St",
+      "Los Angeles, CA 90005"
+    ],
+    "timezone": "America/Los_Angeles"
+  },
+  "name": "Stagger Coffee",
+  "note": "double matcha and cream top coffee",
+  "phone": "",
+  "photos": [
+    "https://s3-media2.fl.yelpcdn.com/bphoto/Zkz0M3--4NNnE4fNGgwp8A/o.jpg",
+    "https://s3-media1.fl.yelpcdn.com/bphoto/pd9D4tm-f4__0fgWsN359A/o.jpg",
+    "https://s3-media4.fl.yelpcdn.com/bphoto/t5hYpTpL4jpZity8e2fy4g/o.jpg"
+  ],
+  "rating": 4.6,
+  "review_count": 92,
+  "special_hours": [],
+  "updatedAt": {
+    "$date": "2024-12-05T15:59:50.293Z"
+  },
+  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g"
+},
+{
+  "_id": {
+    "$oid": "675a1db791e02b2f99423179"
+  },
+  "alias": "modu-cafe-los-angeles",
+  "__v": 0,
+  "addedIndex": 143,
+  "categories": [
+    {
+      "alias": "coffee",
+      "title": "Coffee & Tea",
+      "_id": {
+        "$oid": "675a1db7a7ae27828dfcbedb"
+      }
+    },
+    {
+      "alias": "bakeries",
+      "title": "Bakeries",
+      "_id": {
+        "$oid": "675a1db7a7ae27828dfcbedc"
+      }
+    }
+  ],
+  "coordinates": {
+    "latitude": 34.11874434377248,
+    "longitude": -118.19196299999992
+  },
+  "createdAt": {
+    "$date": "2024-12-11T23:18:15.232Z"
+  },
+  "display_phone": "",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1500",
+          "day": 2,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbede"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1500",
+          "day": 3,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbedf"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1500",
+          "day": 4,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbee0"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1600",
+          "day": 5,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbee1"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1600",
+          "day": 6,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbee2"
+          }
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": false,
+      "_id": {
+        "$oid": "675a1db7a7ae27828dfcbedd"
+      }
+    }
+  ],
+  "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/7WDtE6NdRc8y_bF5XisAdg/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "location": {
+    "address1": "5805 York Blvd",
+    "address2": "Unit A",
+    "address3": null,
+    "city": "Los Angeles",
+    "zip_code": "90042",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "5805 York Blvd",
+      "Unit A",
+      "Los Angeles, CA 90042"
+    ],
+    "timezone": "America/Los_Angeles"
+  },
+  "name": "Modu Cafe",
+  "note": "Japanese inspired pastries",
+  "phone": "",
+  "photos": [
+    "https://s3-media3.fl.yelpcdn.com/bphoto/7WDtE6NdRc8y_bF5XisAdg/o.jpg",
+    "https://s3-media2.fl.yelpcdn.com/bphoto/r3c-g-pnbQWDjjJ99ILnaQ/o.jpg",
+    "https://s3-media4.fl.yelpcdn.com/bphoto/HVyxjJLGwY9nlkCty1G_jg/o.jpg"
+  ],
+  "rating": 4.3,
+  "review_count": 70,
+  "special_hours": [],
+  "updatedAt": {
+    "$date": "2024-12-11T23:18:15.232Z"
+  },
+  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g"
+},
+{
+  "_id": {
+    "$oid": "675a1db791e02b2f9942317b"
+  },
+  "alias": "stereoscope-coffee-newport-beach-9",
+  "__v": 0,
+  "addedIndex": 46,
+  "categories": [
+    {
+      "alias": "coffeeroasteries",
+      "title": "Coffee Roasteries",
+      "_id": {
+        "$oid": "675a1db7a7ae27828dfcbf00"
+      }
+    },
+    {
+      "alias": "coffee",
+      "title": "Coffee & Tea",
+      "_id": {
+        "$oid": "675a1db7a7ae27828dfcbf01"
+      }
+    },
+    {
+      "alias": "breakfast_brunch",
+      "title": "Breakfast & Brunch",
+      "_id": {
+        "$oid": "675a1db7a7ae27828dfcbf02"
+      }
+    }
+  ],
+  "coordinates": {
+    "latitude": 33.65574061550646,
+    "longitude": -117.86810037537946
+  },
+  "createdAt": {
+    "$date": "2024-12-11T23:18:15.595Z"
+  },
+  "display_phone": "(949) 932-0068",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1700",
+          "day": 0,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbf04"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1700",
+          "day": 1,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbf05"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1700",
+          "day": 2,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbf06"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1700",
+          "day": 3,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbf07"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1700",
+          "day": 4,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbf08"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0700",
+          "end": "1700",
+          "day": 5,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbf09"
+          }
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "1700",
+          "day": 6,
+          "_id": {
+            "$oid": "675a1db7a7ae27828dfcbf0a"
+          }
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true,
+      "_id": {
+        "$oid": "675a1db7a7ae27828dfcbf03"
+      }
+    }
+  ],
+  "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/oIyglQAn34azucVsyWKtJw/o.jpg",
+  "is_claimed": true,
+  "is_closed": false,
+  "location": {
+    "address1": "100 Bayview Cir",
+    "address2": "Ste 1200",
+    "address3": null,
+    "city": "Newport Beach",
+    "zip_code": "92660",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "100 Bayview Cir",
+      "Ste 1200",
+      "Newport Beach, CA 92660"
+    ],
+    "timezone": "America/Los_Angeles"
+  },
+  "name": "Stereoscope Coffee",
+  "note": "",
+  "phone": "+19499320068",
+  "photos": [
+    "https://s3-media2.fl.yelpcdn.com/bphoto/oIyglQAn34azucVsyWKtJw/o.jpg",
+    "https://s3-media2.fl.yelpcdn.com/bphoto/cis7NcY25YA8Pbe30_BVbw/o.jpg",
+    "https://s3-media3.fl.yelpcdn.com/bphoto/fZWvh9_hRczlPDy5OeKbyg/o.jpg"
+  ],
+  "rating": 4.4,
+  "review_count": 545,
+  "special_hours": [],
+  "updatedAt": {
+    "$date": "2024-12-11T23:18:15.595Z"
+  },
+  "yelpCollectionId": "MsymJVnRKb4Z-4GUmr1s7g"
 }]

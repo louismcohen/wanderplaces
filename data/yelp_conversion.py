@@ -23,7 +23,8 @@ def load_yelp_bookmarks(json_file, limit=None):
             'address': ' '.join(bookmark.get('location', {}).get('display_address', [])),
             'note': bookmark.get('note', ''),
             'lat': bookmark.get('coordinates', {}).get('latitude'),
-            'lng': bookmark.get('coordinates', {}).get('longitude')
+            'lng': bookmark.get('coordinates', {}).get('longitude'),
+            'visited': bookmark.get('visited', False)
         })
     
     return pd.DataFrame(processed_bookmarks)
@@ -85,18 +86,19 @@ def main():
     load_dotenv(dotenv_path)
     serper_api_key = os.getenv('SERPER_API_KEY')
     
-    yelp_bookmarks = load_yelp_bookmarks('yelp-collections.yelpbusinesses.json', limit=3)
+    yelp_bookmarks = load_yelp_bookmarks('yelp-collections.yelpbusinesses.json')
     result_df = batch_place_lookup(yelp_bookmarks, serper_api_key)
 
     # Rename and select columns as requested
     result_df = result_df.rename(columns={
         'name': 'Title',
         'note': 'Note',
-        'maps_url': 'URL'
+        'maps_url': 'URL',
+        'visited': 'Visited'
     })
     
     # Select only the specified columns
-    result_df = result_df[['Title', 'Note', 'URL']]
+    result_df = result_df[['Title', 'Note', 'URL', 'Visited']]
     
     result_df.to_csv('yelp_bookmarks_with_place_details.csv', index=False)
     print(result_df)
