@@ -1,6 +1,8 @@
+import os
 import json
 import requests
 import pandas as pd
+from dotenv import load_dotenv
 
 def load_yelp_bookmarks(json_file, limit=None):
     """Load Yelp bookmarks from a JSON file"""
@@ -79,7 +81,9 @@ def batch_place_lookup(df, serper_api_key, location="United States"):
     return df
 
 def main():
-    serper_api_key = '190acaa669f9b81e01301be9b1f2e8841e494a23'
+    dotenv_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+    load_dotenv(dotenv_path)
+    serper_api_key = os.getenv('SERPER_API_KEY')
     
     yelp_bookmarks = load_yelp_bookmarks('yelp-collections.yelpbusinesses.json', limit=3)
     result_df = batch_place_lookup(yelp_bookmarks, serper_api_key)
