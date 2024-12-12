@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import csv
 import json
 import requests
@@ -82,9 +83,15 @@ parser.add_argument('input_directory', type=str, help='Input directory containin
 parser.add_argument('output_directory', type=str, help='Output directory to write updated JSON files')
 args = parser.parse_args()
 
+# Specify the path to the .env file
+dotenv_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+
+# Load the .env file
+load_dotenv(dotenv_path)
+
 # API and field mask
 api_url_base = 'https://places.googleapis.com/v1/places:searchText/'
-api_key = 'AIzaSyAEoV6r3-BPVwnw8MvGep1Ok1oMsNMW9ZY'
+api_key = os.getenv('EXPO_PUBLIC_GOOGLE_API_KEY')
 field_mask = 'places.displayName,places.id,places.location,places.photos,places.types,places.addressComponents,places.primaryTypeDisplayName,places.primaryType,places.iconMaskBaseUri,places.rating,places.userRatingCount,places.regularOpeningHours,places.shortFormattedAddress,places.photos'
 
 # Iterate through each CSV file in the input directory
